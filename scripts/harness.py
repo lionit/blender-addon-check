@@ -177,9 +177,14 @@ def main() -> None:
                     op.poll()
             except Exception:  # noqa: BLE001
                 poll_failures.append(f"{idname}\n{traceback.format_exc()}")
-        for cls in list(bpy.types.bpy_struct.__subclasses__()):
+        def walk(base):
+            for sub in base.__subclasses__():
+                yield sub
+                yield from walk(sub)
+
+        for cls in list(walk(bpy.types.bpy_struct)):
             modname = getattr(cls, "__module__", "") or ""
-            if modname == full_module or modname.startswith(full_module + "."):
+            if (modname == full_module or modname.startswith(full_module + ".")) and getattr(cls, "is_registered", False):
                 registered += 1
         RESULT["operators_total"] = total
         RESULT["operators_poll_failed"] = len(poll_failures)
