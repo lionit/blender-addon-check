@@ -4,9 +4,9 @@
   "blender_version": "5.1.2",
   "captured_output": "addon_utils.disable: mira_tools not loaded\nModules Installed (mira_tools) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/mira-tools.zip' into '/tmp/bac-mira-tools-x8hc_ow8/blender/scripts/addons'\nInfo: Modules Installed (mira_tools) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/mira-tools.zip' into '/tmp/bac-mira-tools-x8hc_ow8/blender/scripts/addons'\n",
   "cause": {
-    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
-    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
-    "id": "unclassified"
+    "cause": "Creates GPU shaders or draw handlers while registering, which cannot run in a headless Blender. It may well work with a display; this test cannot tell.",
+    "fix": "Create shaders and draw handlers lazily (first draw or first operator call) and skip them when bpy.app.background is True; that also makes the add-on testable in CI.",
+    "id": "needs-display"
   },
   "classes_registered": 0,
   "declared_max": null,
@@ -35,7 +35,8 @@
       "ok": true
     }
   },
-  "status": "fail",
+  "status": "inconclusive",
+  "status_before_analysis": "fail",
   "timing_s": {
     "install": 0.01
   }

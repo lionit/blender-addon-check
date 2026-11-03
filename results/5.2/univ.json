@@ -4,9 +4,9 @@
   "blender_version": "5.2.3 LTS",
   "captured_output": "UniV: Skipping registration in background mode\nUniV: Skipping registration in background mode\n",
   "cause": {
-    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
-    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
-    "id": "unclassified"
+    "cause": "Defines an operator class that is never registered, so bpy.ops cannot reach it.",
+    "fix": "Register the class or delete it; this is harmless to users but hides dead code.",
+    "id": "unregistered-operator"
   },
   "classes_registered": 0,
   "declared_max": null,

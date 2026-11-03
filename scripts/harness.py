@@ -166,6 +166,9 @@ def main() -> None:
             idname = getattr(cls, "bl_idname", None)
             if not idname or "." not in idname:
                 continue
+            # Classes the add-on defines but never registers are not reachable from bpy.ops.
+            if not getattr(cls, "is_registered", True):
+                continue
             total += 1
             group, name = idname.split(".", 1)
             try:

@@ -4,9 +4,9 @@
   "blender_version": "5.1.2",
   "captured_output": "INFO: Ucupaint 3.0.1 is registered!\nTraceback (most recent call last):\n  File \"/tmp/bac-ucupaint-a279mdsm/blender/extensions/user_default/ucupaint/Root.py\", line 836, in poll\n    space.type == 'NODE_EDITOR' and\n    ^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\nINFO: Ucupaint 3.0.1 is unregistered!\nINFO: Ucupaint 3.0.1 is registered!\n",
   "cause": {
-    "cause": "Calls a bpy attribute that no longer exists in this Blender version.",
-    "fix": "Check the Python API change log for this release and add a version guard around the renamed or removed attribute.",
-    "id": "removed-bpy-attribute"
+    "cause": "Defines an operator class that is never registered, so bpy.ops cannot reach it.",
+    "fix": "Register the class or delete it; this is harmless to users but hides dead code.",
+    "id": "unregistered-operator"
   },
   "classes_registered": 0,
   "declared_max": null,

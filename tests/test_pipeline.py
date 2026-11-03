@@ -131,5 +131,22 @@ class Config(unittest.TestCase):
         self.assertEqual(common.parse_version("5.3"), (5, 3, 0))
 
 
+
+class StatusOverrideTests(unittest.TestCase):
+    def test_headless_gpu_is_inconclusive_not_broken(self):
+        c = analyze.classify("SystemError: GPU functions for drawing are not available in background mode", "fail")
+        self.assertEqual(c["id"], "needs-display")
+        self.assertEqual(analyze.STATUS_OVERRIDE[c["id"]], "inconclusive")
+
+    def test_declared_minimum_version(self):
+        c = analyze.classify("ERROR molecularnodes: This Blender version (4.5.15) doesn\u2019t meet the minimum supported version (5.2.0)", "fail")
+        self.assertEqual(c["id"], "declared-unsupported")
+        self.assertEqual(analyze.STATUS_OVERRIDE[c["id"]], "unsupported")
+
+    def test_unregistered_operator_is_not_removed_attribute(self):
+        c = analyze.classify('AttributeError: Polling operator "bpy.ops.uv.univ_pack" error, could not be found', "warn")
+        self.assertEqual(c["id"], "unregistered-operator")
+
+
 if __name__ == "__main__":
     unittest.main()

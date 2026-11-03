@@ -20,6 +20,18 @@ from common import RESULTS_DIR, log, read_json, write_json
 # (id, regex, cause, fix)
 RULES: list[tuple[str, str, str, str]] = [
     (
+        "needs-display",
+        r"GPU functions for drawing (are not available in background mode|requires the gpu module to be initialized)|gpu\.types\.GPUShader[^\n]*background|bgl[^\n]*not available in background",
+        "Creates GPU shaders or draw handlers while registering, which cannot run in a headless Blender. It may well work with a display; this test cannot tell.",
+        "Create shaders and draw handlers lazily (first draw or first operator call) and skip them when bpy.app.background is True; that also makes the add-on testable in CI.",
+    ),
+    (
+        "unregistered-operator",
+        r'Polling operator "bpy\.ops\.[a-z0-9_.]+" error, could not be found',
+        "Defines an operator class that is never registered, so bpy.ops cannot reach it.",
+        "Register the class or delete it; this is harmless to users but hides dead code.",
+    ),
+    (
         "compiled-python-mismatch",
         r"cpython-3(11|12)[^\n]*\.so|ImportError: [^\n]*(undefined symbol|wrong ELF|cannot open shared object)|ModuleNotFoundError: No module named '[^']*cpython",
         "Ships a compiled library built for an older Python. Blender 5.1 moved to Python 3.13, so binaries built for 3.11 no longer load.",
@@ -81,7 +93,7 @@ RULES: list[tuple[str, str, str, str]] = [
     ),
     (
         "declared-unsupported",
-        r"(requires|supports) Blender [0-9.]+|incompatible with this Blender version|blender_version_min",
+        r"(requires|supports) Blender [0-9.]+|incompatible with this Blender version|blender_version_min|doesn.t meet the minimum supported version|exceeds the maximum supported version",
         "The add-on declares it does not support this Blender version, and Blender refuses to enable it.",
         "Raise blender_version_min / bl_info['blender'] once the add-on is confirmed to work, or publish a version for this release.",
     ),
@@ -106,6 +118,12 @@ RULES: list[tuple[str, str, str, str]] = [
 ]
 
 COMPILED = [(rid, re.compile(rx, re.IGNORECASE | re.MULTILINE), cause, fix) for rid, rx, cause, fix in RULES]
+
+# Causes that change what the result means: the add-on is not "broken", the test could not decide.
+STATUS_OVERRIDE = {
+    "needs-display": "inconclusive",
+    "declared-unsupported": "unsupported",
+}
 
 GENERIC = {
     "id": "unclassified",
@@ -135,8 +153,16 @@ def analyze_file(path: Path, dry_run: bool) -> dict:
         payload.get("captured_output", "") or "",
         *[s.get("detail", "") for s in payload.get("stages", {}).values() if not s.get("ok", True)],
     ])
-    cause = classify(text, payload.get("status", "unknown"))
+    status = payload.get("status", "unknown")
+    if status in ("inconclusive", "unsupported") and payload.get("status_before_analysis"):
+        status = payload["status_before_analysis"]  # re-analysis starts from the raw outcome
+    cause = classify(text, status)
     payload["cause"] = cause
+    if status in ("fail", "crash") and cause["id"] in STATUS_OVERRIDE:
+        payload["status_before_analysis"] = status
+        payload["status"] = STATUS_OVERRIDE[cause["id"]]
+    else:
+        payload["status"] = status
     if not dry_run:
         write_json(path, payload)
     return cause

@@ -1,5 +1,5 @@
 {
-  "_comment": "Curated add-ons that are not on extensions.blender.org, plus the project owner's own add-ons. The nightly run merges this with config/addons.generated.json (top extensions by downloads). Source types: extensions | github_release | github_zipball | local.",
+  "_comment": "Curated add-ons that are not on extensions.blender.org, plus the project owner's own add-ons (group 'owner', fetched from a private repository with PRIVATE_ADDONS_TOKEN). The nightly run merges this with config/addons.generated.json. Source types: extensions | github_release | github_zipball | local | private_github_file.",
   "addons": [
     {
       "id": "machin3tools",
@@ -12,7 +12,9 @@
         "repo": "machin3io/MACHIN3tools",
         "ref": "HEAD",
         "module": "MACHIN3tools"
-      }
+      },
+      "enabled": false,
+      "_note": "GitHub repository is no longer public (404). Re-enable if a public source appears."
     },
     {
       "id": "sverchok",
@@ -81,17 +83,48 @@
       }
     },
     {
-      "id": "owner-addon-example",
-      "name": "Owner's add-ons go here (example entry, disabled)",
+      "id": "print-ready",
+      "name": "3DQuads Print Ready",
       "group": "owner",
-      "developer": "lionit",
-      "homepage": "",
+      "developer": "3DQuads",
+      "homepage": "https://superhivemarket.com/products/3dquads-print-ready",
       "enabled": false,
+      "_note": "Paid add-on: the zip lives in the private repo, never in this one. Enable once PRIVATE_ADDONS_TOKEN is set.",
       "source": {
         "type": "private_github_file",
         "repo": "lionit/blender-addon-check-private",
-        "path": "addons/example.zip",
-        "module": "example"
+        "path": "addons/print-ready.zip",
+        "module": "print_ready"
+      }
+    },
+    {
+      "id": "texture-maps-generator",
+      "name": "3DQuads Texture Maps Generator",
+      "group": "owner",
+      "developer": "3DQuads",
+      "homepage": "https://superhivemarket.com/products/3dquads-texture-maps-generator",
+      "enabled": false,
+      "_note": "Paid add-on: the zip lives in the private repo, never in this one. Enable once PRIVATE_ADDONS_TOKEN is set.",
+      "source": {
+        "type": "private_github_file",
+        "repo": "lionit/blender-addon-check-private",
+        "path": "addons/texture-maps-generator.zip",
+        "module": "procedural_pattern_generator"
+      }
+    },
+    {
+      "id": "showcase-studio-pro",
+      "name": "Showcase Studio Pro",
+      "group": "owner",
+      "developer": "3DQuads",
+      "homepage": "https://superhivemarket.com/products/showcase-studio",
+      "enabled": false,
+      "_note": "Paid add-on: the zip lives in the private repo, never in this one. Enable once PRIVATE_ADDONS_TOKEN is set.",
+      "source": {
+        "type": "private_github_file",
+        "repo": "lionit/blender-addon-check-private",
+        "path": "addons/showcase-studio-pro.zip",
+        "module": "showcase_studio_pro"
       }
     }
   ]
