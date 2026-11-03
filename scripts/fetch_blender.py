@@ -48,7 +48,9 @@ def resolve_daily(series: str) -> str:
             continue
         if b.get("architecture") not in ("x86_64", "amd64"):
             continue
-        if b.get("file_extension") != "tar.xz":
+        if b.get("file_extension") not in ("xz", "tar.xz"):
+            continue
+        if not str(b.get("url", "")).endswith(".tar.xz"):
             continue
         if not str(b.get("version", "")).startswith(series + "."):
             continue

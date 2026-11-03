@@ -20,7 +20,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from common import RESULTS_DIR, ROOT, log, read_json, write_json
-from fetch_addons import fetch_one, load_addons
+from fetch_addons import fetch_one, inspect_zip, load_addons
 from fetch_blender import ensure_blender, version_entry
 
 HARNESS = ROOT / "scripts" / "harness.py"
@@ -51,42 +51,67 @@ def run_one(binary: Path, addon: dict, out_dir: Path, timeout: int) -> dict:
         write_json(result_path, payload)
         return payload
 
+    try:
+        info = inspect_zip(zip_path)
+    except Exception as exc:  # noqa: BLE001
+        payload = {**base, "status": "fail", "error": str(exc), "error_stage": "inspect"}
+        write_json(result_path, payload)
+        return payload
+    base.update({"kind": info["kind"], "declared_min": info["declared_min"], "declared_max": info["declared_max"], "addon_version": info["version"]})
+
     tmp_user = Path(tempfile.mkdtemp(prefix=f"bac-{addon['id']}-"))
     tmp_result = tmp_user / "result.json"
+    user_resources = tmp_user / "blender"
+    user_resources.mkdir(parents=True, exist_ok=True)
     env = {
         **os.environ,
         "HOME": str(tmp_user),
         "XDG_CONFIG_HOME": str(tmp_user / "config"),
         "XDG_CACHE_HOME": str(tmp_user / "cache"),
-        "BLENDER_USER_RESOURCES": str(tmp_user / "blender"),
+        "BLENDER_USER_RESOURCES": str(user_resources),
         "PYTHONUNBUFFERED": "1",
     }
-    cmd = [
-        str(binary), "-b", "--factory-startup", "-noaudio",
-        "--python", str(HARNESS), "--",
-        "--zip", str(zip_path), "--out", str(tmp_result), "--addon-id", addon["id"],
-    ]
+    output = ""
     status_override = None
-    try:
-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, env=env, cwd=str(tmp_user))
-        output = (proc.stdout or "") + "\n--- stderr ---\n" + (proc.stderr or "")
-        if proc.returncode not in (0,) and not tmp_result.exists():
-            status_override = "crash"
-    except subprocess.TimeoutExpired as exc:
-        output = ((exc.stdout or b"").decode("utf-8", "replace") if isinstance(exc.stdout, bytes) else (exc.stdout or "")) + "\n--- timeout ---"
-        status_override = "timeout"
+    install_failed = ""
+
+    # Extensions are installed by Blender's own command line, which is built for headless use.
+    if info["kind"] == "extension":
+        cmd_install = [str(binary), "-b", "--command", "extension", "install-file", "--repo", "user_default", str(zip_path)]
+        try:
+            proc = subprocess.run(cmd_install, capture_output=True, text=True, timeout=timeout, env=env, cwd=str(tmp_user))
+            output += "--- extension install-file ---\n" + (proc.stdout or "") + (proc.stderr or "")
+            if proc.returncode != 0:
+                install_failed = f"`blender --command extension install-file` exited with {proc.returncode}\n" + output[-4000:]
+        except subprocess.TimeoutExpired:
+            install_failed = "extension install-file timed out"
+            status_override = "timeout"
+
+    if install_failed:
+        payload = {**base, "status": status_override or "fail", "error": install_failed, "error_stage": "install", "module": f"bl_ext.user_default.{info['module']}"}
+    else:
+        cmd = [
+            str(binary), "-b", "--factory-startup", "-noaudio",
+            "--python", str(HARNESS), "--",
+            "--zip", str(zip_path), "--out", str(tmp_result), "--addon-id", addon["id"],
+            "--kind", info["kind"], "--module", info["module"],
+        ]
+        try:
+            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout, env=env, cwd=str(tmp_user))
+            output += "\n--- harness ---\n" + (proc.stdout or "") + "\n--- stderr ---\n" + (proc.stderr or "")
+            if proc.returncode != 0 and not tmp_result.exists():
+                status_override = "crash"
+        except subprocess.TimeoutExpired as exc:
+            partial = exc.stdout.decode("utf-8", "replace") if isinstance(exc.stdout, bytes) else (exc.stdout or "")
+            output += "\n--- harness ---\n" + partial + "\n--- timeout ---"
+            status_override = "timeout"
+        if tmp_result.exists() and status_override != "timeout":
+            payload = {**base, **read_json(tmp_result)}
+        else:
+            payload = {**base, "status": status_override or "crash", "error": output[-6000:], "error_stage": "process"}
+
     log_path.parent.mkdir(parents=True, exist_ok=True)
     log_path.write_text(output[-60000:], encoding="utf-8")
-
-    if tmp_result.exists() and status_override != "timeout":
-        payload = {**base, **read_json(tmp_result)}
-    else:
-        payload = {
-            **base,
-            "status": status_override or "crash",
-            "error": output[-6000:],
-            "error_stage": "process",
-        }
     payload["log"] = log_path.name
     write_json(result_path, payload)
     shutil.rmtree(tmp_user, ignore_errors=True)
@@ -112,6 +137,7 @@ def main() -> None:
     log(f"testing {len(addons)} add-ons with {args.jobs} parallel jobs")
 
     counts: dict[str, int] = {}
+    failures: list[dict] = []
     with ThreadPoolExecutor(max_workers=args.jobs) as pool:
         futures = {pool.submit(run_one, binary, a, out_dir, args.timeout): a for a in addons}
         for fut in as_completed(futures):
@@ -119,11 +145,18 @@ def main() -> None:
             try:
                 payload = fut.result()
             except Exception as exc:  # noqa: BLE001
-                payload = {"status": "crash", "error": str(exc)}
-                write_json(out_dir / f"{a['id']}.json", {"addon_id": a["id"], **payload})
+                payload = {"addon_id": a["id"], "status": "crash", "error": str(exc), "error_stage": "runner"}
+                write_json(out_dir / f"{a['id']}.json", payload)
             status = payload.get("status", "unknown")
             counts[status] = counts.get(status, 0) + 1
             log(f"{a['id']:40s} {status:12s} {payload.get('error_stage', '')}")
+            if status != "pass":
+                failures.append(payload)
+
+    # Print the tail of each failure so the job log alone tells the story.
+    for p in sorted(failures, key=lambda p: p.get("addon_id", "")):
+        print(f"\n===== {p.get('addon_id')} [{p.get('status')}] stage={p.get('error_stage', '')} kind={p.get('kind', '')} module={p.get('module', '')}")
+        print("\n".join((p.get("error") or "").strip().splitlines()[-40:]))
 
     write_json(out_dir / "summary.json", {
         "version_key": args.version,

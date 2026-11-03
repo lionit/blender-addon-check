@@ -106,6 +106,41 @@ def is_extension_zip(path: Path) -> bool:
     return False
 
 
+def inspect_zip(path: Path) -> dict:
+    """Describe an add-on zip: kind (extension | legacy | legacy-single), module, declared versions."""
+    import re
+    import tomllib
+
+    with zipfile.ZipFile(path) as z:
+        names = z.namelist()
+        tops = sorted({n.split("/", 1)[0] for n in names})
+        manifest_name = next((n for n in names if n.split("/")[-1] == "blender_manifest.toml" and n.count("/") <= 1), None)
+        if manifest_name:
+            manifest = tomllib.loads(z.read(manifest_name).decode("utf-8", "replace"))
+            return {
+                "kind": "extension",
+                "module": manifest.get("id") or tops[0],
+                "declared_min": manifest.get("blender_version_min"),
+                "declared_max": manifest.get("blender_version_max"),
+                "version": manifest.get("version"),
+            }
+        init_name = next((n for n in names if n.endswith("/__init__.py") and n.count("/") == 1), None)
+        if init_name:
+            src = z.read(init_name).decode("utf-8", "replace")
+            m = re.search(r"[\"']blender[\"']\s*:\s*\(\s*(\d+)\s*,\s*(\d+)\s*(?:,\s*(\d+))?\s*\)", src)
+            return {
+                "kind": "legacy",
+                "module": init_name.split("/", 1)[0],
+                "declared_min": f"{m.group(1)}.{m.group(2)}.{m.group(3) or 0}" if m else None,
+                "declared_max": None,
+                "version": None,
+            }
+        single = [n for n in names if n.endswith(".py") and "/" not in n]
+        if len(single) == 1:
+            return {"kind": "legacy-single", "module": single[0][:-3], "declared_min": None, "declared_max": None, "version": None}
+    raise ValueError(f"cannot tell what kind of add-on {path.name} is; top-level entries: {tops[:10]}")
+
+
 def fetch_one(addon: dict) -> Path:
     ADDONS_CACHE.mkdir(parents=True, exist_ok=True)
     src = addon["source"]

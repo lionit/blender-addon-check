@@ -7,7 +7,7 @@
       "group": "github",
       "developer": "MACHIN3",
       "homepage": "https://github.com/machin3io/MACHIN3tools",
-      "source": {"type": "github_release", "repo": "machin3io/MACHIN3tools", "asset_pattern": "MACHIN3tools.*\\.zip", "module": "MACHIN3tools"}
+      "source": {"type": "github_zipball", "repo": "machin3io/MACHIN3tools", "ref": "master", "module": "MACHIN3tools"}
     },
     {
       "id": "sverchok",

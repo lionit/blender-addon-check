@@ -1,11 +1,17 @@
-"""Runs INSIDE Blender. Installs one add-on, enables it, pokes it, writes a JSON result.
+"""Runs INSIDE Blender. Installs (legacy) or locates (extension) one add-on, enables it,
+pokes it, writes a JSON result.
 
 Invoked by run_tests.py as:
-    blender -b --factory-startup --python scripts/harness.py -- --zip X.zip --out result.json --addon-id ID
+    blender -b --factory-startup --python scripts/harness.py -- \
+        --zip X.zip --out result.json --addon-id ID --kind extension|legacy|legacy-single --module NAME
+
+For extensions, run_tests.py has already installed the zip with
+`blender --command extension install-file`, so this script only enables
+`bl_ext.user_default.<id>`. For legacy add-ons it installs the zip here with
+bpy.ops.preferences.addon_install, which is synchronous and works headless.
 
 Stages, each recorded with its own outcome:
-    inspect   read the zip: extension (blender_manifest.toml) or legacy (bl_info)
-    install   bpy.ops.extensions.package_install_files / bpy.ops.preferences.addon_install
+    install   place the add-on where Blender can import it
     enable    addon_utils.enable with error capture
     poll      call poll() on every operator the add-on registered
     reenable  disable, then enable again (catches bad unregister code)
@@ -31,8 +37,6 @@ RESULT: dict = {
     "python_version": None,
     "kind": None,
     "module": None,
-    "declared_min": None,
-    "declared_max": None,
     "stages": {},
     "status": "unknown",
     "error": "",
@@ -71,45 +75,20 @@ def stage(name: str, ok: bool, detail: str = "") -> None:
         RESULT["error_stage"] = name
 
 
-def inspect_zip(zip_path: str) -> tuple[str, str, dict]:
-    """Return (kind, module_name, manifest_or_blinfo)."""
-    with zipfile.ZipFile(zip_path) as z:
-        names = z.namelist()
-        tops = sorted({n.split("/", 1)[0] for n in names})
-        manifest_name = next((n for n in names if n.split("/")[-1] == "blender_manifest.toml" and n.count("/") <= 1), None)
-        if manifest_name:
-            import tomllib
-
-            manifest = tomllib.loads(z.read(manifest_name).decode("utf-8", "replace"))
-            return "extension", manifest.get("id", tops[0]), manifest
-        init_name = next((n for n in names if n.endswith("/__init__.py") and n.count("/") == 1), None)
-        if init_name:
-            module = init_name.split("/", 1)[0]
-            src = z.read(init_name).decode("utf-8", "replace")
-            return "legacy", module, {"bl_info_src": src[:20000]}
-        single = [n for n in names if n.endswith(".py") and "/" not in n]
-        if len(single) == 1:
-            return "legacy-single", single[0][:-3], {}
-    raise RuntimeError(f"cannot tell what kind of add-on this is; top-level entries: {tops[:10]}")
-
-
-def declared_versions(kind: str, meta: dict) -> tuple[str | None, str | None]:
-    if kind == "extension":
-        return meta.get("blender_version_min"), meta.get("blender_version_max")
-    src = meta.get("bl_info_src", "")
-    import re
-
-    m = re.search(r"[\"']blender[\"']\s*:\s*\(\s*(\d+)\s*,\s*(\d+)\s*(?:,\s*(\d+))?\s*\)", src)
-    if m:
-        return f"{m.group(1)}.{m.group(2)}.{m.group(3) or 0}", None
-    return None, None
+def finish(out_path: str, buf: io.StringIO, status: str) -> None:
+    RESULT["status"] = status
+    RESULT["captured_output"] = buf.getvalue()[-8000:]
+    write_result(out_path)
 
 
 def main() -> None:
     args = parse_args()
     out_path = args.get("out", "result.json")
     zip_path = args["zip"]
+    kind = args.get("kind", "legacy")
+    module = args.get("module", "")
     RESULT["addon_id"] = args.get("addon_id", os.path.basename(zip_path))
+    RESULT["kind"] = kind
 
     import bpy  # noqa: E402  (only importable inside Blender)
     import addon_utils  # noqa: E402
@@ -122,18 +101,6 @@ def main() -> None:
         errors.append("".join(traceback.format_exception(type(exc), exc, exc.__traceback__)))
 
     buf = io.StringIO()
-    t0 = time.time()
-    try:
-        kind, module, meta = inspect_zip(zip_path)
-        RESULT["kind"], RESULT["module"] = kind, module
-        RESULT["declared_min"], RESULT["declared_max"] = declared_versions(kind, meta)
-        stage("inspect", True, f"{kind} {module}")
-    except Exception:  # noqa: BLE001
-        stage("inspect", False, traceback.format_exc())
-        RESULT["status"] = "fail"
-        write_result(out_path)
-        return
-    RESULT["timing_s"]["inspect"] = round(time.time() - t0, 2)
 
     # ---- install -----------------------------------------------------------
     t0 = time.time()
@@ -141,10 +108,18 @@ def main() -> None:
     try:
         with redirect_stdout(buf), redirect_stderr(buf):
             if kind == "extension":
-                bpy.ops.extensions.package_install_files(filepath=zip_path, repo="user_default", enable_on_install=False)
                 full_module = f"bl_ext.user_default.{module}"
+                if hasattr(addon_utils, "extensions_refresh"):
+                    addon_utils.extensions_refresh()
+                known = {m.__name__ for m in addon_utils.modules(refresh=True)}
+                if full_module not in known:
+                    raise RuntimeError(
+                        f"{full_module} is not among the add-ons Blender can see after install-file. "
+                        f"Known extension modules: {sorted(k for k in known if k.startswith('bl_ext.'))[:20]}"
+                    )
             elif kind == "legacy":
                 bpy.ops.preferences.addon_install(filepath=zip_path, overwrite=True)
+                addon_utils.modules(refresh=True)
             else:  # legacy-single: extract the .py and install it
                 import tempfile
 
@@ -152,13 +127,11 @@ def main() -> None:
                 with zipfile.ZipFile(zip_path) as z:
                     z.extract(module + ".py", tmpdir)
                 bpy.ops.preferences.addon_install(filepath=os.path.join(tmpdir, module + ".py"), overwrite=True)
-        addon_utils.modules_refresh() if hasattr(addon_utils, "modules_refresh") else None
+                addon_utils.modules(refresh=True)
         stage("install", True, buf.getvalue()[-2000:])
     except Exception:  # noqa: BLE001
         stage("install", False, traceback.format_exc() + "\n--- output ---\n" + buf.getvalue()[-3000:])
-        RESULT["status"] = "fail"
-        RESULT["captured_output"] = buf.getvalue()[-8000:]
-        write_result(out_path)
+        finish(out_path, buf, "fail")
         return
     RESULT["module"] = full_module
     RESULT["timing_s"]["install"] = round(time.time() - t0, 2)
@@ -171,16 +144,12 @@ def main() -> None:
             mod = addon_utils.enable(full_module, default_set=False, persistent=False, handle_error=handle_error)
         if mod is None or errors:
             stage("enable", False, "\n".join(errors) or f"addon_utils.enable returned None for {full_module}\n--- output ---\n{buf.getvalue()[-3000:]}")
-            RESULT["status"] = "fail"
-            RESULT["captured_output"] = buf.getvalue()[-8000:]
-            write_result(out_path)
+            finish(out_path, buf, "fail")
             return
         stage("enable", True)
     except Exception:  # noqa: BLE001
         stage("enable", False, traceback.format_exc())
-        RESULT["status"] = "fail"
-        RESULT["captured_output"] = buf.getvalue()[-8000:]
-        write_result(out_path)
+        finish(out_path, buf, "fail")
         return
     RESULT["timing_s"]["enable"] = round(time.time() - t0, 2)
 
@@ -236,13 +205,12 @@ def main() -> None:
 
     stages = RESULT["stages"]
     if not stages["install"]["ok"] or not stages["enable"]["ok"]:
-        RESULT["status"] = "fail"
+        status = "fail"
     elif not stages.get("poll", {}).get("ok", True) or not stages.get("reenable", {}).get("ok", True):
-        RESULT["status"] = "warn"
+        status = "warn"
     else:
-        RESULT["status"] = "pass"
-    RESULT["captured_output"] = buf.getvalue()[-8000:]
-    write_result(out_path)
+        status = "pass"
+    finish(out_path, buf, status)
 
 
 if __name__ == "__main__":
