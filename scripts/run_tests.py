@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import os
+import re
 import shutil
 import subprocess
 import tempfile
@@ -81,7 +82,8 @@ def run_one(binary: Path, addon: dict, out_dir: Path, timeout: int) -> dict:
         try:
             proc = subprocess.run(cmd_install, capture_output=True, text=True, timeout=timeout, env=env, cwd=str(tmp_user))
             output += "--- extension install-file ---\n" + (proc.stdout or "") + (proc.stderr or "")
-            if proc.returncode != 0:
+            # Blender's extension command prints "ERROR ..." but still exits 0, so check the text too.
+            if proc.returncode != 0 or re.search(r"^ERROR\b", (proc.stdout or "") + (proc.stderr or ""), re.M):
                 install_failed = f"`blender --command extension install-file` exited with {proc.returncode}\n" + output[-4000:]
         except subprocess.TimeoutExpired:
             install_failed = "extension install-file timed out"
