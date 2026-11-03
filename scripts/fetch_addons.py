@@ -175,7 +175,8 @@ def fetch_one(addon: dict) -> Path:
     if kind == "github_release":
         url = github_release_asset_url(src["repo"], src.get("asset_pattern"))
     elif kind == "github_zipball":
-        url = f"https://api.github.com/repos/{src['repo']}/zipball/{src.get('ref', 'HEAD')}"
+        ref = src.get("ref") or "HEAD"
+        url = f"https://api.github.com/repos/{src['repo']}/zipball" + ("" if ref == "HEAD" else f"/{ref}")
     else:
         raise ValueError(f"{addon['id']}: unknown source type {kind!r}")
     download(url, raw)

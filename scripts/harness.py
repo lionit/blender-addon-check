@@ -141,7 +141,7 @@ def main() -> None:
     errors.clear()
     try:
         with redirect_stdout(buf), redirect_stderr(buf):
-            mod = addon_utils.enable(full_module, default_set=False, persistent=False, handle_error=handle_error)
+            mod = addon_utils.enable(full_module, default_set=True, persistent=True, handle_error=handle_error)
         if mod is None or errors:
             stage("enable", False, "\n".join(errors) or f"addon_utils.enable returned None for {full_module}\n--- output ---\n{buf.getvalue()[-3000:]}")
             finish(out_path, buf, "fail")
@@ -191,10 +191,10 @@ def main() -> None:
     errors.clear()
     try:
         with redirect_stdout(buf), redirect_stderr(buf):
-            addon_utils.disable(full_module, default_set=False, handle_error=handle_error)
+            addon_utils.disable(full_module, default_set=True, handle_error=handle_error)
             disable_errors = list(errors)
             errors.clear()
-            mod = addon_utils.enable(full_module, default_set=False, persistent=False, handle_error=handle_error)
+            mod = addon_utils.enable(full_module, default_set=True, persistent=True, handle_error=handle_error)
         problems = disable_errors + errors
         if mod is None:
             problems.append(f"second enable returned None for {full_module}")

@@ -10,7 +10,7 @@
       "source": {
         "type": "github_zipball",
         "repo": "machin3io/MACHIN3tools",
-        "ref": "master",
+        "ref": "HEAD",
         "module": "MACHIN3tools"
       }
     },
@@ -62,7 +62,7 @@
       "source": {
         "type": "github_zipball",
         "repo": "s-leger/archipack",
-        "ref": "master",
+        "ref": "HEAD",
         "module": "archipack"
       }
     },
@@ -75,7 +75,7 @@
       "source": {
         "type": "github_zipball",
         "repo": "mifth/mifthtools",
-        "ref": "master",
+        "ref": "HEAD",
         "subdir": "blender/addons/2.8/mira_tools",
         "module": "mira_tools"
       }
