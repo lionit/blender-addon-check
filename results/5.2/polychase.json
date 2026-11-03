@@ -2,9 +2,9 @@
   "addon_id": "polychase",
   "addon_version": "0.0.14",
   "cause": {
-    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
-    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
-    "id": "unclassified"
+    "cause": "The extension ships builds only for other platforms (usually Windows), so it cannot be installed on the Linux machine this test runs on.",
+    "fix": "Nothing to fix for Windows users. To be tested here, publish a linux-x64 build or a pure-Python version.",
+    "id": "platform-not-shipped"
   },
   "declared_max": null,
   "declared_min": "4.2.0",
@@ -19,5 +19,6 @@
   "name": "Polychase",
   "ran_at": "2026-11-03T14:12:29+00:00",
   "source_type": "extensions",
-  "status": "fail"
+  "status": "inconclusive",
+  "status_before_analysis": "fail"
 }

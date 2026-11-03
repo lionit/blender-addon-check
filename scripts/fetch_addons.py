@@ -20,7 +20,7 @@ import shutil
 import zipfile
 from pathlib import Path
 
-from common import CACHE_DIR, CONFIG_DIR, ROOT, download, http_get, http_get_json, log, read_json
+from common import CACHE_DIR, CONFIG_DIR, ROOT, download, http_get, http_get_json, log, parse_version, read_json
 
 ADDONS_CACHE = CACHE_DIR / "addons"
 
@@ -141,19 +141,44 @@ def inspect_zip(path: Path) -> dict:
     raise ValueError(f"cannot tell what kind of add-on {path.name} is; top-level entries: {tops[:10]}")
 
 
-def fetch_one(addon: dict) -> Path:
+def pick_build(builds: list[dict], blender_version: str | None) -> dict | None:
+    """The build whose declared Blender range contains `blender_version` (highest minimum wins).
+    Falls back to the newest build when nothing matches, so the test still reports what happens."""
+    if not builds:
+        return None
+    if not blender_version:
+        return builds[0]
+    target = parse_version(blender_version)
+    matching = []
+    for b in builds:
+        lo = parse_version(b.get("blender_version_min") or "0")
+        hi = parse_version(b["blender_version_max"]) if b.get("blender_version_max") else None
+        if lo <= target and (hi is None or target < hi):
+            matching.append(b)
+    if matching:
+        return max(matching, key=lambda b: parse_version(b.get("blender_version_min") or "0"))
+    return builds[0]
+
+
+def fetch_one(addon: dict, blender_version: str | None = None) -> Path:
     ADDONS_CACHE.mkdir(parents=True, exist_ok=True)
     src = addon["source"]
-    dest = ADDONS_CACHE / f"{addon['id']}.zip"
-    if dest.exists() and dest.stat().st_size > 0:
-        return dest
     kind = src["type"]
     if kind == "extensions":
-        url = src.get("archive_url")
+        build = pick_build(src.get("builds") or [], blender_version)
+        url = (build or {}).get("archive_url") or src.get("archive_url")
         if not url:
             ext = http_get_json(f"https://extensions.blender.org/api/v1/extensions/{src['id']}/")
-            url = ext["archive_url"]
-        download(url, dest)
+            data = ext.get("data", ext) if isinstance(ext, dict) else ext
+            rows = data if isinstance(data, list) else [data]
+            url = pick_build(rows, blender_version)["archive_url"]
+        suffix = re.sub(r"[^a-z0-9]", "", url.rsplit("/", 1)[-1].lower())[-24:]
+        dest = ADDONS_CACHE / f"{addon['id']}-{suffix}.zip"
+        if not (dest.exists() and dest.stat().st_size > 0):
+            download(url, dest)
+        return dest
+    dest = ADDONS_CACHE / f"{addon['id']}.zip"
+    if dest.exists() and dest.stat().st_size > 0:
         return dest
     if kind == "local":
         local = ROOT / src["path"]

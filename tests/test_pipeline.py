@@ -148,5 +148,24 @@ class StatusOverrideTests(unittest.TestCase):
         self.assertEqual(c["id"], "unregistered-operator")
 
 
+
+class BuildSelectionTests(unittest.TestCase):
+    BUILDS = [
+        {"archive_url": "new", "blender_version_min": "5.1.0", "blender_version_max": ""},
+        {"archive_url": "old", "blender_version_min": "4.2.0", "blender_version_max": "5.1.0"},
+    ]
+
+    def test_picks_build_for_version(self):
+        from fetch_addons import pick_build
+        self.assertEqual(pick_build(self.BUILDS, "4.5.15")["archive_url"], "old")
+        self.assertEqual(pick_build(self.BUILDS, "5.1.0")["archive_url"], "new")
+        self.assertEqual(pick_build(self.BUILDS, "5.3.0")["archive_url"], "new")
+
+    def test_falls_back_to_newest(self):
+        from fetch_addons import pick_build
+        self.assertEqual(pick_build(self.BUILDS, "3.6.0")["archive_url"], "new")
+        self.assertIsNone(pick_build([], "5.2.0"))
+
+
 if __name__ == "__main__":
     unittest.main()

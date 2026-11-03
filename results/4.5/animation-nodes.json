@@ -4,9 +4,9 @@
   "blender_version": "4.5.15 LTS",
   "captured_output": "addon_utils.disable: animation_nodes not loaded\nModules Installed (animation_nodes) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/animation-nodes.zip' into '/tmp/bac-animation-nodes-kkizrby0/blender/scripts/addons'\nInfo: Modules Installed (animation_nodes) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/animation-nodes.zip' into '/tmp/bac-animation-nodes-kkizrby0/blender/scripts/addons'\n",
   "cause": {
-    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
-    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
-    "id": "unclassified"
+    "cause": "Uses the video-sequencer 'Sequence' API that Blender 4.4 renamed to 'Strip' (bpy.types.Strip, scene.sequence_editor.strips).",
+    "fix": "Replace Sequence/sequences with Strip/strips, guarded by a bpy.app.version check if you still support 4.2.",
+    "id": "sequence-strip-rename"
   },
   "classes_registered": 0,
   "declared_max": null,

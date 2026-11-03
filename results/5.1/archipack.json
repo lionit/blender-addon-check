@@ -4,9 +4,9 @@
   "blender_version": "5.1.2",
   "captured_output": "addon_utils.disable: archipack not loaded\nModules Installed (archipack) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/archipack.zip' into '/tmp/bac-archipack-z9jsb0zd/blender/scripts/addons'\nInfo: Modules Installed (archipack) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/archipack.zip' into '/tmp/bac-archipack-z9jsb0zd/blender/scripts/addons'\n",
   "cause": {
-    "cause": "Imports a Python package that is not bundled with Blender.",
-    "fix": "Ship the package as a wheel in blender_manifest.toml, or vendor it inside the add-on folder.",
-    "id": "missing-dependency"
+    "cause": "Uses the legacy bgl OpenGL wrapper, deprecated since Blender 3.4 and removed in 4.x/5.0.",
+    "fix": "Port the drawing code to the gpu module (gpu.shader, gpu.state, gpu_extras.batch).",
+    "id": "bgl-removed"
   },
   "classes_registered": 0,
   "declared_max": null,

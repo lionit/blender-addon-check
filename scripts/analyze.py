@@ -20,6 +20,24 @@ from common import RESULTS_DIR, log, read_json, write_json
 # (id, regex, cause, fix)
 RULES: list[tuple[str, str, str, str]] = [
     (
+        "platform-not-shipped",
+        r"This platform \(linux-x64\) isn't one of",
+        "The extension ships builds only for other platforms (usually Windows), so it cannot be installed on the Linux machine this test runs on.",
+        "Nothing to fix for Windows users. To be tested here, publish a linux-x64 build or a pure-Python version.",
+    ),
+    (
+        "sequence-strip-rename",
+        r"cannot import name 'Sequence' from 'bpy\.types'|bpy\.types\.Sequence\b|'Sequences' object has no attribute|has no attribute 'sequences'|has no attribute 'sequence_editor'",
+        "Uses the video-sequencer 'Sequence' API that Blender 4.4 renamed to 'Strip' (bpy.types.Strip, scene.sequence_editor.strips).",
+        "Replace Sequence/sequences with Strip/strips, guarded by a bpy.app.version check if you still support 4.2.",
+    ),
+    (
+        "bgl-removed",
+        r"No module named 'bgl'|module 'bgl' has no attribute",
+        "Uses the legacy bgl OpenGL wrapper, deprecated since Blender 3.4 and removed in 4.x/5.0.",
+        "Port the drawing code to the gpu module (gpu.shader, gpu.state, gpu_extras.batch).",
+    ),
+    (
         "needs-display",
         r"GPU functions for drawing (are not available in background mode|requires the gpu module to be initialized)|gpu\.types\.GPUShader[^\n]*background|bgl[^\n]*not available in background",
         "Creates GPU shaders or draw handlers while registering, which cannot run in a headless Blender. It may well work with a display; this test cannot tell.",
@@ -33,7 +51,7 @@ RULES: list[tuple[str, str, str, str]] = [
     ),
     (
         "compiled-python-mismatch",
-        r"cpython-3(11|12)[^\n]*\.so|ImportError: [^\n]*(undefined symbol|wrong ELF|cannot open shared object)|ModuleNotFoundError: No module named '[^']*cpython",
+        r"cpython-3(11|12)[^\n]*\.so|ImportError: [^\n]*(undefined symbol|wrong ELF|cannot open shared object)|ModuleNotFoundError: No module named '[^']*cpython|ask if someone can create a build for you|compiled for a different (Blender|Python) version",
         "Ships a compiled library built for an older Python. Blender 5.1 moved to Python 3.13, so binaries built for 3.11 no longer load.",
         "Rebuild the compiled parts (or the wheels in the manifest) for Python 3.13, and ship one build per Blender Python version.",
     ),
@@ -93,7 +111,7 @@ RULES: list[tuple[str, str, str, str]] = [
     ),
     (
         "declared-unsupported",
-        r"(requires|supports) Blender [0-9.]+|incompatible with this Blender version|blender_version_min|doesn.t meet the minimum supported version|exceeds the maximum supported version",
+        r"(requires|supports) Blender [0-9.]+|incompatible with this Blender version|blender_version_min|doesn.t meet the minimum supported version|exceeds the maximum supported version|must be less than the maximum version",
         "The add-on declares it does not support this Blender version, and Blender refuses to enable it.",
         "Raise blender_version_min / bl_info['blender'] once the add-on is confirmed to work, or publish a version for this release.",
     ),
@@ -122,6 +140,7 @@ COMPILED = [(rid, re.compile(rx, re.IGNORECASE | re.MULTILINE), cause, fix) for 
 # Causes that change what the result means: the add-on is not "broken", the test could not decide.
 STATUS_OVERRIDE = {
     "needs-display": "inconclusive",
+    "platform-not-shipped": "inconclusive",
     "declared-unsupported": "unsupported",
 }
 

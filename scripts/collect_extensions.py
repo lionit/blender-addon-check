@@ -20,15 +20,40 @@ LISTING_URL = "https://extensions.blender.org/add-ons/?sort=downloads&page={page
 SLUG_RE = re.compile(r'href="/add-ons/([a-z0-9][a-z0-9_-]*)/"')
 
 
+def linux_capable(ext: dict) -> bool:
+    platforms = ext.get("platforms") or []
+    return not platforms or "linux-x64" in platforms
+
+
 def fetch_api_index() -> dict[str, dict]:
+    """One entry per add-on id. The API lists one row per build (platform x Blender range),
+    so rows are grouped: `builds` keeps every Linux-capable build, newest minimum version first."""
     payload = http_get_json(API_URL)
     data = payload["data"] if isinstance(payload, dict) else payload
     index: dict[str, dict] = {}
+    skipped: set[str] = set()
     for ext in data:
         if ext.get("type") != "add-on":
             continue
-        index[ext["id"]] = ext
-    log(f"api lists {len(index)} add-ons")
+        if not linux_capable(ext):
+            skipped.add(ext["id"])
+            continue
+        build = {
+            "archive_url": ext.get("archive_url", ""),
+            "version": ext.get("version", ""),
+            "blender_version_min": ext.get("blender_version_min", ""),
+            "blender_version_max": ext.get("blender_version_max", ""),
+            "platforms": ext.get("platforms") or [],
+        }
+        entry = index.setdefault(ext["id"], {**ext, "builds": []})
+        entry["builds"].append(build)
+    for entry in index.values():
+        entry["builds"].sort(key=lambda b: tuple(int(x) for x in (b["blender_version_min"] or "0").split(".") if x.isdigit()), reverse=True)
+        newest = entry["builds"][0]
+        for k in ("archive_url", "version", "blender_version_min", "blender_version_max"):
+            entry[k] = newest[k]
+    windows_only = skipped - set(index)
+    log(f"api lists {len(index)} add-ons with a Linux build; {len(windows_only)} skipped as Windows/macOS-only")
     return index
 
 
@@ -58,7 +83,7 @@ def to_entry(ext: dict) -> dict:
         "version": ext.get("version", ""),
         "blender_version_min": ext.get("blender_version_min", ""),
         "blender_version_max": ext.get("blender_version_max", ""),
-        "source": {"type": "extensions", "id": ext["id"], "archive_url": ext.get("archive_url", "")},
+        "source": {"type": "extensions", "id": ext["id"], "archive_url": ext.get("archive_url", ""), "builds": ext.get("builds", [])},
     }
 
 

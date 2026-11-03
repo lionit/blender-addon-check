@@ -4,9 +4,9 @@
   "blender_version": "4.5.15 LTS",
   "captured_output": "addon_utils.disable: archipack not loaded\nModules Installed (archipack) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/archipack.zip' into '/tmp/bac-archipack-5htvwtlk/blender/scripts/addons'\nInfo: Modules Installed (archipack) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/archipack.zip' into '/tmp/bac-archipack-5htvwtlk/blender/scripts/addons'\n",
   "cause": {
-    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
-    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
-    "id": "unclassified"
+    "cause": "Uses the legacy bgl OpenGL wrapper, deprecated since Blender 3.4 and removed in 4.x/5.0.",
+    "fix": "Port the drawing code to the gpu module (gpu.shader, gpu.state, gpu_extras.batch).",
+    "id": "bgl-removed"
   },
   "classes_registered": 0,
   "declared_max": null,

@@ -21,7 +21,7 @@ STATUS_LABEL = {
     "fail": ("Broken", "bad"),
     "crash": ("Crashes Blender", "bad"),
     "timeout": ("Hangs", "bad"),
-    "inconclusive": ("Needs a display", "na"),
+    "inconclusive": ("Not testable here", "na"),
     "unsupported": ("Not supported (declared)", "na"),
     "unavailable": ("Not tested", "na"),
     "unknown": ("Not tested", "na"),
@@ -126,7 +126,7 @@ def build_index(versions: list[dict], results: dict[str, dict[str, dict]], site_
 <p class="sub">Every add-on below was installed and enabled in a fresh, headless Blender for each version. Last run: {esc(newest_run[:16].replace('T', ' '))} UTC. <a href="results.json">Raw results</a>.</p>
 <div class="stats"><div class="stat"><b>{len(tested)}</b><span>add-ons tested</span></div><div class="stat"><b>{len(broken)}</b><span>broken on at least one version</span></div><div class="stat"><b>{len(warned)}</b><span>load but throw errors</span></div><div class="stat"><b>{esc(top_cause)}</b><span>most common cause</span></div></div>
 <div class="cta"><b>Is your add-on paid, or not in this list?</b> We could not test what we cannot download. <a href="{esc(signup_url)}">Send us your add-on</a> and it joins the nightly run, free, with the same report and a suggested fix for anything that breaks.</div>
-<p class="legend"><span class="s ok">Works</span> installs, enables, every operator polls, disables and re-enables cleanly. <span class="s warn">Loads, with errors</span> enables but something throws. <span class="s bad">Broken</span> fails to install or enable, hangs, or crashes Blender. <span class="s na">Not supported (declared)</span> the add-on itself says it does not support this version. <span class="s na">Needs a display</span> sets up GPU drawing while registering, so a headless test cannot judge it. <span class="s na">Not tested</span> could not be downloaded.</p>
+<p class="legend"><span class="s ok">Works</span> installs, enables, every operator polls, disables and re-enables cleanly. <span class="s warn">Loads, with errors</span> enables but something throws. <span class="s bad">Broken</span> fails to install or enable, hangs, or crashes Blender. <span class="s na">Not supported (declared)</span> the add-on itself says it does not support this version. <span class="s na">Not testable here</span> needs a display (GPU drawing at register time) or ships no Linux build, so this headless Linux test cannot judge it. <span class="s na">Not tested</span> could not be downloaded.</p>
 <div class="filter"><input id="q" type="search" placeholder="Filter by add-on name"></div>
 <table><thead><tr><th>Add-on</th>{heads}</tr></thead><tbody>{''.join(rows)}</tbody></table>
 <h2>How this works</h2><p>Each night a script downloads the newest build of every version above, installs each add-on into a clean user profile, enables it, calls <code>poll()</code> on every operator it registered, then disables and re-enables it. Nothing is rendered and no file is opened, so a green mark means "loads and registers correctly", not "every feature works". Source and method: <a href="https://github.com/lionit/blender-addon-check">github.com/lionit/blender-addon-check</a>.</p>

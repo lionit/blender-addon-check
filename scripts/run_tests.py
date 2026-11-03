@@ -33,7 +33,7 @@ def blender_version_string(binary: Path) -> str:
     return first.replace("Blender ", "")
 
 
-def run_one(binary: Path, addon: dict, out_dir: Path, timeout: int) -> dict:
+def run_one(binary: Path, addon: dict, out_dir: Path, timeout: int, blender_version: str | None = None) -> dict:
     result_path = out_dir / f"{addon['id']}.json"
     log_path = out_dir / f"{addon['id']}.log"
     base = {
@@ -46,7 +46,7 @@ def run_one(binary: Path, addon: dict, out_dir: Path, timeout: int) -> dict:
         "ran_at": dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
     }
     try:
-        zip_path = fetch_one(addon)
+        zip_path = fetch_one(addon, blender_version)
     except Exception as exc:  # noqa: BLE001
         payload = {**base, "status": "unavailable", "error": f"could not fetch add-on: {exc}", "error_stage": "fetch"}
         write_json(result_path, payload)
@@ -141,7 +141,8 @@ def main() -> None:
     counts: dict[str, int] = {}
     failures: list[dict] = []
     with ThreadPoolExecutor(max_workers=args.jobs) as pool:
-        futures = {pool.submit(run_one, binary, a, out_dir, args.timeout): a for a in addons}
+        numeric_version = full_version.split()[0]  # "5.3.0 Beta (hash ...)" -> "5.3.0"
+        futures = {pool.submit(run_one, binary, a, out_dir, args.timeout, numeric_version): a for a in addons}
         for fut in as_completed(futures):
             a = futures[fut]
             try:

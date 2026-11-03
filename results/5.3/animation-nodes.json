@@ -4,9 +4,9 @@
   "blender_version": "5.3.0 Beta",
   "captured_output": "addon_utils.disable: animation_nodes not loaded\nModules Installed (animation_nodes) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/animation-nodes.zip' into '/tmp/bac-animation-nodes-wvdyj0h_/blender/scripts/addons'\nInfo: Modules Installed (animation_nodes) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/animation-nodes.zip' into '/tmp/bac-animation-nodes-wvdyj0h_/blender/scripts/addons'\n",
   "cause": {
-    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
-    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
-    "id": "unclassified"
+    "cause": "Ships a compiled library built for an older Python. Blender 5.1 moved to Python 3.13, so binaries built for 3.11 no longer load.",
+    "fix": "Rebuild the compiled parts (or the wheels in the manifest) for Python 3.13, and ship one build per Blender Python version.",
+    "id": "compiled-python-mismatch"
   },
   "classes_registered": 0,
   "declared_max": null,
