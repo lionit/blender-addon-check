@@ -3,7 +3,7 @@ STATUS Installed "ucupaint"
 Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
 
 --- harness ---
-00:01.621  bpy.rna          | ERROR Python script error in WM_OT_y_add_new_ypaint_node.poll
+00:01.558  bpy.rna          | ERROR Python script error in WM_OT_y_add_new_ypaint_node.poll
 INFO: Ucupaint 3.0.1 is unregistered!
 Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
 

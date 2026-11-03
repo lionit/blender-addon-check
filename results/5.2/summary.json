@@ -1,12 +1,14 @@
 {
-  "addons": 5,
+  "addons": 94,
   "blender_version": "5.2.3 LTS",
   "channel": "release",
   "counts": {
-    "fail": 2,
-    "pass": 3
+    "fail": 16,
+    "pass": 74,
+    "timeout": 1,
+    "warn": 3
   },
   "label": "5.2 LTS",
-  "ran_at": "2026-11-03T17:11:54+00:00",
+  "ran_at": "2026-11-03T17:48:20+00:00",
   "version_key": "5.2"
 }

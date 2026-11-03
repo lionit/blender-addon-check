@@ -2,13 +2,13 @@
   "addon_id": "photogrammetry-importer",
   "addon_version": null,
   "blender_version": "5.3.0 Beta",
-  "captured_output": "addon_utils.disable: photogrammetry_importer not loaded\nModules Installed (photogrammetry_importer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/photogrammetry-importer.zip' into '/tmp/bac-photogrammetry-importer-frke1dj1/blender/scripts/addons'\nInfo: Modules Installed (photogrammetry_importer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/photogrammetry-importer.zip' into '/tmp/bac-photogrammetry-importer-frke1dj1/blender/scripts/addons'\nINFO:root:INFO: Registered Photogrammetry Import Export Addon with 63 modules\nINFO:root:INFO: Unregistered Photogrammetry Import Export Addon\nINFO:root:INFO: Registered Photogrammetry Import Export Addon with 63 modules\n",
+  "captured_output": "addon_utils.disable: photogrammetry_importer not loaded\nModules Installed (photogrammetry_importer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/photogrammetry-importer.zip' into '/tmp/bac-photogrammetry-importer-b66pxos6/blender/scripts/addons'\nInfo: Modules Installed (photogrammetry_importer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/photogrammetry-importer.zip' into '/tmp/bac-photogrammetry-importer-b66pxos6/blender/scripts/addons'\nINFO:root:INFO: Registered Photogrammetry Import Export Addon with 63 modules\nINFO:root:INFO: Unregistered Photogrammetry Import Export Addon\nINFO:root:INFO: Registered Photogrammetry Import Export Addon with 63 modules\n",
   "cause": {
     "cause": "",
     "fix": "",
     "id": "none"
   },
-  "classes_registered": 0,
+  "classes_registered": 27,
   "declared_max": null,
   "declared_min": "3.2.1",
   "developer": "SBCV",
@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 10,
   "python_version": "3.13.13",
-  "ran_at": "2026-11-03T14:40:03+00:00",
+  "ran_at": "2026-11-03T17:42:54+00:00",
   "source_type": "github_zipball",
   "stages": {
     "enable": {
@@ -31,7 +31,7 @@
       "ok": true
     },
     "install": {
-      "detail": "addon_utils.disable: photogrammetry_importer not loaded\nModules Installed (photogrammetry_importer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/photogrammetry-importer.zip' into '/tmp/bac-photogrammetry-importer-frke1dj1/blender/scripts/addons'\nInfo: Modules Installed (photogrammetry_importer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/photogrammetry-importer.zip' into '/tmp/bac-photogrammetry-importer-frke1dj1/blender/scripts/addons'\n",
+      "detail": "addon_utils.disable: photogrammetry_importer not loaded\nModules Installed (photogrammetry_importer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/photogrammetry-importer.zip' into '/tmp/bac-photogrammetry-importer-b66pxos6/blender/scripts/addons'\nInfo: Modules Installed (photogrammetry_importer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/photogrammetry-importer.zip' into '/tmp/bac-photogrammetry-importer-b66pxos6/blender/scripts/addons'\n",
       "ok": true
     },
     "poll": {
@@ -45,9 +45,9 @@
   },
   "status": "pass",
   "timing_s": {
-    "enable": 0.15,
+    "enable": 0.23,
     "install": 0.02,
-    "poll": 0.0,
+    "poll": 0.01,
     "reenable": 0.0
   }
 }

@@ -8,7 +8,7 @@
     "fix": "",
     "id": "none"
   },
-  "classes_registered": 0,
+  "classes_registered": 12,
   "declared_max": null,
   "declared_min": "4.2.0",
   "developer": "SMagnusson",
@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 10,
   "python_version": "3.13.13",
-  "ran_at": "2026-11-03T14:40:53+00:00",
+  "ran_at": "2026-11-03T17:43:15+00:00",
   "source_type": "extensions",
   "stages": {
     "enable": {
@@ -45,7 +45,7 @@
   },
   "status": "pass",
   "timing_s": {
-    "enable": 0.15,
+    "enable": 0.09,
     "install": 0.0,
     "poll": 0.0,
     "reenable": 0.0

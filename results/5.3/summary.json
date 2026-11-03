@@ -1,12 +1,14 @@
 {
-  "addons": 5,
+  "addons": 94,
   "blender_version": "5.3.0 Beta",
   "channel": "daily",
   "counts": {
-    "fail": 2,
-    "pass": 3
+    "fail": 16,
+    "pass": 74,
+    "timeout": 1,
+    "warn": 3
   },
   "label": "5.3 pre-release",
-  "ran_at": "2026-11-03T17:11:58+00:00",
+  "ran_at": "2026-11-03T17:48:42+00:00",
   "version_key": "5.3"
 }
