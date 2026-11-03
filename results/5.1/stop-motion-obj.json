@@ -1,17 +1,53 @@
 {
   "addon_id": "stop-motion-obj",
+  "addon_version": null,
+  "blender_version": "5.1.2",
+  "captured_output": "addon_utils.disable: Stop-motion-OBJ not loaded\nModules Installed (Stop-motion-OBJ) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/stop-motion-obj.zip' into '/tmp/bac-stop-motion-obj-tc1mezbj/blender/scripts/addons'\nInfo: Modules Installed (Stop-motion-OBJ) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/stop-motion-obj.zip' into '/tmp/bac-stop-motion-obj-tc1mezbj/blender/scripts/addons'\n",
   "cause": {
-    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
-    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
-    "id": "unclassified"
+    "cause": "",
+    "fix": "",
+    "id": "none"
   },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "4.0.0",
   "developer": "neverhood311",
-  "error": "cannot tell what kind of add-on stop-motion-obj.zip is; top-level entries: ['Stop-motion-OBJ']",
-  "error_stage": "inspect",
+  "error": "",
+  "error_stage": "",
   "group": "github",
   "homepage": "https://github.com/neverhood311/Stop-motion-OBJ",
+  "kind": "legacy",
+  "log": "stop-motion-obj.log",
+  "module": "Stop-motion-OBJ",
   "name": "Stop Motion OBJ",
-  "ran_at": "2026-11-03T14:24:06+00:00",
+  "operators_poll_failed": 0,
+  "operators_total": 10,
+  "python_version": "3.13.9",
+  "ran_at": "2026-11-03T14:39:52+00:00",
   "source_type": "github_release",
-  "status": "fail"
+  "stages": {
+    "enable": {
+      "detail": "",
+      "ok": true
+    },
+    "install": {
+      "detail": "addon_utils.disable: Stop-motion-OBJ not loaded\nModules Installed (Stop-motion-OBJ) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/stop-motion-obj.zip' into '/tmp/bac-stop-motion-obj-tc1mezbj/blender/scripts/addons'\nInfo: Modules Installed (Stop-motion-OBJ) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/stop-motion-obj.zip' into '/tmp/bac-stop-motion-obj-tc1mezbj/blender/scripts/addons'\n",
+      "ok": true
+    },
+    "poll": {
+      "detail": "",
+      "ok": true
+    },
+    "reenable": {
+      "detail": "",
+      "ok": true
+    }
+  },
+  "status": "pass",
+  "timing_s": {
+    "enable": 0.04,
+    "install": 0.01,
+    "poll": 0.0,
+    "reenable": 0.0
+  }
 }

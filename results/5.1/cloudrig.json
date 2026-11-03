@@ -2,7 +2,7 @@
   "addon_id": "cloudrig",
   "addon_version": "2.2.31",
   "blender_version": "5.1.2",
-  "captured_output": "Traceback (most recent call last):\n  File \"/tmp/bac-cloudrig-lba8_dx0/blender/extensions/user_default/cloudrig/ui/component_list.py\", line 203, in poll\n    if not is_cloud_metarig(context.object) and context.object.cloudrig.active_component:\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/bac-cloudrig-lba8_dx0/blender/extensions/user_default/cloudrig/properties.py\", line 723, in active_component\n    if len(self.rig_component_bones) == 0:\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/bac-cloudrig-lba8_dx0/blender/extensions/user_default/cloudrig/properties.py\", line 775, in rig_component_bones\n    return [pb.cloudrig_component for pb in rig.pose.bones if pb.cloudrig_component.component_type]\n                                            ^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'bones'\nTraceback (most recent call last):\n  File \"/tmp/bac-cloudrig-lba8_dx0/blender/extensions/user_default/cloudrig/rig_component_features/bone_set.py\", line 486, in poll\n    component = get_component_in_ui(context)\n  File \"/tmp/bac-cloudrig-lba8_dx0/blender/extensions/user_default/cloudrig/utils/rig.py\", line 40, in get_component_in_ui\n    if context.area.type == 'PROPERTIES' and context.area.spaces.active.context == 'BONE':\n       ^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\n",
+  "captured_output": "Traceback (most recent call last):\n  File \"/tmp/bac-cloudrig-z5v6n_d7/blender/extensions/user_default/cloudrig/ui/component_list.py\", line 203, in poll\n    if not is_cloud_metarig(context.object) and context.object.cloudrig.active_component:\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/bac-cloudrig-z5v6n_d7/blender/extensions/user_default/cloudrig/properties.py\", line 723, in active_component\n    if len(self.rig_component_bones) == 0:\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/bac-cloudrig-z5v6n_d7/blender/extensions/user_default/cloudrig/properties.py\", line 775, in rig_component_bones\n    return [pb.cloudrig_component for pb in rig.pose.bones if pb.cloudrig_component.component_type]\n                                            ^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'bones'\nTraceback (most recent call last):\n  File \"/tmp/bac-cloudrig-z5v6n_d7/blender/extensions/user_default/cloudrig/rig_component_features/bone_set.py\", line 486, in poll\n    component = get_component_in_ui(context)\n  File \"/tmp/bac-cloudrig-z5v6n_d7/blender/extensions/user_default/cloudrig/utils/rig.py\", line 40, in get_component_in_ui\n    if context.area.type == 'PROPERTIES' and context.area.spaces.active.context == 'BONE':\n       ^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\n",
   "cause": {
     "cause": "",
     "fix": "",
@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 90,
   "python_version": "3.13.9",
-  "ran_at": "2026-11-03T14:24:37+00:00",
+  "ran_at": "2026-11-03T14:40:23+00:00",
   "source_type": "extensions",
   "stages": {
     "enable": {
@@ -45,9 +45,9 @@
   },
   "status": "pass",
   "timing_s": {
-    "enable": 0.81,
+    "enable": 0.76,
     "install": 0.0,
     "poll": 0.01,
-    "reenable": 0.12
+    "reenable": 0.11
   }
 }

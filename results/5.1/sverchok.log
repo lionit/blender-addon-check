@@ -1,16 +1,16 @@
 
 --- harness ---
-00:04.597  bpy.rna          | ERROR Python script error in NODE_OT_add_node_output_input.poll
-00:04.598  bpy.rna          | ERROR Python script error in NODE_OT_ungroup_group_tree.poll
-00:04.599  bpy.rna          | ERROR Python script error in NODE_OT_sv_testing_dump_node_def.poll
-00:04.599  bpy.rna          | ERROR Python script error in NODE_OT_sv_testing_list_old_nodes.poll
-00:04.600  bpy.rna          | ERROR Python script error in NODE_OT_sv_temporal_viewer.poll
-00:04.601  bpy.rna          | ERROR Python script error in NODE_OT_sv_node_vd_toggle.poll
-00:04.602  bpy.rna          | ERROR Python script error in NODE_OT_zoom_to_node.poll
-00:04.603  bpy.rna          | ERROR Python script error in NODE_OT_sv_switch_layout.poll
-00:04.604  bpy.rna          | ERROR Python script error in NODE_OT_sv_node_connector.poll
-00:04.605  bpy.rna          | ERROR Python script error in NODE_OT_sv_abort_nodes_updating.poll
-00:04.607  bpy.rna          | ERROR Python script error in NODE_OT_sv_create_material.poll
+00:04.671  bpy.rna          | ERROR Python script error in NODE_OT_add_node_output_input.poll
+00:04.672  bpy.rna          | ERROR Python script error in NODE_OT_ungroup_group_tree.poll
+00:04.673  bpy.rna          | ERROR Python script error in NODE_OT_sv_testing_dump_node_def.poll
+00:04.673  bpy.rna          | ERROR Python script error in NODE_OT_sv_testing_list_old_nodes.poll
+00:04.674  bpy.rna          | ERROR Python script error in NODE_OT_sv_temporal_viewer.poll
+00:04.675  bpy.rna          | ERROR Python script error in NODE_OT_sv_node_vd_toggle.poll
+00:04.676  bpy.rna          | ERROR Python script error in NODE_OT_zoom_to_node.poll
+00:04.677  bpy.rna          | ERROR Python script error in NODE_OT_sv_switch_layout.poll
+00:04.678  bpy.rna          | ERROR Python script error in NODE_OT_sv_node_connector.poll
+00:04.679  bpy.rna          | ERROR Python script error in NODE_OT_sv_abort_nodes_updating.poll
+00:04.681  bpy.rna          | ERROR Python script error in NODE_OT_sv_create_material.poll
 Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)
 
 Blender quit

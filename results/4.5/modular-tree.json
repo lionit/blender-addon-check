@@ -1,17 +1,42 @@
 {
   "addon_id": "modular-tree",
+  "addon_version": null,
+  "blender_version": "4.5.15 LTS",
+  "captured_output": "addon_utils.disable: modular_tree not loaded\nModules Installed (modular_tree) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/modular-tree.zip' into '/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons'\nInfo: Modules Installed (modular_tree) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/modular-tree.zip' into '/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons'\n",
   "cause": {
-    "cause": "The add-on could not be downloaded, so it was not tested.",
-    "fix": "Check the source URL in config/addons.json.",
-    "id": "unavailable"
+    "cause": "Ships a compiled library built for an older Python. Blender 5.1 moved to Python 3.13, so binaries built for 3.11 no longer load.",
+    "fix": "Rebuild the compiled parts (or the wheels in the manifest) for Python 3.13, and ship one build per Blender Python version.",
+    "id": "compiled-python-mismatch"
   },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "2.83.0",
   "developer": "MaximeHerpin",
-  "error": "could not fetch add-on: HTTP Error 403: rate limit exceeded",
-  "error_stage": "fetch",
+  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 432, in enable\n    mod = importlib.import_module(module_name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/python/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons/modular_tree/__init__.py\", line 16, in <module>\n    from . import python_classes\n  File \"/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons/modular_tree/python_classes/__init__.py\", line 2, in <module>\n    from . import nodes\n  File \"/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons/modular_tree/python_classes/nodes/__init__.py\", line 6, in <module>\n    from . import sockets\n  File \"/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons/modular_tree/python_classes/nodes/sockets/__init__.py\", line 6, in <module>\n    from .property_socket import MtreePropertySocket\n  File \"/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons/modular_tree/python_classes/nodes/sockets/property_socket.py\", line 3, in <module>\n    from ....m_tree import ConstantProperty, RandomProperty, PropertyWrapper\nImportError: cannot import name 'ConstantProperty' from 'modular_tree.m_tree' (unknown location)\n",
+  "error_stage": "enable",
   "group": "github",
   "homepage": "https://github.com/MaximeHerpin/modular_tree",
+  "kind": "legacy",
+  "log": "modular-tree.log",
+  "module": "modular_tree",
   "name": "Modular Tree",
-  "ran_at": "2026-11-03T14:23:55+00:00",
+  "operators_poll_failed": 0,
+  "operators_total": 0,
+  "python_version": "3.11.15",
+  "ran_at": "2026-11-03T14:39:53+00:00",
   "source_type": "github_zipball",
-  "status": "unavailable"
+  "stages": {
+    "enable": {
+      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 432, in enable\n    mod = importlib.import_module(module_name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/python/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons/modular_tree/__init__.py\", line 16, in <module>\n    from . import python_classes\n  File \"/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons/modular_tree/python_classes/__init__.py\", line 2, in <module>\n    from . import nodes\n  File \"/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons/modular_tree/python_classes/nodes/__init__.py\", line 6, in <module>\n    from . import sockets\n  File \"/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons/modular_tree/python_classes/nodes/sockets/__init__.py\", line 6, in <module>\n    from .property_socket import MtreePropertySocket\n  File \"/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons/modular_tree/python_classes/nodes/sockets/property_socket.py\", line 3, in <module>\n    from ....m_tree import ConstantProperty, RandomProperty, PropertyWrapper\nImportError: cannot import name 'ConstantProperty' from 'modular_tree.m_tree' (unknown location)\n",
+      "ok": false
+    },
+    "install": {
+      "detail": "addon_utils.disable: modular_tree not loaded\nModules Installed (modular_tree) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/modular-tree.zip' into '/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons'\nInfo: Modules Installed (modular_tree) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/modular-tree.zip' into '/tmp/bac-modular-tree-o8yu4gbx/blender/scripts/addons'\n",
+      "ok": true
+    }
+  },
+  "status": "fail",
+  "timing_s": {
+    "install": 0.03
+  }
 }

@@ -2,7 +2,7 @@
   "addon_id": "malt",
   "addon_version": null,
   "blender_version": "4.5.15 LTS",
-  "captured_output": "addon_utils.disable: BlenderMalt not loaded\nModules Installed (BlenderMalt) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/malt.zip' into '/tmp/bac-malt-c9bcglt_/blender/scripts/addons'\nInfo: Modules Installed (BlenderMalt) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/malt.zip' into '/tmp/bac-malt-c9bcglt_/blender/scripts/addons'\nTypeError: 'set_transform' is an invalid keyword argument for StringProperty()\nException in module register(): /tmp/bac-malt-c9bcglt_/blender/scripts/addons/BlenderMalt/__init__.py\n",
+  "captured_output": "addon_utils.disable: BlenderMalt not loaded\nModules Installed (BlenderMalt) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/malt.zip' into '/tmp/bac-malt-ivuopfcj/blender/scripts/addons'\nInfo: Modules Installed (BlenderMalt) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/malt.zip' into '/tmp/bac-malt-ivuopfcj/blender/scripts/addons'\nTypeError: 'set_transform' is an invalid keyword argument for StringProperty()\nException in module register(): /tmp/bac-malt-ivuopfcj/blender/scripts/addons/BlenderMalt/__init__.py\n",
   "cause": {
     "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
     "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
@@ -12,7 +12,7 @@
   "declared_max": null,
   "declared_min": "5.1.0",
   "developer": "bnpr",
-  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 515, in enable\n    mod.register()\n  File \"/tmp/bac-malt-c9bcglt_/blender/scripts/addons/BlenderMalt/__init__.py\", line 175, in register\n    for _class in classes: bpy.utils.register_class(_class)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: bpy_struct \"Preferences\" registration error: 'renderdoc_path' StringProperty could not register (see previous error)\n",
+  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 515, in enable\n    mod.register()\n  File \"/tmp/bac-malt-ivuopfcj/blender/scripts/addons/BlenderMalt/__init__.py\", line 175, in register\n    for _class in classes: bpy.utils.register_class(_class)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: bpy_struct \"Preferences\" registration error: 'renderdoc_path' StringProperty could not register (see previous error)\n",
   "error_stage": "enable",
   "group": "github",
   "homepage": "https://github.com/bnpr/Malt",
@@ -23,15 +23,15 @@
   "operators_poll_failed": 0,
   "operators_total": 0,
   "python_version": "3.11.15",
-  "ran_at": "2026-11-03T14:24:01+00:00",
+  "ran_at": "2026-11-03T14:39:59+00:00",
   "source_type": "github_release",
   "stages": {
     "enable": {
-      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 515, in enable\n    mod.register()\n  File \"/tmp/bac-malt-c9bcglt_/blender/scripts/addons/BlenderMalt/__init__.py\", line 175, in register\n    for _class in classes: bpy.utils.register_class(_class)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: bpy_struct \"Preferences\" registration error: 'renderdoc_path' StringProperty could not register (see previous error)\n",
+      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 515, in enable\n    mod.register()\n  File \"/tmp/bac-malt-ivuopfcj/blender/scripts/addons/BlenderMalt/__init__.py\", line 175, in register\n    for _class in classes: bpy.utils.register_class(_class)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: bpy_struct \"Preferences\" registration error: 'renderdoc_path' StringProperty could not register (see previous error)\n",
       "ok": false
     },
     "install": {
-      "detail": "addon_utils.disable: BlenderMalt not loaded\nModules Installed (BlenderMalt) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/malt.zip' into '/tmp/bac-malt-c9bcglt_/blender/scripts/addons'\nInfo: Modules Installed (BlenderMalt) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/malt.zip' into '/tmp/bac-malt-c9bcglt_/blender/scripts/addons'\n",
+      "detail": "addon_utils.disable: BlenderMalt not loaded\nModules Installed (BlenderMalt) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/malt.zip' into '/tmp/bac-malt-ivuopfcj/blender/scripts/addons'\nInfo: Modules Installed (BlenderMalt) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/malt.zip' into '/tmp/bac-malt-ivuopfcj/blender/scripts/addons'\n",
       "ok": true
     }
   },

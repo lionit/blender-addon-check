@@ -3,7 +3,7 @@ STATUS Installed "beantextures"
 Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)
 
 --- harness ---
-00:00.394  bpy.rna          | ERROR Python script error in BEANTEXTURES_OT_init_enum_driver.poll
+00:00.732  bpy.rna          | ERROR Python script error in BEANTEXTURES_OT_init_enum_driver.poll
 Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)
 
 Blender quit

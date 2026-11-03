@@ -1,17 +1,53 @@
 {
   "addon_id": "blender-source-tools",
+  "addon_version": null,
+  "blender_version": "4.5.15 LTS",
+  "captured_output": "addon_utils.disable: io_scene_valvesource not loaded\nModules Installed (io_scene_valvesource) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-source-tools.zip' into '/tmp/bac-blender-source-tools-f80wor5b/blender/scripts/addons'\nInfo: Modules Installed (io_scene_valvesource) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-source-tools.zip' into '/tmp/bac-blender-source-tools-f80wor5b/blender/scripts/addons'\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-source-tools-f80wor5b/blender/scripts/addons/io_scene_valvesource/flex.py\", line 33, in poll\n    return utils.hasShapes(utils.get_active_exportable(context).item, valid_only=False)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'item'\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-source-tools-f80wor5b/blender/scripts/addons/io_scene_valvesource/flex.py\", line 189, in poll\n    return context.space_data.type == 'TEXT_EDITOR' and context.space_data.text\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-source-tools-f80wor5b/blender/scripts/addons/io_scene_valvesource/GUI.py\", line 205, in poll\n    return type(get_active_exportable(c).item) in [bpy.types.Object, bpy.types.Collection]\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'item'\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-source-tools-f80wor5b/blender/scripts/addons/io_scene_valvesource/GUI.py\", line 223, in poll\n    item = get_active_exportable(c).item\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'item'\n",
   "cause": {
-    "cause": "The add-on could not be downloaded, so it was not tested.",
-    "fix": "Check the source URL in config/addons.json.",
-    "id": "unavailable"
+    "cause": "",
+    "fix": "",
+    "id": "none"
   },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "4.1.0",
   "developer": "Artfunkel",
-  "error": "could not fetch add-on: HTTP Error 403: rate limit exceeded",
-  "error_stage": "fetch",
+  "error": "",
+  "error_stage": "",
   "group": "github",
   "homepage": "https://github.com/Artfunkel/BlenderSourceTools",
+  "kind": "legacy",
+  "log": "blender-source-tools.log",
+  "module": "io_scene_valvesource",
   "name": "Blender Source Tools",
-  "ran_at": "2026-11-03T14:24:01+00:00",
+  "operators_poll_failed": 0,
+  "operators_total": 23,
+  "python_version": "3.11.15",
+  "ran_at": "2026-11-03T14:39:59+00:00",
   "source_type": "github_zipball",
-  "status": "unavailable"
+  "stages": {
+    "enable": {
+      "detail": "",
+      "ok": true
+    },
+    "install": {
+      "detail": "addon_utils.disable: io_scene_valvesource not loaded\nModules Installed (io_scene_valvesource) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-source-tools.zip' into '/tmp/bac-blender-source-tools-f80wor5b/blender/scripts/addons'\nInfo: Modules Installed (io_scene_valvesource) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-source-tools.zip' into '/tmp/bac-blender-source-tools-f80wor5b/blender/scripts/addons'\n",
+      "ok": true
+    },
+    "poll": {
+      "detail": "",
+      "ok": true
+    },
+    "reenable": {
+      "detail": "",
+      "ok": true
+    }
+  },
+  "status": "pass",
+  "timing_s": {
+    "enable": 0.54,
+    "install": 0.01,
+    "poll": 0.0,
+    "reenable": 0.0
+  }
 }

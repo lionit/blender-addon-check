@@ -1,17 +1,53 @@
 {
   "addon_id": "photogrammetry-importer",
+  "addon_version": null,
+  "blender_version": "4.5.15 LTS",
+  "captured_output": "addon_utils.disable: photogrammetry_importer not loaded\nModules Installed (photogrammetry_importer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/photogrammetry-importer.zip' into '/tmp/bac-photogrammetry-importer-i6p0hxvn/blender/scripts/addons'\nInfo: Modules Installed (photogrammetry_importer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/photogrammetry-importer.zip' into '/tmp/bac-photogrammetry-importer-i6p0hxvn/blender/scripts/addons'\nINFO:root:INFO: Registered Photogrammetry Import Export Addon with 63 modules\nINFO:root:INFO: Unregistered Photogrammetry Import Export Addon\nINFO:root:INFO: Registered Photogrammetry Import Export Addon with 63 modules\n",
   "cause": {
-    "cause": "The add-on could not be downloaded, so it was not tested.",
-    "fix": "Check the source URL in config/addons.json.",
-    "id": "unavailable"
+    "cause": "",
+    "fix": "",
+    "id": "none"
   },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "3.2.1",
   "developer": "SBCV",
-  "error": "could not fetch add-on: HTTP Error 403: rate limit exceeded",
-  "error_stage": "fetch",
+  "error": "",
+  "error_stage": "",
   "group": "github",
   "homepage": "https://github.com/SBCV/Blender-Addon-Photogrammetry-Importer",
+  "kind": "legacy",
+  "log": "photogrammetry-importer.log",
+  "module": "photogrammetry_importer",
   "name": "Photogrammetry Importer",
-  "ran_at": "2026-11-03T14:24:05+00:00",
+  "operators_poll_failed": 0,
+  "operators_total": 10,
+  "python_version": "3.11.15",
+  "ran_at": "2026-11-03T14:40:03+00:00",
   "source_type": "github_zipball",
-  "status": "unavailable"
+  "stages": {
+    "enable": {
+      "detail": "",
+      "ok": true
+    },
+    "install": {
+      "detail": "addon_utils.disable: photogrammetry_importer not loaded\nModules Installed (photogrammetry_importer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/photogrammetry-importer.zip' into '/tmp/bac-photogrammetry-importer-i6p0hxvn/blender/scripts/addons'\nInfo: Modules Installed (photogrammetry_importer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/photogrammetry-importer.zip' into '/tmp/bac-photogrammetry-importer-i6p0hxvn/blender/scripts/addons'\n",
+      "ok": true
+    },
+    "poll": {
+      "detail": "",
+      "ok": true
+    },
+    "reenable": {
+      "detail": "",
+      "ok": true
+    }
+  },
+  "status": "pass",
+  "timing_s": {
+    "enable": 0.21,
+    "install": 0.02,
+    "poll": 0.0,
+    "reenable": 0.0
+  }
 }
