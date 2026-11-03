@@ -1,0 +1,53 @@
+{
+  "addon_id": "terrainmixer",
+  "addon_version": "3.1.3",
+  "blender_version": "5.3.0 Beta",
+  "captured_output": "[bl_ext.user_default.terrainmixer] WARNING: Using legacy path-finding for older Blender version.\n[bl_ext.user_default.terrainmixer] WARNING: Using legacy path-finding for older Blender version.\n",
+  "cause": {
+    "cause": "",
+    "fix": "",
+    "id": "none"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "4.2.0",
+  "developer": "zets",
+  "error": "",
+  "error_stage": "",
+  "group": "extensions-top",
+  "homepage": "https://extensions.blender.org/add-ons/terrainmixer/",
+  "kind": "extension",
+  "log": "terrainmixer.log",
+  "module": "bl_ext.user_default.terrainmixer",
+  "name": "Terrain Mixer",
+  "operators_poll_failed": 0,
+  "operators_total": 8,
+  "python_version": "3.13.13",
+  "ran_at": "2026-11-03T14:24:48+00:00",
+  "source_type": "extensions",
+  "stages": {
+    "enable": {
+      "detail": "",
+      "ok": true
+    },
+    "install": {
+      "detail": "",
+      "ok": true
+    },
+    "poll": {
+      "detail": "",
+      "ok": true
+    },
+    "reenable": {
+      "detail": "",
+      "ok": true
+    }
+  },
+  "status": "pass",
+  "timing_s": {
+    "enable": 0.03,
+    "install": 0.0,
+    "poll": 0.0,
+    "reenable": 0.0
+  }
+}

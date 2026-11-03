@@ -1,0 +1,42 @@
+{
+  "addon_id": "gob",
+  "addon_version": "4.5.3",
+  "blender_version": "5.3.0 Beta",
+  "captured_output": "GoB Unkonwn System:  Linux\n",
+  "cause": {
+    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
+    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
+    "id": "unclassified"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "4.2.0",
+  "developer": "JoseConseco",
+  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/scripts/modules/addon_utils.py\", line 464, in enable\n    mod = importlib.import_module(module_name)\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/python/lib/python3.13/importlib/__init__.py\", line 88, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1395, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 1023, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/tmp/bac-gob-zrsyyh40/blender/extensions/user_default/gob/__init__.py\", line 25, in <module>\n    from . import gob_export, gob_import, paths, preferences, ui\n  File \"/tmp/bac-gob-zrsyyh40/blender/extensions/user_default/gob/gob_export.py\", line 28, in <module>\n    from . import paths, utils, geometry, ui, gob_import\n  File \"/tmp/bac-gob-zrsyyh40/blender/extensions/user_default/gob/paths.py\", line 64, in <module>\n    isMacOS, PATH_GOB, PATH_BLENDER, PATH_GOZ, PATH_OBJLIST, PATH_CONFIG, PATH_SCRIPT, PATH_VARS = gob_init_os_paths()\n                                                                                                   ~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-gob-zrsyyh40/blender/extensions/user_default/gob/paths.py\", line 55, in gob_init_os_paths\n    PATH_OBJLIST = os.path.join(PATH_GOZ, \"GoZBrush\", \"GoZ_ObjectList.txt\")\n  File \"<frozen posixpath>\", line 77, in join\nTypeError: expected str, bytes or os.PathLike object, not bool\n",
+  "error_stage": "enable",
+  "group": "github",
+  "homepage": "https://github.com/JoseConseco/GoB",
+  "kind": "extension",
+  "log": "gob.log",
+  "module": "bl_ext.user_default.gob",
+  "name": "GoB (ZBrush bridge)",
+  "operators_poll_failed": 0,
+  "operators_total": 0,
+  "python_version": "3.13.13",
+  "ran_at": "2026-11-03T14:23:52+00:00",
+  "source_type": "github_zipball",
+  "stages": {
+    "enable": {
+      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/scripts/modules/addon_utils.py\", line 464, in enable\n    mod = importlib.import_module(module_name)\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/python/lib/python3.13/importlib/__init__.py\", line 88, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1395, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 1023, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/tmp/bac-gob-zrsyyh40/blender/extensions/user_default/gob/__init__.py\", line 25, in <module>\n    from . import gob_export, gob_import, paths, preferences, ui\n  File \"/tmp/bac-gob-zrsyyh40/blender/extensions/user_default/gob/gob_export.py\", line 28, in <module>\n    from . import paths, utils, geometry, ui, gob_import\n  File \"/tmp/bac-gob-zrsyyh40/blender/extensions/user_default/gob/paths.py\", line 64, in <module>\n    isMacOS, PATH_GOB, PATH_BLENDER, PATH_GOZ, PATH_OBJLIST, PATH_CONFIG, PATH_SCRIPT, PATH_VARS = gob_init_os_paths()\n                                                                                                   ~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-gob-zrsyyh40/blender/extensions/user_default/gob/paths.py\", line 55, in gob_init_os_paths\n    PATH_OBJLIST = os.path.join(PATH_GOZ, \"GoZBrush\", \"GoZ_ObjectList.txt\")\n  File \"<frozen posixpath>\", line 77, in join\nTypeError: expected str, bytes or os.PathLike object, not bool\n",
+      "ok": false
+    },
+    "install": {
+      "detail": "",
+      "ok": true
+    }
+  },
+  "status": "fail",
+  "timing_s": {
+    "install": 0.0
+  }
+}

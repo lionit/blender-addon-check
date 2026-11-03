@@ -2,14 +2,14 @@
   "addon_id": "surfacepsycho",
   "addon_version": "0.10.4",
   "cause": {
-    "cause": "The extension ships builds only for other platforms (usually Windows), so it cannot be installed on the Linux machine this test runs on.",
-    "fix": "Nothing to fix for Windows users. To be tested here, publish a linux-x64 build or a pure-Python version.",
-    "id": "platform-not-shipped"
+    "cause": "The add-on declares it does not support this Blender version, and Blender refuses to enable it.",
+    "fix": "Raise blender_version_min / bl_info['blender'] once the add-on is confirmed to work, or publish a version for this release.",
+    "id": "declared-unsupported"
   },
   "declared_max": null,
   "declared_min": "5.2.0",
   "developer": "RomainGuimbal",
-  "error": "`blender --command extension install-file` exited with 0\n--- extension install-file ---\nERROR surfacepsycho: This platform (linux-x64) isn't one of (windows-x64)\nBlender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)\n",
+  "error": "`blender --command extension install-file` exited with 0\n--- extension install-file ---\nERROR surfacepsycho: This Blender version (5.1.2) doesn't meet the minimum supported version (5.2.0)\nBlender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)\n",
   "error_stage": "install",
   "group": "extensions-top",
   "homepage": "https://extensions.blender.org/add-ons/surfacepsycho/",
@@ -17,8 +17,8 @@
   "log": "surfacepsycho.log",
   "module": "bl_ext.user_default.surfacepsycho",
   "name": "Surface Psycho",
-  "ran_at": "2026-11-03T14:12:40+00:00",
+  "ran_at": "2026-11-03T14:24:58+00:00",
   "source_type": "extensions",
-  "status": "inconclusive",
+  "status": "unsupported",
   "status_before_analysis": "fail"
 }

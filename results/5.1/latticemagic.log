@@ -1,0 +1,12 @@
+--- extension install-file ---
+STATUS Installed "latticemagic"
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)
+
+--- harness ---
+00:00.458  bpy.rna          | ERROR Python script error in LATTICE_OT_generate_lattice_for_slot.poll
+00:00.459  bpy.rna          | ERROR Python script error in LATTICE_OT_delete_lattice_from_slot.poll
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)
+
+Blender quit
+
+--- stderr ---

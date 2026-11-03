@@ -1,0 +1,17 @@
+{
+  "addon_id": "stop-motion-obj",
+  "cause": {
+    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
+    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
+    "id": "unclassified"
+  },
+  "developer": "neverhood311",
+  "error": "cannot tell what kind of add-on stop-motion-obj.zip is; top-level entries: ['Stop-motion-OBJ']",
+  "error_stage": "inspect",
+  "group": "github",
+  "homepage": "https://github.com/neverhood311/Stop-motion-OBJ",
+  "name": "Stop Motion OBJ",
+  "ran_at": "2026-11-03T14:23:57+00:00",
+  "source_type": "github_release",
+  "status": "fail"
+}

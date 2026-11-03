@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 22,
   "python_version": "3.13.13",
-  "ran_at": "2026-11-03T14:12:02+00:00",
+  "ran_at": "2026-11-03T14:24:21+00:00",
   "source_type": "extensions",
   "stages": {
     "enable": {
@@ -45,9 +45,9 @@
   },
   "status": "pass",
   "timing_s": {
-    "enable": 6.31,
-    "install": 0.0,
+    "enable": 6.47,
+    "install": 0.01,
     "poll": 0.0,
-    "reenable": 2.36
+    "reenable": 3.88
   }
 }

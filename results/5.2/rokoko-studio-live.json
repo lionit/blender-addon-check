@@ -1,0 +1,53 @@
+{
+  "addon_id": "rokoko-studio-live",
+  "addon_version": null,
+  "blender_version": "5.2.3 LTS",
+  "captured_output": "/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1121: SyntaxWarning: invalid escape sequence '\\L'\n  'Mixamorig:\\LHandPinky2',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1124: SyntaxWarning: invalid escape sequence '\\L'\n  'LittleFinger3_\\L',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1125: SyntaxWarning: invalid escape sequence '\\L'\n  'Little3_\\L',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1126: SyntaxWarning: invalid escape sequence '\\L'\n  '\\LPinky3',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1127: SyntaxWarning: invalid escape sequence '\\L'\n  '\\LPinky3N',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1128: SyntaxWarning: invalid escape sequence '\\L'\n  '\\LLittle3N',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1129: SyntaxWarning: invalid escape sequence '\\L'\n  'F_Pinky_03_\\L',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1130: SyntaxWarning: invalid escape sequence '\\L'\n  '\\L_Pinky2',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1131: SyntaxWarning: invalid escape sequence '\\L'\n  '\\L_Pinkey_03',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1132: SyntaxWarning: invalid escape sequence '\\L'\n  '\\LHandPinky3',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1133: SyntaxWarning: invalid escape sequence '\\L'\n  '\\LFinger42',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1134: SyntaxWarning: invalid escape sequence '\\L'\n  'Finger5_4_\\L',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1135: SyntaxWarning: invalid escape sequence '\\L'\n  'H_\\L_Pinky3',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1136: SyntaxWarning: invalid escape sequence '\\L'\n  'Bip_Pinky_2_\\L',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1137: SyntaxWarning: invalid escape sequence '\\L'\n  'Bip_\\L_Finger42',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1138: SyntaxWarning: invalid escape sequence '\\L'\n  '\\L_Fing5_C',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1139: SyntaxWarning: invalid escape sequence '\\L'\n  '\\L_Little_C',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1140: SyntaxWarning: invalid escape sequence '\\L'\n  '\\L_Little_C_1',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1141: SyntaxWarning: invalid escape sequence '\\L'\n  'Sf3_\\L',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1142: SyntaxWarning: invalid escape sequence '\\L'\n  '\\L_FINGER53',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1143: SyntaxWarning: invalid escape sequence '\\L'\n  'LittleFinger3\\L',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1144: SyntaxWarning: invalid escape sequence '\\L'\n  '\\LFingerA3',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1145: SyntaxWarning: invalid escape sequence '\\L'\n  'LittC_\\L',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1146: SyntaxWarning: invalid escape sequence '\\L'\n  'Pinky3_\\L',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1147: SyntaxWarning: invalid escape sequence '\\L'\n  '\\Lf_Pinky3',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1148: SyntaxWarning: invalid escape sequence '\\L'\n  'Pinky_03_\\L',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1149: SyntaxWarning: invalid escape sequence '\\L'\n  '\\L_Finger_E3',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1150: SyntaxWarning: invalid escape sequence '\\L'\n  'Little03_\\L',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1151: SyntaxWarning: invalid escape sequence '\\L'\n  'Arm_\\L_Finger_5_3',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1152: SyntaxWarning: invalid escape sequence '\\L'\n  '\\L_Littlefinger_C',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1153: SyntaxWarning: invalid escape sequence '\\L'\n  'PinkyC\\LT_01',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1154: SyntaxWarning: invalid escape sequence '\\L'\n  'J_Bip_\\L_Little3',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1155: SyntaxWarning: invalid escape sequence '\\L'\n  'Bip_FPinky02_\\L',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1156: SyntaxWarning: invalid escape sequence '\\L'\n  'Arm_\\L_Finger_5c',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1157: SyntaxWarning: invalid escape sequence '\\L'\n  'J_Ko_C_\\L',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1158: SyntaxWarning: invalid escape sequence '\\L'\n  '\\LFinger5Distal',\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/auto_detect_lists/bones.py:1159: SyntaxWarning: invalid escape sequence '\\L'\n  'Mixamorig:\\LHandPinky3',\nTraceback (most recent call last):\n  File \"/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/login_manager.py\", line 27, in <module>\n    import boto3\nModuleNotFoundError: No module named 'boto3'\n\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/detection_manager_v2.py:44: SyntaxWarning: invalid escape sequence '\\l'\n  if \"\\l\" not in name:\n/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons/rokoko-studio-live-blender/core/detection_manager_v2.py:49: SyntaxWarning: invalid escape sequence '\\l'\n  name_new = name.replace(\"\\l\", replacement)\n\n### Loading Rokoko Studio Live for Blender...\nCustom bone list not found.\nCustom name list file is not a valid name list file\n### Loaded Rokoko Studio Live for Blender successfully!\n\n### Unloading Rokoko Studio Live for Blender...\n### Unloaded Rokoko Studio Live for Blender successfully!\n\n\n### Loading Rokoko Studio Live for Blender...\nLOADED UPDATER!\nCustom bone list not found.\nCustom name list file is not a valid name list file\n### Loaded Rokoko Studio Live for Blender successfully!\n\n",
+  "cause": {
+    "cause": "",
+    "fix": "",
+    "id": "none"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "2.80.0",
+  "developer": "Rokoko",
+  "error": "",
+  "error_stage": "",
+  "group": "github",
+  "homepage": "https://github.com/Rokoko/rokoko-studio-live-blender",
+  "kind": "legacy",
+  "log": "rokoko-studio-live.log",
+  "module": "rokoko-studio-live-blender",
+  "name": "Rokoko Studio Live",
+  "operators_poll_failed": 0,
+  "operators_total": 43,
+  "python_version": "3.13.13",
+  "ran_at": "2026-11-03T14:24:05+00:00",
+  "source_type": "github_release",
+  "stages": {
+    "enable": {
+      "detail": "",
+      "ok": true
+    },
+    "install": {
+      "detail": "addon_utils.disable: rokoko-studio-live-blender not loaded\nModules Installed (rokoko-studio-live-blender) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/rokoko-studio-live.zip' into '/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons'\nInfo: Modules Installed (rokoko-studio-live-blender) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/rokoko-studio-live.zip' into '/tmp/bac-rokoko-studio-live-1116wpgg/blender/scripts/addons'\n",
+      "ok": true
+    },
+    "poll": {
+      "detail": "",
+      "ok": true
+    },
+    "reenable": {
+      "detail": "",
+      "ok": true
+    }
+  },
+  "status": "pass",
+  "timing_s": {
+    "enable": 0.16,
+    "install": 0.01,
+    "poll": 0.0,
+    "reenable": 0.01
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "addon_id": "textools",
+  "addon_version": null,
+  "blender_version": "5.1.2",
+  "captured_output": "ools-92b6l8sy/blender/scripts/addons/TexTools/op_color_clear.py\", line 15, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_color_convert_texture.py\", line 22, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_color_convert_vertex_colors.py\", line 20, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_color_from_elements.py\", line 16, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_color_from_materials.py\", line 15, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_color_from_directions.py\", line 29, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_edge_split_bevel.py\", line 25, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_color_io_export.py\", line 14, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_color_io_import.py\", line 15, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_color_select.py\", line 18, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_island_align_edge.py\", line 18, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_island_align_world.py\", line 29, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_island_mirror.py\", line 15, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_island_rotate_90.py\", line 17, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_island_straighten_edge_loops.py\", line 23, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_randomize.py\", line 29, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_rectify.py\", line 21, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_select_islands_identical.py\", line 16, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_select_islands_outline.py\", line 16, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_select_islands_overlap.py\", line 16, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_select_islands_flipped.py\", line 15, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_select_zero.py\", line 18, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_texel_density_get.py\", line 19, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_texel_density_set.py\", line 20, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_stitch.py\", line 20, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_uv_crop.py\", line 18, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_uv_fill.py\", line 21, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_uv_resize.py\", line 69, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\nTraceback (most recent call last):\n  File \"/tmp/bac-textools-92b6l8sy/blender/scripts/addons/TexTools/op_uv_unwrap.py\", line 20, in poll\n    if bpy.context.area.ui_type != 'UV':\n       ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'ui_type'\n",
+  "cause": {
+    "cause": "",
+    "fix": "",
+    "id": "none"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "2.80.0",
+  "developer": "SavMartin",
+  "error": "",
+  "error_stage": "",
+  "group": "github",
+  "homepage": "https://github.com/SavMartin/TexTools-Blender",
+  "kind": "legacy",
+  "log": "textools.log",
+  "module": "TexTools",
+  "name": "TexTools",
+  "operators_poll_failed": 0,
+  "operators_total": 63,
+  "python_version": "3.13.9",
+  "ran_at": "2026-11-03T14:23:59+00:00",
+  "source_type": "github_release",
+  "stages": {
+    "enable": {
+      "detail": "",
+      "ok": true
+    },
+    "install": {
+      "detail": "addon_utils.disable: TexTools not loaded\nModules Installed (TexTools) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/textools.zip' into '/tmp/bac-textools-92b6l8sy/blender/scripts/addons'\nInfo: Modules Installed (TexTools) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/textools.zip' into '/tmp/bac-textools-92b6l8sy/blender/scripts/addons'\n",
+      "ok": true
+    },
+    "poll": {
+      "detail": "",
+      "ok": true
+    },
+    "reenable": {
+      "detail": "",
+      "ok": true
+    }
+  },
+  "status": "pass",
+  "timing_s": {
+    "enable": 0.29,
+    "install": 0.08,
+    "poll": 0.04,
+    "reenable": 0.02
+  }
+}

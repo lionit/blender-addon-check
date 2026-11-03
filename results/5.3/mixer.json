@@ -1,0 +1,42 @@
+{
+  "addon_id": "mixer",
+  "addon_version": null,
+  "blender_version": "5.3.0 Beta",
+  "captured_output": "addon_utils.disable: mixer not loaded\nModules Installed (mixer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/mixer.zip' into '/tmp/bac-mixer-ur87ce8o/blender/scripts/addons'\nInfo: Modules Installed (mixer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/mixer.zip' into '/tmp/bac-mixer-ur87ce8o/blender/scripts/addons'\nException in module register(): /tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/__init__.py\n",
+  "cause": {
+    "cause": "Calls a bpy attribute that no longer exists in this Blender version.",
+    "fix": "Check the Python API change log for this release and add a version guard around the renamed or removed attribute.",
+    "id": "removed-bpy-attribute"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "2.91.0",
+  "developer": "ubisoft",
+  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/scripts/modules/addon_utils.py\", line 550, in enable\n    mod.register()\n    ~~~~~~~~~~~~^^\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/__init__.py\", line 75, in register\n    from mixer import bl_panels\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/bl_panels.py\", line 30, in <module>\n    from mixer import bl_operators\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/bl_operators.py\", line 33, in <module>\n    from mixer.share_data import share_data\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/share_data.py\", line 28, in <module>\n    from mixer.blender_data.bpy_data_proxy import BpyDataProxy\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/blender_data/bpy_data_proxy.py\", line 37, in <module>\n    from mixer.blender_data.changeset import Changeset, RenameChangeset\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/blender_data/changeset.py\", line 26, in <module>\n    from mixer.blender_data.datablock_proxy import DatablockProxy\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/blender_data/datablock_proxy.py\", line 32, in <module>\n    from mixer.blender_data import specifics\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/blender_data/specifics.py\", line 483, in <module>\n    @conditional_properties.register(T.EffectSequence)  # type: ignore[no-redef]\n                                     ^^^^^^^^^^^^^^^^\nAttributeError: 'module' object has no attribute 'EffectSequence'\n",
+  "error_stage": "enable",
+  "group": "github",
+  "homepage": "https://github.com/ubisoft/mixer",
+  "kind": "legacy",
+  "log": "mixer.log",
+  "module": "mixer",
+  "name": "Mixer",
+  "operators_poll_failed": 0,
+  "operators_total": 0,
+  "python_version": "3.13.13",
+  "ran_at": "2026-11-03T14:23:51+00:00",
+  "source_type": "github_release",
+  "stages": {
+    "enable": {
+      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/scripts/modules/addon_utils.py\", line 550, in enable\n    mod.register()\n    ~~~~~~~~~~~~^^\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/__init__.py\", line 75, in register\n    from mixer import bl_panels\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/bl_panels.py\", line 30, in <module>\n    from mixer import bl_operators\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/bl_operators.py\", line 33, in <module>\n    from mixer.share_data import share_data\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/share_data.py\", line 28, in <module>\n    from mixer.blender_data.bpy_data_proxy import BpyDataProxy\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/blender_data/bpy_data_proxy.py\", line 37, in <module>\n    from mixer.blender_data.changeset import Changeset, RenameChangeset\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/blender_data/changeset.py\", line 26, in <module>\n    from mixer.blender_data.datablock_proxy import DatablockProxy\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/blender_data/datablock_proxy.py\", line 32, in <module>\n    from mixer.blender_data import specifics\n  File \"/tmp/bac-mixer-ur87ce8o/blender/scripts/addons/mixer/blender_data/specifics.py\", line 483, in <module>\n    @conditional_properties.register(T.EffectSequence)  # type: ignore[no-redef]\n                                     ^^^^^^^^^^^^^^^^\nAttributeError: 'module' object has no attribute 'EffectSequence'\n",
+      "ok": false
+    },
+    "install": {
+      "detail": "addon_utils.disable: mixer not loaded\nModules Installed (mixer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/mixer.zip' into '/tmp/bac-mixer-ur87ce8o/blender/scripts/addons'\nInfo: Modules Installed (mixer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/mixer.zip' into '/tmp/bac-mixer-ur87ce8o/blender/scripts/addons'\n",
+      "ok": true
+    }
+  },
+  "status": "fail",
+  "timing_s": {
+    "install": 0.01
+  }
+}

@@ -1,0 +1,28 @@
+--- extension install-file ---
+STATUS Installed "lumos"
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)
+
+--- harness ---
+00:00.311  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_add_light.poll
+00:00.311  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_delete_light.poll
+00:00.311  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_select_light.poll
+00:00.311  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_lookthrough_light.poll
+00:00.311  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_visibility.poll
+00:00.311  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_all_light_visibility.poll
+00:00.312  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_isolate_light.poll
+00:00.312  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_normals_modal.poll
+00:00.312  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_reflection_modal.poll
+00:00.312  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_target_modal.poll
+00:00.312  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_shadow_modal.poll
+00:00.312  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_edit_mode_switcher.poll
+00:00.312  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_position_modal_manager.poll
+00:00.313  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_modify_intensity_modal.poll
+00:00.313  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_modify_color_modal.poll
+00:00.313  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_modify_local_z_position_modal.poll
+00:00.313  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_edit_tool_toggle.poll
+00:00.313  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_delete_emissive_object.poll
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)
+
+Blender quit
+
+--- stderr ---

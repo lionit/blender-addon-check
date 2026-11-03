@@ -3,38 +3,38 @@ STATUS Installed "retarget"
 Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
 
 --- harness ---
-00:00.484  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_activate_anim_offset.poll
-00:00.484  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_deactivate_anim_offset.poll
-00:00.485  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_add_anim_offset_mask.poll
-00:00.485  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_delete_anim_offset_mask.poll
-00:00.485  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_anim_offset_settings.poll
-00:00.486  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_move_key.poll
-00:00.486  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_insert_frames.poll
-00:00.486  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_set_key_type.poll
-00:00.487  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_delete_key_type.poll
-00:00.487  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_select_key_type.poll
-00:00.487  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_set_handles_type.poll
-00:00.488  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_select_key_parts.poll
-00:00.488  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_set_handles_interp.poll
-00:00.488  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_ease_to_ease.poll
-00:00.489  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_ease.poll
-00:00.489  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_ease.poll
-00:00.489  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_neighbor.poll
-00:00.490  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_default.poll
-00:00.490  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_infinite.poll
-00:00.490  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_frame.poll
-00:00.491  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_offset.poll
-00:00.491  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_tween.poll
-00:00.491  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_push_pull.poll
-00:00.491  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_smooth.poll
-00:00.492  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_time_offset.poll
-00:00.492  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_shear_right.poll
-00:00.492  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_shear_left.poll
-00:00.493  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_wave_noise.poll
-00:00.493  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_scale_left.poll
-00:00.493  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_scale_right.poll
-00:00.494  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_scale_average.poll
-00:00.494  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_tools_settings.poll
+00:00.418  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_activate_anim_offset.poll
+00:00.419  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_deactivate_anim_offset.poll
+00:00.419  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_add_anim_offset_mask.poll
+00:00.419  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_delete_anim_offset_mask.poll
+00:00.419  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_anim_offset_settings.poll
+00:00.420  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_move_key.poll
+00:00.420  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_insert_frames.poll
+00:00.420  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_set_key_type.poll
+00:00.421  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_delete_key_type.poll
+00:00.421  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_select_key_type.poll
+00:00.421  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_set_handles_type.poll
+00:00.422  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_select_key_parts.poll
+00:00.422  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_set_handles_interp.poll
+00:00.423  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_ease_to_ease.poll
+00:00.423  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_ease.poll
+00:00.423  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_ease.poll
+00:00.424  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_neighbor.poll
+00:00.424  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_default.poll
+00:00.424  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_infinite.poll
+00:00.425  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_frame.poll
+00:00.425  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_offset.poll
+00:00.425  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_tween.poll
+00:00.426  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_push_pull.poll
+00:00.426  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_smooth.poll
+00:00.426  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_time_offset.poll
+00:00.426  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_shear_right.poll
+00:00.427  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_shear_left.poll
+00:00.427  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_wave_noise.poll
+00:00.427  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_scale_left.poll
+00:00.428  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_scale_right.poll
+00:00.428  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_scale_average.poll
+00:00.428  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_tools_settings.poll
 Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
 
 Blender quit

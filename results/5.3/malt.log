@@ -1,0 +1,12 @@
+
+--- harness ---
+00:00.935  bpy.rna          | ERROR Python script error in WM_OT_malt_edit_node_tree.poll
+00:00.935  bpy.rna          | ERROR Python script error in WM_OT_malt_set_tree_preview.poll
+00:00.935  bpy.rna          | ERROR Python script error in WM_OT_malt_connect_tree_preview.poll
+00:00.936  bpy.rna          | ERROR Python script error in WM_OT_malt_cycle_sub_categories.poll
+00:00.936  bpy.rna          | ERROR Python script error in NODE_OT_add_subcategory_node.poll
+Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
+
+Blender quit
+
+--- stderr ---

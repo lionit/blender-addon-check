@@ -1,24 +1,53 @@
 {
   "addon_id": "polychase",
   "addon_version": "0.0.14",
+  "blender_version": "5.2.3 LTS",
+  "captured_output": "",
   "cause": {
-    "cause": "The extension ships builds only for other platforms (usually Windows), so it cannot be installed on the Linux machine this test runs on.",
-    "fix": "Nothing to fix for Windows users. To be tested here, publish a linux-x64 build or a pure-Python version.",
-    "id": "platform-not-shipped"
+    "cause": "",
+    "fix": "",
+    "id": "none"
   },
+  "classes_registered": 0,
   "declared_max": null,
   "declared_min": "4.2.0",
   "developer": "theartful",
-  "error": "`blender --command extension install-file` exited with 0\n--- extension install-file ---\nERROR polychase: This platform (linux-x64) isn't one of (windows-x64)\nBlender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)\n",
-  "error_stage": "install",
+  "error": "",
+  "error_stage": "",
   "group": "extensions-top",
   "homepage": "https://extensions.blender.org/add-ons/polychase/",
   "kind": "extension",
   "log": "polychase.log",
   "module": "bl_ext.user_default.polychase",
   "name": "Polychase",
-  "ran_at": "2026-11-03T14:12:29+00:00",
+  "operators_poll_failed": 0,
+  "operators_total": 24,
+  "python_version": "3.13.13",
+  "ran_at": "2026-11-03T14:24:42+00:00",
   "source_type": "extensions",
-  "status": "inconclusive",
-  "status_before_analysis": "fail"
+  "stages": {
+    "enable": {
+      "detail": "",
+      "ok": true
+    },
+    "install": {
+      "detail": "",
+      "ok": true
+    },
+    "poll": {
+      "detail": "",
+      "ok": true
+    },
+    "reenable": {
+      "detail": "",
+      "ok": true
+    }
+  },
+  "status": "pass",
+  "timing_s": {
+    "enable": 0.16,
+    "install": 0.0,
+    "poll": 0.0,
+    "reenable": 0.06
+  }
 }

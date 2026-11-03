@@ -1,0 +1,53 @@
+{
+  "addon_id": "achievements",
+  "addon_version": "1.3.1",
+  "blender_version": "5.1.2",
+  "captured_output": "",
+  "cause": {
+    "cause": "",
+    "fix": "",
+    "id": "none"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "4.4.0",
+  "developer": "Illya-Ilev",
+  "error": "",
+  "error_stage": "",
+  "group": "extensions-top",
+  "homepage": "https://extensions.blender.org/add-ons/achievements/",
+  "kind": "extension",
+  "log": "achievements.log",
+  "module": "bl_ext.user_default.achievements",
+  "name": "Achievements",
+  "operators_poll_failed": 0,
+  "operators_total": 13,
+  "python_version": "3.13.9",
+  "ran_at": "2026-11-03T14:25:15+00:00",
+  "source_type": "extensions",
+  "stages": {
+    "enable": {
+      "detail": "",
+      "ok": true
+    },
+    "install": {
+      "detail": "",
+      "ok": true
+    },
+    "poll": {
+      "detail": "",
+      "ok": true
+    },
+    "reenable": {
+      "detail": "",
+      "ok": true
+    }
+  },
+  "status": "pass",
+  "timing_s": {
+    "enable": 0.19,
+    "install": 0.0,
+    "poll": 0.0,
+    "reenable": 0.0
+  }
+}

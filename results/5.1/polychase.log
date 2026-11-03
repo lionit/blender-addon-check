@@ -1,3 +1,10 @@
 --- extension install-file ---
-ERROR polychase: This platform (linux-x64) isn't one of (windows-x64)
+STATUS Installed "polychase"
 Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)
+
+--- harness ---
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)
+
+Blender quit
+
+--- stderr ---

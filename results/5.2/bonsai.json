@@ -2,14 +2,14 @@
   "addon_id": "bonsai",
   "addon_version": "0.9.0-post1-py311",
   "cause": {
-    "cause": "The extension ships builds only for other platforms (usually Windows), so it cannot be installed on the Linux machine this test runs on.",
-    "fix": "Nothing to fix for Windows users. To be tested here, publish a linux-x64 build or a pure-Python version.",
-    "id": "platform-not-shipped"
+    "cause": "The add-on declares it does not support this Blender version, and Blender refuses to enable it.",
+    "fix": "Raise blender_version_min / bl_info['blender'] once the add-on is confirmed to work, or publish a version for this release.",
+    "id": "declared-unsupported"
   },
   "declared_max": "5.1.0",
   "declared_min": "4.2.0",
   "developer": "IfcOpenShell",
-  "error": "`blender --command extension install-file` exited with 0\n--- extension install-file ---\nERROR bonsai: This platform (linux-x64) isn't one of (windows-x64)\nBlender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)\n",
+  "error": "`blender --command extension install-file` exited with 0\n--- extension install-file ---\nERROR bonsai: This Blender version (5.2.3) must be less than the maximum version (5.1.0)\nBlender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)\n",
   "error_stage": "install",
   "group": "extensions-top",
   "homepage": "https://extensions.blender.org/add-ons/bonsai/",
@@ -17,8 +17,8 @@
   "log": "bonsai.log",
   "module": "bl_ext.user_default.bonsai",
   "name": "Bonsai",
-  "ran_at": "2026-11-03T14:12:02+00:00",
+  "ran_at": "2026-11-03T14:24:21+00:00",
   "source_type": "extensions",
-  "status": "inconclusive",
+  "status": "unsupported",
   "status_before_analysis": "fail"
 }

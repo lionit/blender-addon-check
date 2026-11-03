@@ -3,7 +3,7 @@ STATUS Installed "amaranth"
 Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
 
 --- harness ---
-00:00.333  bpy.rna          | ERROR Python script error in NODE_OT_show_active_node_image.poll
+00:00.233  bpy.rna          | ERROR Python script error in NODE_OT_show_active_node_image.poll
 Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
 
 Blender quit

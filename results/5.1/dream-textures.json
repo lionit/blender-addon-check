@@ -1,0 +1,22 @@
+{
+  "addon_id": "dream-textures",
+  "addon_version": null,
+  "cause": {
+    "cause": "Blender did not finish loading the add-on within the time limit.",
+    "fix": "Look for network calls, modal operators or heavy work at import time; defer it until the user acts.",
+    "id": "timeout"
+  },
+  "declared_max": null,
+  "declared_min": "3.1.0",
+  "developer": "carson-katri",
+  "error": "\n--- harness ---\n\n--- timeout ---",
+  "error_stage": "process",
+  "group": "github",
+  "homepage": "https://github.com/carson-katri/dream-textures",
+  "kind": "legacy",
+  "log": "dream-textures.log",
+  "name": "Dream Textures",
+  "ran_at": "2026-11-03T14:24:13+00:00",
+  "source_type": "github_release",
+  "status": "timeout"
+}

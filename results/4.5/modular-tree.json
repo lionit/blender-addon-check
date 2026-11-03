@@ -1,0 +1,17 @@
+{
+  "addon_id": "modular-tree",
+  "cause": {
+    "cause": "The add-on could not be downloaded, so it was not tested.",
+    "fix": "Check the source URL in config/addons.json.",
+    "id": "unavailable"
+  },
+  "developer": "MaximeHerpin",
+  "error": "could not fetch add-on: HTTP Error 403: rate limit exceeded",
+  "error_stage": "fetch",
+  "group": "github",
+  "homepage": "https://github.com/MaximeHerpin/modular_tree",
+  "name": "Modular Tree",
+  "ran_at": "2026-11-03T14:23:55+00:00",
+  "source_type": "github_zipball",
+  "status": "unavailable"
+}

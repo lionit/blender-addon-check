@@ -1,0 +1,42 @@
+{
+  "addon_id": "modular-tree",
+  "addon_version": null,
+  "blender_version": "5.3.0 Beta",
+  "captured_output": "addon_utils.disable: modular_tree not loaded\nModules Installed (modular_tree) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/modular-tree.zip' into '/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons'\nInfo: Modules Installed (modular_tree) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/modular-tree.zip' into '/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons'\n",
+  "cause": {
+    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
+    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
+    "id": "unclassified"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "2.83.0",
+  "developer": "MaximeHerpin",
+  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/scripts/modules/addon_utils.py\", line 464, in enable\n    mod = importlib.import_module(module_name)\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/python/lib/python3.13/importlib/__init__.py\", line 88, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1395, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 1023, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons/modular_tree/__init__.py\", line 16, in <module>\n    from . import python_classes\n  File \"/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons/modular_tree/python_classes/__init__.py\", line 2, in <module>\n    from . import nodes\n  File \"/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons/modular_tree/python_classes/nodes/__init__.py\", line 6, in <module>\n    from . import sockets\n  File \"/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons/modular_tree/python_classes/nodes/sockets/__init__.py\", line 6, in <module>\n    from .property_socket import MtreePropertySocket\n  File \"/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons/modular_tree/python_classes/nodes/sockets/property_socket.py\", line 3, in <module>\n    from ....m_tree import ConstantProperty, RandomProperty, PropertyWrapper\nImportError: cannot import name 'ConstantProperty' from 'modular_tree.m_tree' (unknown location)\n",
+  "error_stage": "enable",
+  "group": "github",
+  "homepage": "https://github.com/MaximeHerpin/modular_tree",
+  "kind": "legacy",
+  "log": "modular-tree.log",
+  "module": "modular_tree",
+  "name": "Modular Tree",
+  "operators_poll_failed": 0,
+  "operators_total": 0,
+  "python_version": "3.13.13",
+  "ran_at": "2026-11-03T14:23:46+00:00",
+  "source_type": "github_zipball",
+  "stages": {
+    "enable": {
+      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/scripts/modules/addon_utils.py\", line 464, in enable\n    mod = importlib.import_module(module_name)\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/python/lib/python3.13/importlib/__init__.py\", line 88, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1395, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 1023, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons/modular_tree/__init__.py\", line 16, in <module>\n    from . import python_classes\n  File \"/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons/modular_tree/python_classes/__init__.py\", line 2, in <module>\n    from . import nodes\n  File \"/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons/modular_tree/python_classes/nodes/__init__.py\", line 6, in <module>\n    from . import sockets\n  File \"/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons/modular_tree/python_classes/nodes/sockets/__init__.py\", line 6, in <module>\n    from .property_socket import MtreePropertySocket\n  File \"/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons/modular_tree/python_classes/nodes/sockets/property_socket.py\", line 3, in <module>\n    from ....m_tree import ConstantProperty, RandomProperty, PropertyWrapper\nImportError: cannot import name 'ConstantProperty' from 'modular_tree.m_tree' (unknown location)\n",
+      "ok": false
+    },
+    "install": {
+      "detail": "addon_utils.disable: modular_tree not loaded\nModules Installed (modular_tree) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/modular-tree.zip' into '/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons'\nInfo: Modules Installed (modular_tree) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/modular-tree.zip' into '/tmp/bac-modular-tree-e7a28y7t/blender/scripts/addons'\n",
+      "ok": true
+    }
+  },
+  "status": "fail",
+  "timing_s": {
+    "install": 0.01
+  }
+}
