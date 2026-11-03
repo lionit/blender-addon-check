@@ -65,7 +65,7 @@ def to_entry(ext: dict) -> dict:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--top", type=int, default=60, help="how many add-ons to keep")
-    ap.add_argument("--max-pages", type=int, default=12, help="listing pages to scan for the ranking")
+    ap.add_argument("--max-pages", type=int, default=30, help="listing pages to scan for the ranking")
     args = ap.parse_args()
 
     index = fetch_api_index()

@@ -126,6 +126,373 @@
         "path": "addons/showcase-studio-pro.zip",
         "module": "showcase_studio_pro"
       }
+    },
+    {
+      "id": "textools",
+      "name": "TexTools",
+      "group": "github",
+      "developer": "SavMartin",
+      "homepage": "https://github.com/SavMartin/TexTools-Blender",
+      "source": {
+        "type": "github_release",
+        "repo": "SavMartin/TexTools-Blender",
+        "asset_pattern": ".*\\.zip",
+        "module": "TexTools"
+      }
+    },
+    {
+      "id": "blendergis",
+      "name": "BlenderGIS",
+      "group": "github",
+      "developer": "domlysz",
+      "homepage": "https://github.com/domlysz/BlenderGIS",
+      "source": {
+        "type": "github_zipball",
+        "repo": "domlysz/BlenderGIS",
+        "ref": "HEAD",
+        "module": "BlenderGIS"
+      }
+    },
+    {
+      "id": "mmd-tools",
+      "name": "MMD Tools",
+      "group": "github",
+      "developer": "MMD-Blender",
+      "homepage": "https://github.com/MMD-Blender/blender_mmd_tools",
+      "source": {
+        "type": "github_release",
+        "repo": "MMD-Blender/blender_mmd_tools",
+        "asset_pattern": ".*\\.zip",
+        "module": "mmd_tools"
+      }
+    },
+    {
+      "id": "retopoflow",
+      "name": "RetopoFlow",
+      "group": "github",
+      "developer": "CGCookie",
+      "homepage": "https://github.com/CGCookie/retopoflow",
+      "source": {
+        "type": "github_release",
+        "repo": "CGCookie/retopoflow",
+        "asset_pattern": ".*\\.zip",
+        "module": "retopoflow"
+      }
+    },
+    {
+      "id": "mesh-align-plus",
+      "name": "Mesh Align Plus",
+      "group": "github",
+      "developer": "egtwobits",
+      "homepage": "https://github.com/egtwobits/mesh_mesh_align_plus",
+      "source": {
+        "type": "github_zipball",
+        "repo": "egtwobits/mesh_mesh_align_plus",
+        "ref": "HEAD",
+        "module": "mesh_mesh_align_plus",
+        "subdir": "mesh_mesh_align_plus"
+      }
+    },
+    {
+      "id": "modular-tree",
+      "name": "Modular Tree",
+      "group": "github",
+      "developer": "MaximeHerpin",
+      "homepage": "https://github.com/MaximeHerpin/modular_tree",
+      "source": {
+        "type": "github_zipball",
+        "repo": "MaximeHerpin/modular_tree",
+        "ref": "HEAD",
+        "module": "modular_tree"
+      }
+    },
+    {
+      "id": "blender-for-unrealengine",
+      "name": "Blender for Unreal Engine",
+      "group": "github",
+      "developer": "xavier150",
+      "homepage": "https://github.com/xavier150/Blender-For-UnrealEngine-Addons",
+      "source": {
+        "type": "github_release",
+        "repo": "xavier150/Blender-For-UnrealEngine-Addons",
+        "asset_pattern": ".*\\.zip",
+        "module": "blender-for-unrealengine"
+      }
+    },
+    {
+      "id": "rokoko-studio-live",
+      "name": "Rokoko Studio Live",
+      "group": "github",
+      "developer": "Rokoko",
+      "homepage": "https://github.com/Rokoko/rokoko-studio-live-blender",
+      "source": {
+        "type": "github_release",
+        "repo": "Rokoko/rokoko-studio-live-blender",
+        "asset_pattern": ".*\\.zip",
+        "module": "rokoko-studio-live-blender"
+      }
+    },
+    {
+      "id": "sketchfab",
+      "name": "Sketchfab plugin",
+      "group": "github",
+      "developer": "sketchfab",
+      "homepage": "https://github.com/sketchfab/blender-plugin",
+      "source": {
+        "type": "github_release",
+        "repo": "sketchfab/blender-plugin",
+        "asset_pattern": ".*\\.zip",
+        "module": "sketchfab"
+      }
+    },
+    {
+      "id": "lily-surface-scraper",
+      "name": "Lily Surface Scraper",
+      "group": "github",
+      "developer": "eliemichel",
+      "homepage": "https://github.com/eliemichel/LilySurfaceScraper",
+      "source": {
+        "type": "github_release",
+        "repo": "eliemichel/LilySurfaceScraper",
+        "asset_pattern": ".*\\.zip",
+        "module": "LilySurfaceScraper"
+      }
+    },
+    {
+      "id": "maps-models-importer",
+      "name": "Maps Models Importer",
+      "group": "github",
+      "developer": "eliemichel",
+      "homepage": "https://github.com/eliemichel/MapsModelsImporter",
+      "source": {
+        "type": "github_release",
+        "repo": "eliemichel/MapsModelsImporter",
+        "asset_pattern": ".*\\.zip",
+        "module": "MapsModelsImporter"
+      }
+    },
+    {
+      "id": "stop-motion-obj",
+      "name": "Stop Motion OBJ",
+      "group": "github",
+      "developer": "neverhood311",
+      "homepage": "https://github.com/neverhood311/Stop-motion-OBJ",
+      "source": {
+        "type": "github_release",
+        "repo": "neverhood311/Stop-motion-OBJ",
+        "asset_pattern": ".*\\.zip",
+        "module": "Stop-motion-OBJ"
+      }
+    },
+    {
+      "id": "shot-manager",
+      "name": "Shot Manager",
+      "group": "github",
+      "developer": "ubisoft",
+      "homepage": "https://github.com/ubisoft/shotmanager",
+      "source": {
+        "type": "github_release",
+        "repo": "ubisoft/shotmanager",
+        "asset_pattern": ".*\\.zip",
+        "module": "shotmanager"
+      }
+    },
+    {
+      "id": "sorcar",
+      "name": "Sorcar",
+      "group": "github",
+      "developer": "aachman98",
+      "homepage": "https://github.com/aachman98/Sorcar",
+      "source": {
+        "type": "github_release",
+        "repo": "aachman98/Sorcar",
+        "asset_pattern": ".*\\.zip",
+        "module": "sorcar"
+      }
+    },
+    {
+      "id": "blosm",
+      "name": "Blosm (blender-osm)",
+      "group": "github",
+      "developer": "vvoovv",
+      "homepage": "https://github.com/vvoovv/blosm",
+      "source": {
+        "type": "github_release",
+        "repo": "vvoovv/blosm",
+        "asset_pattern": ".*\\.zip",
+        "module": "blosm"
+      }
+    },
+    {
+      "id": "mixer",
+      "name": "Mixer",
+      "group": "github",
+      "developer": "ubisoft",
+      "homepage": "https://github.com/ubisoft/mixer",
+      "source": {
+        "type": "github_release",
+        "repo": "ubisoft/mixer",
+        "asset_pattern": ".*\\.zip",
+        "module": "mixer"
+      }
+    },
+    {
+      "id": "blendluxcore",
+      "name": "BlendLuxCore (LuxCoreRender)",
+      "group": "github",
+      "developer": "LuxCoreRender",
+      "homepage": "https://github.com/LuxCoreRender/BlendLuxCore",
+      "source": {
+        "type": "github_release",
+        "repo": "LuxCoreRender/BlendLuxCore",
+        "asset_pattern": ".*linux.*\\.zip",
+        "module": "BlendLuxCore"
+      }
+    },
+    {
+      "id": "malt",
+      "name": "Malt render engine",
+      "group": "github",
+      "developer": "bnpr",
+      "homepage": "https://github.com/bnpr/Malt",
+      "source": {
+        "type": "github_release",
+        "repo": "bnpr/Malt",
+        "asset_pattern": ".*[Ll]inux.*\\.zip",
+        "module": "BlenderMalt"
+      }
+    },
+    {
+      "id": "gob",
+      "name": "GoB (ZBrush bridge)",
+      "group": "github",
+      "developer": "JoseConseco",
+      "homepage": "https://github.com/JoseConseco/GoB",
+      "source": {
+        "type": "github_zipball",
+        "repo": "JoseConseco/GoB",
+        "ref": "HEAD",
+        "module": "GoB"
+      }
+    },
+    {
+      "id": "blender-source-tools",
+      "name": "Blender Source Tools",
+      "group": "github",
+      "developer": "Artfunkel",
+      "homepage": "https://github.com/Artfunkel/BlenderSourceTools",
+      "source": {
+        "type": "github_zipball",
+        "repo": "Artfunkel/BlenderSourceTools",
+        "ref": "HEAD",
+        "module": "io_scene_valvesource",
+        "subdir": "io_scene_valvesource"
+      }
+    },
+    {
+      "id": "dream-textures",
+      "name": "Dream Textures",
+      "group": "github",
+      "developer": "carson-katri",
+      "homepage": "https://github.com/carson-katri/dream-textures",
+      "source": {
+        "type": "github_release",
+        "repo": "carson-katri/dream-textures",
+        "asset_pattern": ".*\\.zip",
+        "module": "dream_textures"
+      }
+    },
+    {
+      "id": "ai-render",
+      "name": "AI Render",
+      "group": "github",
+      "developer": "benrugg",
+      "homepage": "https://github.com/benrugg/AI-Render",
+      "source": {
+        "type": "github_release",
+        "repo": "benrugg/AI-Render",
+        "asset_pattern": ".*\\.zip",
+        "module": "AI-Render"
+      }
+    },
+    {
+      "id": "photogrammetry-importer",
+      "name": "Photogrammetry Importer",
+      "group": "github",
+      "developer": "SBCV",
+      "homepage": "https://github.com/SBCV/Blender-Addon-Photogrammetry-Importer",
+      "source": {
+        "type": "github_zipball",
+        "repo": "SBCV/Blender-Addon-Photogrammetry-Importer",
+        "ref": "HEAD",
+        "module": "photogrammetry_importer",
+        "subdir": "photogrammetry_importer"
+      }
+    },
+    {
+      "id": "blendergpt",
+      "name": "BlenderGPT",
+      "group": "github",
+      "developer": "gd3kr",
+      "homepage": "https://github.com/gd3kr/BlenderGPT",
+      "source": {
+        "type": "github_zipball",
+        "repo": "gd3kr/BlenderGPT",
+        "ref": "HEAD",
+        "module": "BlenderGPT"
+      }
+    },
+    {
+      "id": "texel-density-checker",
+      "name": "Texel Density Checker",
+      "group": "github",
+      "developer": "mrven",
+      "homepage": "https://github.com/mrven/Blender-Texel-Density-Checker",
+      "source": {
+        "type": "github_release",
+        "repo": "mrven/Blender-Texel-Density-Checker",
+        "asset_pattern": ".*\\.zip",
+        "module": "Texel_Density"
+      }
+    },
+    {
+      "id": "fspy-blender",
+      "name": "fSpy importer",
+      "group": "github",
+      "developer": "stuffmatic",
+      "homepage": "https://github.com/stuffmatic/fSpy-Blender",
+      "source": {
+        "type": "github_release",
+        "repo": "stuffmatic/fSpy-Blender",
+        "asset_pattern": ".*\\.zip",
+        "module": "fspy_blender"
+      }
+    },
+    {
+      "id": "sketchup-importer",
+      "name": "SketchUp Importer",
+      "group": "github",
+      "developer": "RedHaloStudio",
+      "homepage": "https://github.com/RedHaloStudio/sketchup_importer",
+      "source": {
+        "type": "github_release",
+        "repo": "RedHaloStudio/sketchup_importer",
+        "asset_pattern": ".*\\.zip",
+        "module": "sketchup_importer"
+      }
+    },
+    {
+      "id": "by-gen",
+      "name": "BY-GEN",
+      "group": "github",
+      "developer": "curtisjamesholt",
+      "homepage": "https://github.com/curtisjamesholt/BY-GEN",
+      "source": {
+        "type": "github_zipball",
+        "repo": "curtisjamesholt/BY-GEN",
+        "ref": "HEAD",
+        "module": "BY-GEN"
+      }
     }
   ]
 }
