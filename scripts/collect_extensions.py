@@ -37,7 +37,10 @@ def fetch_ranking(max_pages: int) -> list[str]:
     seen: list[str] = []
     for page in range(1, max_pages + 1):
         html = http_get(LISTING_URL.format(page=page)).decode("utf-8", "replace")
-        slugs = [s for s in SLUG_RE.findall(html) if s not in seen]
+        slugs: list[str] = []
+        for s in SLUG_RE.findall(html):  # each card links its slug more than once
+            if s not in seen and s not in slugs:
+                slugs.append(s)
         if not slugs:
             break
         seen.extend(slugs)

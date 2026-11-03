@@ -19,21 +19,6 @@
     {
       "blender_version_max": "",
       "blender_version_min": "4.2.0",
-      "developer": "HugeMenace",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/nd/",
-      "id": "nd",
-      "name": "ND",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:c830740928ceb780bfd168a2957d7994a63c230c23b7b31912a75a7f685b4783/add-on-nd-v2.2.1.zip",
-        "id": "nd",
-        "type": "extensions"
-      },
-      "version": "2.2.1"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
       "developer": "ucupumar",
       "group": "extensions-top",
       "homepage": "https://extensions.blender.org/add-ons/ucupaint/",
@@ -45,36 +30,6 @@
         "type": "extensions"
       },
       "version": "3.0.1"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
-      "developer": "ucupumar",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/ucupaint/",
-      "id": "ucupaint",
-      "name": "Ucupaint",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:880f3961ea7682897580f9060ff5530f5922bd4c74bedf72bafa906096afba0f/add-on-ucupaint-v3.0.1.zip",
-        "id": "ucupaint",
-        "type": "extensions"
-      },
-      "version": "3.0.1"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
-      "developer": "Oxicid",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/univ/",
-      "id": "univ",
-      "name": "UniV",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:734a70137ab6824c9b4294a8aef2cd76e23c667795ebf7f360668ebe45968963/add-on-univ-v4.0.0.zip",
-        "id": "univ",
-        "type": "extensions"
-      },
-      "version": "4.0.0"
     },
     {
       "blender_version_max": "",
@@ -107,36 +62,6 @@
       "version": "4.7.7"
     },
     {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
-      "developer": "Community",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/looptools/",
-      "id": "looptools",
-      "name": "LoopTools",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:ff1ca3b3fff73094379da8b1fa2c1acbc9d88d26b7dfc73bb9de5941a6b50108/add-on-looptools-v4.7.7.zip",
-        "id": "looptools",
-        "type": "extensions"
-      },
-      "version": "4.7.7"
-    },
-    {
-      "blender_version_max": "5.1.0",
-      "blender_version_min": "4.2.0",
-      "developer": "IfcOpenShell",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/bonsai/",
-      "id": "bonsai",
-      "name": "Bonsai",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:7f37085c37238a6eacd75d63ac20c241f1880b9af9a264d0bf8eb5cc8f766815/add-on-bonsai-v0.9.0-post1-py311-windows-x64.zip",
-        "id": "bonsai",
-        "type": "extensions"
-      },
-      "version": "0.9.0-post1-py311"
-    },
-    {
       "blender_version_max": "5.1.0",
       "blender_version_min": "4.2.0",
       "developer": "IfcOpenShell",
@@ -165,36 +90,6 @@
         "type": "extensions"
       },
       "version": "520.2.0"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "5.2.0",
-      "developer": "bradyajohnston",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/molecularnodes/",
-      "id": "molecularnodes",
-      "name": "Molecular Nodes",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:6efade09f5b6d804d2a1f5f73bfb9a081c666b3f717af52c259e3b9407fb3b48/add-on-molecularnodes-v520.2.0-linux-x64.zip",
-        "id": "molecularnodes",
-        "type": "extensions"
-      },
-      "version": "520.2.0"
-    },
-    {
-      "blender_version_max": "5.3.0",
-      "blender_version_min": "4.2.0",
-      "developer": "saturday06",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/vrm/",
-      "id": "vrm",
-      "name": "VRM format",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:cbcc06d6ef9a209126894f03d6221017e03bee08509d06bb14aa9522047bf9f5/add-on-vrm-v4.10.3.zip",
-        "id": "vrm",
-        "type": "extensions"
-      },
-      "version": "4.10.3"
     },
     {
       "blender_version_max": "5.3.0",
@@ -229,36 +124,6 @@
     {
       "blender_version_max": "",
       "blender_version_min": "4.2.0",
-      "developer": "Aisun-Tang",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/proceduraltiles/",
-      "id": "proceduraltiles",
-      "name": "Procedural Tiles",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:4c6040e0c5654c066fa66f48321857d44e26ca1726d3c8c70cd04050cb6efc30/add-on-proceduraltiles-v0.0.4.zip",
-        "id": "proceduraltiles",
-        "type": "extensions"
-      },
-      "version": "0.0.4"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
-      "developer": "Community",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/f2/",
-      "id": "f2",
-      "name": "F2",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:dc8f19637a61c332b3eb937a6b86e2363511cbb29a9a22ea8571fe7d924ab05c/add-on-f2-v1.8.5.zip",
-        "id": "f2",
-        "type": "extensions"
-      },
-      "version": "1.8.5"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
       "developer": "Community",
       "group": "extensions-top",
       "homepage": "https://extensions.blender.org/add-ons/f2/",
@@ -285,36 +150,6 @@
         "type": "extensions"
       },
       "version": "2.5.0"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.4.0",
-      "developer": "MikhailRachinskiy",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/commotion/",
-      "id": "commotion",
-      "name": "Commotion",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:9554d7ccc6211c666991b03cd72b354173495dc8977320a70874694bf25179eb/add-on-commotion-v2.5.0.zip",
-        "id": "commotion",
-        "type": "extensions"
-      },
-      "version": "2.5.0"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
-      "developer": "GregZaal",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/matalogue/",
-      "id": "matalogue",
-      "name": "Matalogue",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:b1911aa0cbe55456ccd3c16a38aed01c687f205d5ca86c69903ef36aca7c90d9/add-on-matalogue-v1.5.1.zip",
-        "id": "matalogue",
-        "type": "extensions"
-      },
-      "version": "1.5.1"
     },
     {
       "blender_version_max": "",
@@ -349,21 +184,6 @@
     {
       "blender_version_max": "",
       "blender_version_min": "5.0.0",
-      "developer": "icrdr",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/bioxelnodes/",
-      "id": "bioxelnodes",
-      "name": "Bioxel Nodes",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:84fbe609f67a90d505b316f831011f2c0aafb93ecd8b6e68347dd35bca3dba14/add-on-bioxelnodes-v2.0.4-linux-x64.zip",
-        "id": "bioxelnodes",
-        "type": "extensions"
-      },
-      "version": "2.0.4"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "5.0.0",
       "developer": "antoniov",
       "group": "extensions-top",
       "homepage": "https://extensions.blender.org/add-ons/measureit/",
@@ -375,36 +195,6 @@
         "type": "extensions"
       },
       "version": "1.8.4"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "5.0.0",
-      "developer": "antoniov",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/measureit/",
-      "id": "measureit",
-      "name": "MeasureIt",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:85b1836d97e5c2f0311afdf45cf9fd3cefa71bade074963864ce40ee15c26042/add-on-measureit-v1.8.4.zip",
-        "id": "measureit",
-        "type": "extensions"
-      },
-      "version": "1.8.4"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.5.0",
-      "developer": "AlessandroZomparelli",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/tissue/",
-      "id": "tissue",
-      "name": "Tissue",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:997e91148732becfd338c58abd605dbbfed4b4125c6d7f0a77951846d67a82fd/add-on-tissue-v0.3.76.zip",
-        "id": "tissue",
-        "type": "extensions"
-      },
-      "version": "0.3.76"
     },
     {
       "blender_version_max": "",
@@ -437,21 +227,6 @@
       "version": "3.3.4"
     },
     {
-      "blender_version_max": "",
-      "blender_version_min": "4.5.0",
-      "developer": "MikhailRachinskiy",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/booltron/",
-      "id": "booltron",
-      "name": "Booltron",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:01a97c73b4fa82a624e536a3443b67c0b0be28bb1ac58a44d0ca34c749cafebd/add-on-booltron-v3.3.4.zip",
-        "id": "booltron",
-        "type": "extensions"
-      },
-      "version": "3.3.4"
-    },
-    {
       "blender_version_max": "6.0.0",
       "blender_version_min": "5.0.0",
       "developer": "Blender Studio",
@@ -465,36 +240,6 @@
         "type": "extensions"
       },
       "version": "2.2.31"
-    },
-    {
-      "blender_version_max": "6.0.0",
-      "blender_version_min": "5.0.0",
-      "developer": "Blender Studio",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/cloudrig/",
-      "id": "cloudrig",
-      "name": "CloudRig",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:dbcc777d9f33dee6174bd1ae49982e58f602dc8e9aa2a4be96b1fe7fd659d18b/add-on-cloudrig-v2.2.31.zip",
-        "id": "cloudrig",
-        "type": "extensions"
-      },
-      "version": "2.2.31"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "5.0.0",
-      "developer": "KBS-DEV",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/retarget/",
-      "id": "retarget",
-      "name": "Retarget",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:521ec8ff5c2373893ea8022b3f71d27ed191fb73f3a5634cac31585e0dcb7af3/add-on-retarget-v5.2.0.zip",
-        "id": "retarget",
-        "type": "extensions"
-      },
-      "version": "5.2.0"
     },
     {
       "blender_version_max": "",
@@ -529,21 +274,6 @@
     {
       "blender_version_max": "",
       "blender_version_min": "4.2.0",
-      "developer": "hisanimations",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/optiploy/",
-      "id": "optiploy",
-      "name": "OptiPloy: Rig Spawner",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:8dee57bb226f754c3bcab8986df3eca85ee8148faae759649f48d2374c7e0956/add-on-optiploy-v1.8.2.zip",
-        "id": "optiploy",
-        "type": "extensions"
-      },
-      "version": "1.8.2"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
       "developer": "theartful",
       "group": "extensions-top",
       "homepage": "https://extensions.blender.org/add-ons/polychase/",
@@ -555,36 +285,6 @@
         "type": "extensions"
       },
       "version": "0.0.14"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
-      "developer": "theartful",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/polychase/",
-      "id": "polychase",
-      "name": "Polychase",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:e687a1b30e20971951176d5ad136acd6f945904f9e0d1054043f506e3c1bc9d0/add-on-polychase-v0.0.14-windows-x64.zip",
-        "id": "polychase",
-        "type": "extensions"
-      },
-      "version": "0.0.14"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
-      "developer": "SMagnusson",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/lightpainter/",
-      "id": "lightpainter",
-      "name": "Light Painter",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:9bac76eb02ecedb97267d43c8ff31af2a9c8286480034bcad1733485fc9b28b6/add-on-lightpainter-v2.0.0.zip",
-        "id": "lightpainter",
-        "type": "extensions"
-      },
-      "version": "2.0.0"
     },
     {
       "blender_version_max": "",
@@ -619,36 +319,6 @@
     {
       "blender_version_max": "",
       "blender_version_min": "4.2.0",
-      "developer": "Joel-Palmius",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/mpfb/",
-      "id": "mpfb",
-      "name": "MPFB",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:c075b3e9b94b8e5556a5f03f4653602d02ea306de08126e8f55ed6dee28a2dad/add-on-mpfb-v2.0.18.zip",
-        "id": "mpfb",
-        "type": "extensions"
-      },
-      "version": "2.0.18"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
-      "developer": "justOniL",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/quickj/",
-      "id": "quickj",
-      "name": "Quick J ( Connect Vertex Path )",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:61e8cbb016e2acaf7ef4a8444a18ca530d0b86ce0773966a5ed57cf316a945d5/add-on-quickj-v1.3.3.zip",
-        "id": "quickj",
-        "type": "extensions"
-      },
-      "version": "1.3.3"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
       "developer": "justOniL",
       "group": "extensions-top",
       "homepage": "https://extensions.blender.org/add-ons/quickj/",
@@ -675,36 +345,6 @@
         "type": "extensions"
       },
       "version": "1.2.5"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
-      "developer": "Community",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/archimesh/",
-      "id": "archimesh",
-      "name": "Archimesh",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:44745a86dd472e296e06cd45c511e002a1105512a73009cb0018c87611d18d87/add-on-archimesh-v1.2.5.zip",
-        "id": "archimesh",
-        "type": "extensions"
-      },
-      "version": "1.2.5"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "5.0.1",
-      "developer": "Damyar",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/persiantype/",
-      "id": "persiantype",
-      "name": "Persian type",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:894a83d0e2b2ddc782bb06ae08227acbbaf6b1c112e58a8196a448b6748614ad/add-on-persiantype-v3.3.0.zip",
-        "id": "persiantype",
-        "type": "extensions"
-      },
-      "version": "3.3.0"
     },
     {
       "blender_version_max": "",
@@ -739,21 +379,6 @@
     {
       "blender_version_max": "",
       "blender_version_min": "4.2.0",
-      "developer": "sharpened",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/openvat/",
-      "id": "openvat",
-      "name": "OpenVAT",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:6f92842ab00a5abc8ca2697004556738db941516e2c29b70eb77d93ca35d8541/add-on-openvat-v1.1.2-windows-x64-macos-arm64-linux-x64.zip",
-        "id": "openvat",
-        "type": "extensions"
-      },
-      "version": "1.1.2"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
       "developer": "mononym",
       "group": "extensions-top",
       "homepage": "https://extensions.blender.org/add-ons/pohlke/",
@@ -765,36 +390,6 @@
         "type": "extensions"
       },
       "version": "2.1.0"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
-      "developer": "mononym",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/pohlke/",
-      "id": "pohlke",
-      "name": "Pohlke",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:1794795bc14baf801d8f5299f524b6c2479989f46d2036ec429ffffdf762c78a/add-on-pohlke-v2.1.0.zip",
-        "id": "pohlke",
-        "type": "extensions"
-      },
-      "version": "2.1.0"
-    },
-    {
-      "blender_version_max": "6.0.0",
-      "blender_version_min": "4.2.0",
-      "developer": "Mets",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/easyweight/",
-      "id": "easyweight",
-      "name": "EasyWeight",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:6a608ee3bf5f8ca5fa9ed6596d19416b40944be33cfaecd26080259eadd507d5/add-on-easyweight-v1.1.3.zip",
-        "id": "easyweight",
-        "type": "extensions"
-      },
-      "version": "1.1.3"
     },
     {
       "blender_version_max": "6.0.0",
@@ -829,21 +424,6 @@
     {
       "blender_version_max": "",
       "blender_version_min": "4.2.0",
-      "developer": "Bolt Factory",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/boltfactory/",
-      "id": "boltfactory",
-      "name": "BoltFactory",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:b75f6f946b5c29f7a2122737da891917cd9c862e85b37daef82c662a348223b3/add-on-boltfactory-v0.7.1.zip",
-        "id": "boltfactory",
-        "type": "extensions"
-      },
-      "version": "0.7.1"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
       "developer": "Community",
       "group": "extensions-top",
       "homepage": "https://extensions.blender.org/add-ons/antlandscape/",
@@ -855,36 +435,6 @@
         "type": "extensions"
       },
       "version": "0.2.0"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
-      "developer": "Community",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/antlandscape/",
-      "id": "antlandscape",
-      "name": "A.N.T.Landscape",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:230571bc14c50952f3af99b70fdb365cf0cee503382975dc38149407a5a4c8c0/add-on-antlandscape-v0.2.0.zip",
-        "id": "antlandscape",
-        "type": "extensions"
-      },
-      "version": "0.2.0"
-    },
-    {
-      "blender_version_max": "",
-      "blender_version_min": "4.2.0",
-      "developer": "dr.sybren",
-      "group": "extensions-top",
-      "homepage": "https://extensions.blender.org/add-ons/unlooped/",
-      "id": "unlooped",
-      "name": "Unlooped",
-      "source": {
-        "archive_url": "https://extensions.blender.org/download/sha256:a254b5faa77745aa3ec6fbd93cfc02d6933dcc20cd4e9f9fe6c853f937b733f4/add-on-unlooped-v1.0.1.zip",
-        "id": "unlooped",
-        "type": "extensions"
-      },
-      "version": "1.0.1"
     },
     {
       "blender_version_max": "",
