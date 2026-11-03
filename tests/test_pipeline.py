@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "scripts"))
 
 import analyze  # noqa: E402
+import build_report  # noqa: E402
 import common  # noqa: E402
 import fetch_addons  # noqa: E402
 
