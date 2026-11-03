@@ -136,6 +136,12 @@ def main() -> None:
     addons = load_addons(set(args.only.split(",")) if args.only else None)
     out_dir = RESULTS_DIR / args.version
     out_dir.mkdir(parents=True, exist_ok=True)
+    if not args.only:
+        # A full run owns the directory: drop results of add-ons that left the list.
+        keep = {a["id"] for a in addons}
+        for stale in out_dir.iterdir():
+            if stale.suffix in (".json", ".log") and stale.stem not in keep and stale.name != "summary.json":
+                stale.unlink()
     log(f"testing {len(addons)} add-ons with {args.jobs} parallel jobs")
 
     counts: dict[str, int] = {}
