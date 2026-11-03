@@ -88,8 +88,7 @@
       "group": "owner",
       "developer": "3DQuads",
       "homepage": "https://superhivemarket.com/products/3dquads-print-ready",
-      "enabled": false,
-      "_note": "Paid add-on: the zip lives in the private repo, never in this one. Enable once PRIVATE_ADDONS_TOKEN is set.",
+      "_note": "Paid add-on: the zip lives in the private repo, never in this one.",
       "source": {
         "type": "private_github_file",
         "repo": "lionit/blender-addon-check-private",
@@ -103,8 +102,7 @@
       "group": "owner",
       "developer": "3DQuads",
       "homepage": "https://superhivemarket.com/products/3dquads-texture-maps-generator",
-      "enabled": false,
-      "_note": "Paid add-on: the zip lives in the private repo, never in this one. Enable once PRIVATE_ADDONS_TOKEN is set.",
+      "_note": "Paid add-on: the zip lives in the private repo, never in this one.",
       "source": {
         "type": "private_github_file",
         "repo": "lionit/blender-addon-check-private",
@@ -118,8 +116,7 @@
       "group": "owner",
       "developer": "3DQuads",
       "homepage": "https://superhivemarket.com/products/showcase-studio",
-      "enabled": false,
-      "_note": "Paid add-on: the zip lives in the private repo, never in this one. Enable once PRIVATE_ADDONS_TOKEN is set.",
+      "_note": "Paid add-on: the zip lives in the private repo, never in this one.",
       "source": {
         "type": "private_github_file",
         "repo": "lionit/blender-addon-check-private",
