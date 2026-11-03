@@ -59,9 +59,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .cache/addons
-          key: addons-${{ hashFiles('config/addons.json', 'config/addons.generated.json') }}-${{ github.run_id }}
+          key: addons-${{ hashFiles('config/addons.json', 'config/addons.generated.json', 'scripts/fetch_addons.py') }}-${{ github.run_id }}
           restore-keys: |
-            addons-${{ hashFiles('config/addons.json', 'config/addons.generated.json') }}-
+            addons-${{ hashFiles('config/addons.json', 'config/addons.generated.json', 'scripts/fetch_addons.py') }}-
 
       - name: Run the tests
         env:

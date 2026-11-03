@@ -4,9 +4,9 @@
   "blender_version": "5.1.2",
   "captured_output": "addon_utils.disable: mixer not loaded\nModules Installed (mixer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/mixer.zip' into '/tmp/bac-mixer-eejw9d0q/blender/scripts/addons'\nInfo: Modules Installed (mixer) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/mixer.zip' into '/tmp/bac-mixer-eejw9d0q/blender/scripts/addons'\nException in module register(): /tmp/bac-mixer-eejw9d0q/blender/scripts/addons/mixer/__init__.py\n",
   "cause": {
-    "cause": "Calls a bpy attribute that no longer exists in this Blender version.",
-    "fix": "Check the Python API change log for this release and add a version guard around the renamed or removed attribute.",
-    "id": "removed-bpy-attribute"
+    "cause": "Uses the video-sequencer 'Sequence' API that Blender 4.4 renamed to 'Strip' (bpy.types.Strip, scene.sequence_editor.strips).",
+    "fix": "Replace Sequence/sequences with Strip/strips, guarded by a bpy.app.version check if you still support 4.2.",
+    "id": "sequence-strip-rename"
   },
   "classes_registered": 0,
   "declared_max": null,

@@ -39,7 +39,7 @@ RULES: list[tuple[str, str, str, str]] = [
     ),
     (
         "sequence-strip-rename",
-        r"cannot import name 'Sequence' from 'bpy\.types'|bpy\.types\.Sequence\b|'Sequences' object has no attribute|has no attribute 'sequences'|has no attribute 'sequence_editor'",
+        r"cannot import name 'Sequence' from 'bpy\.types'|bpy\.types\.Sequence\b|'Sequences' object has no attribute|has no attribute 'sequences'|has no attribute 'sequence_editor'|has no attribute '[A-Za-z]*Sequence'",
         "Uses the video-sequencer 'Sequence' API that Blender 4.4 renamed to 'Strip' (bpy.types.Strip, scene.sequence_editor.strips).",
         "Replace Sequence/sequences with Strip/strips, guarded by a bpy.app.version check if you still support 4.2.",
     ),
