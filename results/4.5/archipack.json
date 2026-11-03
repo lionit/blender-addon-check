@@ -1,0 +1,42 @@
+{
+  "addon_id": "archipack",
+  "addon_version": null,
+  "blender_version": "4.5.15 LTS",
+  "captured_output": "addon_utils.disable: archipack not loaded\nModules Installed (archipack) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/archipack.zip' into '/tmp/bac-archipack-5htvwtlk/blender/scripts/addons'\nInfo: Modules Installed (archipack) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/archipack.zip' into '/tmp/bac-archipack-5htvwtlk/blender/scripts/addons'\n",
+  "cause": {
+    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
+    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
+    "id": "unclassified"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "2.7.8",
+  "developer": "s-leger",
+  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 432, in enable\n    mod = importlib.import_module(module_name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/python/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/tmp/bac-archipack-5htvwtlk/blender/scripts/addons/archipack/__init__.py\", line 89, in <module>\n    from . import archipack_manipulator\n  File \"/tmp/bac-archipack-5htvwtlk/blender/scripts/addons/archipack/archipack_manipulator.py\", line 40, in <module>\n    from .archipack_gl import (\n  File \"/tmp/bac-archipack-5htvwtlk/blender/scripts/addons/archipack/archipack_gl.py\", line 1137, in <module>\n    class GlCursorFence():\n  File \"/tmp/bac-archipack-5htvwtlk/blender/scripts/addons/archipack/archipack_gl.py\", line 1141, in GlCursorFence\n    def __init__(self, width=1, colour=(1.0, 1.0, 1.0, 0.5), style=bgl.GL_LINE_STIPPLE):\n                                                                   ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'bgl' has no attribute 'GL_LINE_STIPPLE'\n",
+  "error_stage": "enable",
+  "group": "github",
+  "homepage": "https://github.com/s-leger/archipack",
+  "kind": "legacy",
+  "log": "archipack.log",
+  "module": "archipack",
+  "name": "Archipack (free)",
+  "operators_poll_failed": 0,
+  "operators_total": 0,
+  "python_version": "3.11.15",
+  "ran_at": "2026-11-03T14:11:55+00:00",
+  "source_type": "github_zipball",
+  "stages": {
+    "enable": {
+      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 432, in enable\n    mod = importlib.import_module(module_name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/python/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/tmp/bac-archipack-5htvwtlk/blender/scripts/addons/archipack/__init__.py\", line 89, in <module>\n    from . import archipack_manipulator\n  File \"/tmp/bac-archipack-5htvwtlk/blender/scripts/addons/archipack/archipack_manipulator.py\", line 40, in <module>\n    from .archipack_gl import (\n  File \"/tmp/bac-archipack-5htvwtlk/blender/scripts/addons/archipack/archipack_gl.py\", line 1137, in <module>\n    class GlCursorFence():\n  File \"/tmp/bac-archipack-5htvwtlk/blender/scripts/addons/archipack/archipack_gl.py\", line 1141, in GlCursorFence\n    def __init__(self, width=1, colour=(1.0, 1.0, 1.0, 0.5), style=bgl.GL_LINE_STIPPLE):\n                                                                   ^^^^^^^^^^^^^^^^^^^\nAttributeError: module 'bgl' has no attribute 'GL_LINE_STIPPLE'\n",
+      "ok": false
+    },
+    "install": {
+      "detail": "addon_utils.disable: archipack not loaded\nModules Installed (archipack) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/archipack.zip' into '/tmp/bac-archipack-5htvwtlk/blender/scripts/addons'\nInfo: Modules Installed (archipack) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/archipack.zip' into '/tmp/bac-archipack-5htvwtlk/blender/scripts/addons'\n",
+      "ok": true
+    }
+  },
+  "status": "fail",
+  "timing_s": {
+    "install": 0.06
+  }
+}

@@ -1,0 +1,10 @@
+--- extension install-file ---
+STATUS Installed "anotherv_sketchtools_lite"
+Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
+
+--- harness ---
+Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
+
+Blender quit
+
+--- stderr ---

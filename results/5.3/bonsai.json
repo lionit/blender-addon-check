@@ -1,0 +1,23 @@
+{
+  "addon_id": "bonsai",
+  "addon_version": "0.9.0-post1-py311",
+  "cause": {
+    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
+    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
+    "id": "unclassified"
+  },
+  "declared_max": "5.1.0",
+  "declared_min": "4.2.0",
+  "developer": "IfcOpenShell",
+  "error": "`blender --command extension install-file` exited with 0\n--- extension install-file ---\nERROR bonsai: This platform (linux-x64) isn't one of (windows-x64)\nBlender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)\n",
+  "error_stage": "install",
+  "group": "extensions-top",
+  "homepage": "https://extensions.blender.org/add-ons/bonsai/",
+  "kind": "extension",
+  "log": "bonsai.log",
+  "module": "bl_ext.user_default.bonsai",
+  "name": "Bonsai",
+  "ran_at": "2026-11-03T14:11:55+00:00",
+  "source_type": "extensions",
+  "status": "fail"
+}

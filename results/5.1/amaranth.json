@@ -1,0 +1,24 @@
+{
+  "addon_id": "amaranth",
+  "addon_version": "1.0.35",
+  "cause": {
+    "cause": "The add-on declares it does not support this Blender version, and Blender refuses to enable it.",
+    "fix": "Raise blender_version_min / bl_info['blender'] once the add-on is confirmed to work, or publish a version for this release.",
+    "id": "declared-unsupported"
+  },
+  "declared_max": null,
+  "declared_min": "5.3.0",
+  "developer": "pablovazquez",
+  "error": "`blender --command extension install-file` exited with 0\n--- extension install-file ---\nERROR amaranth: This Blender version (5.1.2) doesn't meet the minimum supported version (5.3.0)\nBlender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)\n",
+  "error_stage": "install",
+  "group": "extensions-top",
+  "homepage": "https://extensions.blender.org/add-ons/amaranth/",
+  "kind": "extension",
+  "log": "amaranth.log",
+  "module": "bl_ext.user_default.amaranth",
+  "name": "Amaranth",
+  "ran_at": "2026-11-03T14:12:42+00:00",
+  "source_type": "extensions",
+  "status": "unsupported",
+  "status_before_analysis": "fail"
+}

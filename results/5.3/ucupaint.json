@@ -2,28 +2,28 @@
   "addon_id": "ucupaint",
   "addon_version": "3.0.1",
   "blender_version": "5.3.0 Beta",
-  "captured_output": "INFO: Ucupaint 3.0.1 is registered!\nTraceback (most recent call last):\n  File \"/tmp/bac-ucupaint-cbxayjwi/blender/extensions/user_default/ucupaint/Root.py\", line 836, in poll\n    space.type == 'NODE_EDITOR' and\n    ^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\nINFO: Ucupaint 3.0.1 is unregistered!\nINFO: Ucupaint 3.0.1 is registered!\n",
+  "captured_output": "INFO: Ucupaint 3.0.1 is registered!\nTraceback (most recent call last):\n  File \"/tmp/bac-ucupaint-_n27j8cy/blender/extensions/user_default/ucupaint/Root.py\", line 836, in poll\n    space.type == 'NODE_EDITOR' and\n    ^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\nINFO: Ucupaint 3.0.1 is unregistered!\nINFO: Ucupaint 3.0.1 is registered!\n",
   "cause": {
-    "cause": "Defines an operator class that is never registered, so bpy.ops cannot reach it.",
-    "fix": "Register the class or delete it; this is harmless to users but hides dead code.",
-    "id": "unregistered-operator"
+    "cause": "",
+    "fix": "",
+    "id": "none"
   },
   "classes_registered": 0,
   "declared_max": null,
   "declared_min": "4.2.0",
   "developer": "ucupumar",
-  "error": "wm.y_bake_channels\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.wm.y_bake_channels\" error, could not be found\n",
-  "error_stage": "poll",
+  "error": "",
+  "error_stage": "",
   "group": "extensions-top",
   "homepage": "https://extensions.blender.org/add-ons/ucupaint/",
   "kind": "extension",
   "log": "ucupaint.log",
   "module": "bl_ext.user_default.ucupaint",
   "name": "Ucupaint",
-  "operators_poll_failed": 1,
-  "operators_total": 144,
+  "operators_poll_failed": 0,
+  "operators_total": 143,
   "python_version": "3.13.13",
-  "ran_at": "2026-11-03T14:03:29+00:00",
+  "ran_at": "2026-11-03T14:11:53+00:00",
   "source_type": "extensions",
   "stages": {
     "enable": {
@@ -35,19 +35,19 @@
       "ok": true
     },
     "poll": {
-      "detail": "wm.y_bake_channels\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.wm.y_bake_channels\" error, could not be found\n",
-      "ok": false
+      "detail": "",
+      "ok": true
     },
     "reenable": {
       "detail": "",
       "ok": true
     }
   },
-  "status": "warn",
+  "status": "pass",
   "timing_s": {
-    "enable": 0.97,
-    "install": 0.01,
-    "poll": 0.01,
-    "reenable": 0.02
+    "enable": 0.52,
+    "install": 0.0,
+    "poll": 0.0,
+    "reenable": 0.01
   }
 }

@@ -1,0 +1,53 @@
+{
+  "addon_id": "h_style_rbd_nodes",
+  "addon_version": "1.0.2",
+  "blender_version": "5.3.0 Beta",
+  "captured_output": "",
+  "cause": {
+    "cause": "",
+    "fix": "",
+    "id": "none"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "5.2.0",
+  "developer": "Excifroge",
+  "error": "",
+  "error_stage": "",
+  "group": "extensions-top",
+  "homepage": "https://extensions.blender.org/add-ons/h-style-rbd-nodes/",
+  "kind": "extension",
+  "log": "h_style_rbd_nodes.log",
+  "module": "bl_ext.user_default.h_style_rbd_nodes",
+  "name": "H-Style RBD Nodes",
+  "operators_poll_failed": 0,
+  "operators_total": 9,
+  "python_version": "3.13.13",
+  "ran_at": "2026-11-03T14:12:37+00:00",
+  "source_type": "extensions",
+  "stages": {
+    "enable": {
+      "detail": "",
+      "ok": true
+    },
+    "install": {
+      "detail": "",
+      "ok": true
+    },
+    "poll": {
+      "detail": "",
+      "ok": true
+    },
+    "reenable": {
+      "detail": "",
+      "ok": true
+    }
+  },
+  "status": "pass",
+  "timing_s": {
+    "enable": 0.08,
+    "install": 0.0,
+    "poll": 0.0,
+    "reenable": 0.0
+  }
+}

@@ -4,26 +4,26 @@
   "blender_version": "5.2.3 LTS",
   "captured_output": "UniV: Skipping registration in background mode\nUniV: Skipping registration in background mode\n",
   "cause": {
-    "cause": "Defines an operator class that is never registered, so bpy.ops cannot reach it.",
-    "fix": "Register the class or delete it; this is harmless to users but hides dead code.",
-    "id": "unregistered-operator"
+    "cause": "",
+    "fix": "",
+    "id": "none"
   },
   "classes_registered": 0,
   "declared_max": null,
   "declared_min": "4.2.0",
   "developer": "Oxicid",
-  "error": "cripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.wm.univ_split_uv_toggle\" error, could not be found\n\n\nwm.univ_toggle_panels_by_cursor\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.wm.univ_toggle_panels_by_cursor\" error, could not be found\n\n\nuv.univ_toggle_pivot\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_toggle_pivot\" error, could not be found\n\n\nuv.univ_sync_uv_toggle\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_sync_uv_toggle\" error, could not be found\n\n\nuv.univ_stretch_uv_toggle\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_stretch_uv_toggle\" error, could not be found\n\n\nuv.univ_show_modified_uv_edges_toggle\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_show_modified_uv_edges_toggle\" error, could not be found\n\n\nview3d.univ_modifiers_toggle\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.view3d.univ_modifiers_toggle\" error, could not be found\n\n\nwm.univ_workspace_toggle\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.wm.univ_workspace_toggle\" error, could not be found\n\n\nuv.univ_fit\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_fit\" error, could not be found\n\n\nuv.univ_snap_to_pixels\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_snap_to_pixels\" error, could not be found\n\n\nuv.univ_align_pie\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_align_pie\" error, could not be found\n\n\nmesh.univ_flip\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.mesh.univ_flip\" error, could not be found\n\n\nmesh.univ_rotate\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.mesh.univ_rotate\" error, could not be found\n\n\nuv.univ_sort\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_sort\" error, could not be found\n\n\nuv.univ_distribute\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_distribute\" error, could not be found\n\n\nuv.univ_break\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_break\" error, could not be found\n\n\nuv.univ_home\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_home\" error, could not be found\n\n\nuv.univ_shift\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_shift\" error, could not be found\n\n\nuv.univ_random\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_random\" error, could not be found\n\n\nuv.univ_orient\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_orient\" error, could not be found\n\n\nuv.univ_gravity\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_gravity\" error, could not be found\n\n\nuv.univ_pack\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_pack\" error, could not be found\n",
-  "error_stage": "poll",
+  "error": "",
+  "error_stage": "",
   "group": "extensions-top",
   "homepage": "https://extensions.blender.org/add-ons/univ/",
   "kind": "extension",
   "log": "univ.log",
   "module": "bl_ext.user_default.univ",
   "name": "UniV",
-  "operators_poll_failed": 89,
-  "operators_total": 89,
+  "operators_poll_failed": 0,
+  "operators_total": 0,
   "python_version": "3.13.13",
-  "ran_at": "2026-11-03T14:03:14+00:00",
+  "ran_at": "2026-11-03T14:11:59+00:00",
   "source_type": "extensions",
   "stages": {
     "enable": {
@@ -35,19 +35,19 @@
       "ok": true
     },
     "poll": {
-      "detail": "\"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.wm.univ_workspace_toggle\" error, could not be found\n\n\nuv.univ_fit\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_fit\" error, could not be found\n\n\nuv.univ_snap_to_pixels\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_snap_to_pixels\" error, could not be found\n\n\nuv.univ_align_pie\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_align_pie\" error, could not be found\n\n\nmesh.univ_flip\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.mesh.univ_flip\" error, could not be found\n\n\nmesh.univ_rotate\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.mesh.univ_rotate\" error, could not be found\n\n\nuv.univ_sort\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_sort\" error, could not be found\n\n\nuv.univ_distribute\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_distribute\" error, could not be found\n\n\nuv.univ_break\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_break\" error, could not be found\n\n\nuv.univ_home\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_home\" error, could not be found\n\n\nuv.univ_shift\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_shift\" error, could not be found\n\n\nuv.univ_random\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_random\" error, could not be found\n\n\nuv.univ_orient\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_orient\" error, could not be found\n\n\nuv.univ_gravity\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_gravity\" error, could not be found\n\n\nuv.univ_pack\nTraceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 174, in main\n    op.poll()\n    ~~~~~~~^^\nAttributeError: Polling operator \"bpy.ops.uv.univ_pack\" error, could not be found\n",
-      "ok": false
+      "detail": "",
+      "ok": true
     },
     "reenable": {
       "detail": "",
       "ok": true
     }
   },
-  "status": "warn",
+  "status": "pass",
   "timing_s": {
-    "enable": 0.62,
+    "enable": 0.48,
     "install": 0.0,
-    "poll": 0.02,
-    "reenable": 0.0
+    "poll": 0.0,
+    "reenable": 0.01
   }
 }

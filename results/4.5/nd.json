@@ -21,9 +21,9 @@
   "module": "bl_ext.user_default.nd",
   "name": "ND",
   "operators_poll_failed": 0,
-  "operators_total": 66,
+  "operators_total": 33,
   "python_version": "3.11.15",
-  "ran_at": "2026-11-03T14:03:19+00:00",
+  "ran_at": "2026-11-03T14:11:57+00:00",
   "source_type": "extensions",
   "stages": {
     "enable": {
@@ -45,9 +45,9 @@
   },
   "status": "pass",
   "timing_s": {
-    "enable": 0.36,
+    "enable": 0.4,
     "install": 0.01,
     "poll": 0.0,
-    "reenable": 0.02
+    "reenable": 0.26
   }
 }

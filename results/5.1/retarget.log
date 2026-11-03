@@ -1,0 +1,42 @@
+--- extension install-file ---
+STATUS Installed "retarget"
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)
+
+--- harness ---
+00:00.602  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_activate_anim_offset.poll
+00:00.602  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_deactivate_anim_offset.poll
+00:00.603  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_add_anim_offset_mask.poll
+00:00.603  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_delete_anim_offset_mask.poll
+00:00.603  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_anim_offset_settings.poll
+00:00.604  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_move_key.poll
+00:00.604  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_insert_frames.poll
+00:00.605  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_set_key_type.poll
+00:00.605  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_delete_key_type.poll
+00:00.605  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_select_key_type.poll
+00:00.606  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_set_handles_type.poll
+00:00.606  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_select_key_parts.poll
+00:00.606  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_set_handles_interp.poll
+00:00.607  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_ease_to_ease.poll
+00:00.607  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_ease.poll
+00:00.607  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_ease.poll
+00:00.608  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_neighbor.poll
+00:00.608  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_default.poll
+00:00.608  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_infinite.poll
+00:00.609  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_frame.poll
+00:00.609  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_blend_offset.poll
+00:00.609  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_tween.poll
+00:00.610  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_push_pull.poll
+00:00.610  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_smooth.poll
+00:00.610  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_time_offset.poll
+00:00.611  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_shear_right.poll
+00:00.611  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_shear_left.poll
+00:00.611  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_wave_noise.poll
+00:00.612  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_scale_left.poll
+00:00.612  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_scale_right.poll
+00:00.612  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_scale_average.poll
+00:00.613  bpy.rna          | ERROR Python script error in ANIM_OT_retarget_aide_tools_settings.poll
+Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)
+
+Blender quit
+
+--- stderr ---

@@ -1,0 +1,42 @@
+{
+  "addon_id": "animation-nodes",
+  "addon_version": null,
+  "blender_version": "5.3.0 Beta",
+  "captured_output": "addon_utils.disable: animation_nodes not loaded\nModules Installed (animation_nodes) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/animation-nodes.zip' into '/tmp/bac-animation-nodes-wvdyj0h_/blender/scripts/addons'\nInfo: Modules Installed (animation_nodes) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/animation-nodes.zip' into '/tmp/bac-animation-nodes-wvdyj0h_/blender/scripts/addons'\n",
+  "cause": {
+    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
+    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
+    "id": "unclassified"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "4.2.0",
+  "developer": "JacquesLucke",
+  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/scripts/modules/addon_utils.py\", line 464, in enable\n    mod = importlib.import_module(module_name)\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/python/lib/python3.13/importlib/__init__.py\", line 88, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1395, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 1023, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/tmp/bac-animation-nodes-wvdyj0h_/blender/scripts/addons/animation_nodes/__init__.py\", line 137, in <module>\n    raise Exception(message)\nException: \n\nThere is a Python version mismatch.\n\nYour Blender build uses: (3, 13, 13)\nAnimation Nodes has been compiled for: (3, 11, 11)\n\nYou have four options:\n  1. Download a version of Animation Nodes with a suitable python version.\n  2. Try to make Blender use another Python version.\n     (Blender 4.2 officially uses Python 3.11.x)\n  3. Compile Animation Nodes yourself using the correct Python version.\n     (Look in the developer manual for more information)\n  4. Create an issue on Github and ask if someone can create a build for you.\n",
+  "error_stage": "enable",
+  "group": "github",
+  "homepage": "https://github.com/JacquesLucke/animation_nodes",
+  "kind": "legacy",
+  "log": "animation-nodes.log",
+  "module": "animation_nodes",
+  "name": "Animation Nodes",
+  "operators_poll_failed": 0,
+  "operators_total": 0,
+  "python_version": "3.13.13",
+  "ran_at": "2026-11-03T14:11:51+00:00",
+  "source_type": "github_release",
+  "stages": {
+    "enable": {
+      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/scripts/modules/addon_utils.py\", line 464, in enable\n    mod = importlib.import_module(module_name)\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/python/lib/python3.13/importlib/__init__.py\", line 88, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1395, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 1023, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\n  File \"/tmp/bac-animation-nodes-wvdyj0h_/blender/scripts/addons/animation_nodes/__init__.py\", line 137, in <module>\n    raise Exception(message)\nException: \n\nThere is a Python version mismatch.\n\nYour Blender build uses: (3, 13, 13)\nAnimation Nodes has been compiled for: (3, 11, 11)\n\nYou have four options:\n  1. Download a version of Animation Nodes with a suitable python version.\n  2. Try to make Blender use another Python version.\n     (Blender 4.2 officially uses Python 3.11.x)\n  3. Compile Animation Nodes yourself using the correct Python version.\n     (Look in the developer manual for more information)\n  4. Create an issue on Github and ask if someone can create a build for you.\n",
+      "ok": false
+    },
+    "install": {
+      "detail": "addon_utils.disable: animation_nodes not loaded\nModules Installed (animation_nodes) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/animation-nodes.zip' into '/tmp/bac-animation-nodes-wvdyj0h_/blender/scripts/addons'\nInfo: Modules Installed (animation_nodes) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/animation-nodes.zip' into '/tmp/bac-animation-nodes-wvdyj0h_/blender/scripts/addons'\n",
+      "ok": true
+    }
+  },
+  "status": "fail",
+  "timing_s": {
+    "install": 0.14
+  }
+}

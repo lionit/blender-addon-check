@@ -1,0 +1,10 @@
+--- extension install-file ---
+STATUS Installed "loopkut"
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)
+
+--- harness ---
+Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)
+
+Blender quit
+
+--- stderr ---
