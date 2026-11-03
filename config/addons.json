@@ -1,0 +1,78 @@
+{
+  "_comment": "Curated add-ons that are not on extensions.blender.org, plus the project owner's own add-ons. The nightly run merges this with config/addons.generated.json (top extensions by downloads). Source types: extensions | github_release | github_zipball | local.",
+  "addons": [
+    {
+      "id": "machin3tools",
+      "name": "MACHIN3tools",
+      "group": "github",
+      "developer": "MACHIN3",
+      "homepage": "https://github.com/machin3io/MACHIN3tools",
+      "source": {"type": "github_release", "repo": "machin3io/MACHIN3tools", "asset_pattern": "MACHIN3tools.*\\.zip", "module": "MACHIN3tools"}
+    },
+    {
+      "id": "sverchok",
+      "name": "Sverchok",
+      "group": "github",
+      "developer": "nortikin",
+      "homepage": "https://github.com/nortikin/sverchok",
+      "source": {"type": "github_zipball", "repo": "nortikin/sverchok", "ref": "master", "module": "sverchok"}
+    },
+    {
+      "id": "animation-nodes",
+      "name": "Animation Nodes",
+      "group": "github",
+      "developer": "JacquesLucke",
+      "homepage": "https://github.com/JacquesLucke/animation_nodes",
+      "source": {"type": "github_release", "repo": "JacquesLucke/animation_nodes", "asset_pattern": ".*linux.*\\.zip", "module": "animation_nodes"}
+    },
+    {
+      "id": "molecular-nodes",
+      "name": "Molecular Nodes",
+      "group": "github",
+      "developer": "BradyAJohnston",
+      "homepage": "https://github.com/BradyAJohnston/MolecularNodes",
+      "source": {"type": "github_release", "repo": "BradyAJohnston/MolecularNodes", "asset_pattern": ".*\\.zip", "module": "molecularnodes"}
+    },
+    {
+      "id": "bonsai",
+      "name": "Bonsai (BlenderBIM)",
+      "group": "github",
+      "developer": "IfcOpenShell",
+      "homepage": "https://github.com/IfcOpenShell/IfcOpenShell",
+      "source": {"type": "github_release", "repo": "IfcOpenShell/IfcOpenShell", "asset_pattern": "bonsai.*linux.*\\.zip", "module": "bonsai"}
+    },
+    {
+      "id": "screencast-keys",
+      "name": "Screencast Keys",
+      "group": "github",
+      "developer": "nutti",
+      "homepage": "https://github.com/nutti/Screencast-Keys",
+      "source": {"type": "github_release", "repo": "nutti/Screencast-Keys", "asset_pattern": ".*\\.zip", "module": "screencast_keys"}
+    },
+    {
+      "id": "archipack",
+      "name": "Archipack (free)",
+      "group": "github",
+      "developer": "s-leger",
+      "homepage": "https://github.com/s-leger/archipack",
+      "source": {"type": "github_zipball", "repo": "s-leger/archipack", "ref": "master", "module": "archipack"}
+    },
+    {
+      "id": "mira-tools",
+      "name": "Mira Tools",
+      "group": "github",
+      "developer": "mifth",
+      "homepage": "https://github.com/mifth/mifthtools",
+      "source": {"type": "github_zipball", "repo": "mifth/mifthtools", "ref": "master", "subdir": "blender/addons/2.8/mira_tools", "module": "mira_tools"}
+    },
+    {
+      "id": "blender-launcher-placeholder-owner-addons",
+      "name": "Owner's add-ons go here",
+      "group": "owner",
+      "developer": "lionit",
+      "homepage": "",
+      "enabled": false,
+      "source": {"type": "local", "path": "addons/OWNER_ADDON.zip", "module": "owner_addon"}
+    }
+  ]
+}

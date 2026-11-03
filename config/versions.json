@@ -1,0 +1,9 @@
+{
+  "_comment": "Blender versions tested every night. 'release' entries resolve to the newest patch release in that series on download.blender.org; 'daily' entries resolve to the newest build on builder.blender.org for that series.",
+  "versions": [
+    {"key": "4.5", "label": "4.5 LTS", "channel": "release", "series": "4.5"},
+    {"key": "5.1", "label": "5.1", "channel": "release", "series": "5.1"},
+    {"key": "5.2", "label": "5.2 LTS", "channel": "release", "series": "5.2"},
+    {"key": "5.3", "label": "5.3 pre-release", "channel": "daily", "series": "5.3"}
+  ]
+}
