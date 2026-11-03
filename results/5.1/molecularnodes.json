@@ -1,0 +1,36 @@
+{
+  "addon_id": "molecularnodes",
+  "addon_version": "520.2.0",
+  "blender_version": "5.1.2",
+  "captured_output": "",
+  "cause": {
+    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
+    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
+    "id": "unclassified"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "5.2.0",
+  "developer": "bradyajohnston",
+  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 116, in main\n    raise RuntimeError(\n    ...<2 lines>...\n    )\nRuntimeError: bl_ext.user_default.molecularnodes is not among the add-ons Blender can see after install-file. Known extension modules: []\n\n--- output ---\n",
+  "error_stage": "install",
+  "group": "extensions-top",
+  "homepage": "https://extensions.blender.org/add-ons/molecularnodes/",
+  "kind": "extension",
+  "log": "molecularnodes.log",
+  "module": null,
+  "name": "Molecular Nodes",
+  "operators_poll_failed": 0,
+  "operators_total": 0,
+  "python_version": "3.13.9",
+  "ran_at": "2026-11-03T14:03:15+00:00",
+  "source_type": "extensions",
+  "stages": {
+    "install": {
+      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/scripts/harness.py\", line 116, in main\n    raise RuntimeError(\n    ...<2 lines>...\n    )\nRuntimeError: bl_ext.user_default.molecularnodes is not among the add-ons Blender can see after install-file. Known extension modules: []\n\n--- output ---\n",
+      "ok": false
+    }
+  },
+  "status": "fail",
+  "timing_s": {}
+}

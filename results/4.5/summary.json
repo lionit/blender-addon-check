@@ -1,13 +1,14 @@
 {
-  "addons": 7,
+  "addons": 10,
   "blender_version": "4.5.15 LTS",
   "channel": "release",
   "counts": {
-    "fail": 5,
+    "fail": 2,
+    "pass": 4,
     "unavailable": 1,
-    "warn": 1
+    "warn": 3
   },
   "label": "4.5 LTS",
-  "ran_at": "2026-11-03T13:54:18+00:00",
+  "ran_at": "2026-11-03T14:03:27+00:00",
   "version_key": "4.5"
 }

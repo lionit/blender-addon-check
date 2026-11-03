@@ -2,18 +2,18 @@
   "addon_id": "nd",
   "addon_version": "2.2.1",
   "blender_version": "5.2.3 LTS",
-  "captured_output": "Exception in module register(): /tmp/bac-nd-3whvcm82/blender/extensions/user_default/nd/__init__.py\n",
+  "captured_output": "",
   "cause": {
-    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
-    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
-    "id": "unclassified"
+    "cause": "",
+    "fix": "",
+    "id": "none"
   },
   "classes_registered": 0,
   "declared_max": null,
   "declared_min": "4.2.0",
   "developer": "HugeMenace",
-  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.2.3-linux-x64/5.2/scripts/modules/addon_utils.py\", line 544, in enable\n    mod.register()\n    ~~~~~~~~~~~~^^\n  File \"/tmp/bac-nd-3whvcm82/blender/extensions/user_default/nd/__init__.py\", line 642, in register\n    registerable.register()\n    ~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-nd-3whvcm82/blender/extensions/user_default/nd/interface/__init__.py\", line 83, in register\n    registerable.register()\n    ~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-nd-3whvcm82/blender/extensions/user_default/nd/interface/main_ui_panel.py\", line 210, in register\n    if get_preferences().enable_sidebar:\n       ~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-nd-3whvcm82/blender/extensions/user_default/nd/lib/preferences.py\", line 33, in get_preferences\n    return bpy.context.preferences.addons[get_registered_addon_name()].preferences\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'bpy_prop_collection[key]: key \"bl_ext.user_default.nd\" not found'\n",
-  "error_stage": "enable",
+  "error": "",
+  "error_stage": "",
   "group": "extensions-top",
   "homepage": "https://extensions.blender.org/add-ons/nd/",
   "kind": "extension",
@@ -21,22 +21,33 @@
   "module": "bl_ext.user_default.nd",
   "name": "ND",
   "operators_poll_failed": 0,
-  "operators_total": 0,
+  "operators_total": 62,
   "python_version": "3.13.13",
-  "ran_at": "2026-11-03T13:54:12+00:00",
+  "ran_at": "2026-11-03T14:03:12+00:00",
   "source_type": "extensions",
   "stages": {
     "enable": {
-      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.2.3-linux-x64/5.2/scripts/modules/addon_utils.py\", line 544, in enable\n    mod.register()\n    ~~~~~~~~~~~~^^\n  File \"/tmp/bac-nd-3whvcm82/blender/extensions/user_default/nd/__init__.py\", line 642, in register\n    registerable.register()\n    ~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-nd-3whvcm82/blender/extensions/user_default/nd/interface/__init__.py\", line 83, in register\n    registerable.register()\n    ~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-nd-3whvcm82/blender/extensions/user_default/nd/interface/main_ui_panel.py\", line 210, in register\n    if get_preferences().enable_sidebar:\n       ~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-nd-3whvcm82/blender/extensions/user_default/nd/lib/preferences.py\", line 33, in get_preferences\n    return bpy.context.preferences.addons[get_registered_addon_name()].preferences\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nKeyError: 'bpy_prop_collection[key]: key \"bl_ext.user_default.nd\" not found'\n",
-      "ok": false
+      "detail": "",
+      "ok": true
     },
     "install": {
       "detail": "",
       "ok": true
+    },
+    "poll": {
+      "detail": "",
+      "ok": true
+    },
+    "reenable": {
+      "detail": "",
+      "ok": true
     }
   },
-  "status": "fail",
+  "status": "pass",
   "timing_s": {
-    "install": 0.0
+    "enable": 0.37,
+    "install": 0.0,
+    "poll": 0.0,
+    "reenable": 0.04
   }
 }

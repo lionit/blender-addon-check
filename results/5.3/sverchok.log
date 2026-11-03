@@ -1,5 +1,16 @@
 
 --- harness ---
+00:04.635  bpy.rna          | ERROR Python script error in NODE_OT_add_node_output_input.poll
+00:04.636  bpy.rna          | ERROR Python script error in NODE_OT_ungroup_group_tree.poll
+00:04.636  bpy.rna          | ERROR Python script error in NODE_OT_sv_testing_dump_node_def.poll
+00:04.637  bpy.rna          | ERROR Python script error in NODE_OT_sv_testing_list_old_nodes.poll
+00:04.638  bpy.rna          | ERROR Python script error in NODE_OT_sv_temporal_viewer.poll
+00:04.638  bpy.rna          | ERROR Python script error in NODE_OT_sv_node_vd_toggle.poll
+00:04.639  bpy.rna          | ERROR Python script error in NODE_OT_zoom_to_node.poll
+00:04.640  bpy.rna          | ERROR Python script error in NODE_OT_sv_switch_layout.poll
+00:04.641  bpy.rna          | ERROR Python script error in NODE_OT_sv_node_connector.poll
+00:04.641  bpy.rna          | ERROR Python script error in NODE_OT_sv_abort_nodes_updating.poll
+00:04.644  bpy.rna          | ERROR Python script error in NODE_OT_sv_create_material.poll
 Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
 
 Blender quit
