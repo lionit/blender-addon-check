@@ -1,0 +1,42 @@
+{
+  "addon_id": "sverchok",
+  "addon_version": null,
+  "blender_version": "5.1.2",
+  "captured_output": "addon_utils.disable: sverchok not loaded\nModules Installed (sverchok) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sverchok.zip' into '/tmp/bac-sverchok-_7nl6564/blender/scripts/addons'\nInfo: Modules Installed (sverchok) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sverchok.zip' into '/tmp/bac-sverchok-_7nl6564/blender/scripts/addons'\n\u001b[33m13:54:20.190 [WARNING] py.warnings /home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.1.2-linux-x64/5.1/python/lib/python3.13/warnings.py:110 - /tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/settings.py:443: SyntaxWarning: invalid escape sequence '\\p'\n  description = \"Path to FreeCAD Python API library files (FreeCAD.so on Linux and MacOS, FreeCAD.dll on Windows). On Linux the usual location is /usr/lib/freecad/lib, on Windows it can be something like E:\\programs\\conda-0.18.3\\\\bin\"\n\u001b[0m\n\u001b[33m13:54:21.826 [WARNING] py.warnings /home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.1.2-linux-x64/5.1/python/lib/python3.13/warnings.py:110 - /tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/utils/snlite_importhelper.py:110: SyntaxWarning: invalid escape sequence '\\+'\n  \\+in\\s+              # valid for inputs\n\u001b[0m\nWill not initialize shaders in the background mode\n\u001b[33m13:54:22.921 [WARNING] py.warnings /home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.1.2-linux-x64/5.1/python/lib/python3.13/warnings.py:110 - /tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/nodes/viz/viewer_texture_lite.py:27: SyntaxWarning: invalid escape sequence '\\i'\n  ('image_editor', 'UV\\image editor', 'insert values into image editor (only RGBA mode!)', '', 0),\n\u001b[0m\n\u001b[33m13:54:22.921 [WARNING] py.warnings /home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.1.2-linux-x64/5.1/python/lib/python3.13/warnings.py:110 - /tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/nodes/viz/viewer_texture_lite.py:34: SyntaxWarning: invalid escape sequence '\\i'\n  Params: UV\\image editor, bgl, Width, Height, color (bw/rgb/rgba)'''\n\u001b[0m\nException in module register(): /tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/__init__.py\n",
+  "cause": {
+    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
+    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
+    "id": "unclassified"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "3.5.0",
+  "developer": "nortikin",
+  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.1.2-linux-x64/5.1/scripts/modules/addon_utils.py\", line 515, in enable\n    mod.register()\n    ~~~~~~~~~~~~^^\n  File \"/tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/__init__.py\", line 120, in register\n    core.sv_register_modules(imported_modules)\n    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/core/__init__.py\", line 83, in sv_register_modules\n    m.register()\n    ~~~~~~~~~~^^\n  File \"/tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/core/handlers.py\", line 239, in register\n    update_frame_change_mode()\n    ~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/core/handlers.py\", line 195, in update_frame_change_mode\n    mode = settings.get_param(\"frame_change_mode\", \"POST\")\n  File \"/tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/settings.py\", line 85, in get_param\n    with sv_preferences() as prefs:\n         ~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.1.2-linux-x64/5.1/python/lib/python3.13/contextlib.py\", line 143, in __enter__\n    raise RuntimeError(\"generator didn't yield\") from None\nRuntimeError: generator didn't yield\n",
+  "error_stage": "enable",
+  "group": "github",
+  "homepage": "https://github.com/nortikin/sverchok",
+  "kind": "legacy",
+  "log": "sverchok.log",
+  "module": "sverchok",
+  "name": "Sverchok",
+  "operators_poll_failed": 0,
+  "operators_total": 0,
+  "python_version": "3.13.9",
+  "ran_at": "2026-11-03T13:54:16+00:00",
+  "source_type": "github_zipball",
+  "stages": {
+    "enable": {
+      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.1.2-linux-x64/5.1/scripts/modules/addon_utils.py\", line 515, in enable\n    mod.register()\n    ~~~~~~~~~~~~^^\n  File \"/tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/__init__.py\", line 120, in register\n    core.sv_register_modules(imported_modules)\n    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^\n  File \"/tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/core/__init__.py\", line 83, in sv_register_modules\n    m.register()\n    ~~~~~~~~~~^^\n  File \"/tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/core/handlers.py\", line 239, in register\n    update_frame_change_mode()\n    ~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/core/handlers.py\", line 195, in update_frame_change_mode\n    mode = settings.get_param(\"frame_change_mode\", \"POST\")\n  File \"/tmp/bac-sverchok-_7nl6564/blender/scripts/addons/sverchok/settings.py\", line 85, in get_param\n    with sv_preferences() as prefs:\n         ~~~~~~~~~~~~~~^^\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.1.2-linux-x64/5.1/python/lib/python3.13/contextlib.py\", line 143, in __enter__\n    raise RuntimeError(\"generator didn't yield\") from None\nRuntimeError: generator didn't yield\n",
+      "ok": false
+    },
+    "install": {
+      "detail": "addon_utils.disable: sverchok not loaded\nModules Installed (sverchok) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sverchok.zip' into '/tmp/bac-sverchok-_7nl6564/blender/scripts/addons'\nInfo: Modules Installed (sverchok) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sverchok.zip' into '/tmp/bac-sverchok-_7nl6564/blender/scripts/addons'\n",
+      "ok": true
+    }
+  },
+  "status": "fail",
+  "timing_s": {
+    "install": 0.51
+  }
+}

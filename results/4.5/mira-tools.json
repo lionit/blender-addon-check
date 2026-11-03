@@ -1,0 +1,42 @@
+{
+  "addon_id": "mira-tools",
+  "addon_version": null,
+  "blender_version": "4.5.15 LTS",
+  "captured_output": "addon_utils.disable: mira_tools not loaded\nModules Installed (mira_tools) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/mira-tools.zip' into '/tmp/bac-mira-tools-p9ncrsen/blender/scripts/addons'\nInfo: Modules Installed (mira_tools) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/mira-tools.zip' into '/tmp/bac-mira-tools-p9ncrsen/blender/scripts/addons'\n",
+  "cause": {
+    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
+    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
+    "id": "unclassified"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "2.90.0",
+  "developer": "mifth",
+  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 432, in enable\n    mod = importlib.import_module(module_name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/python/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/tmp/bac-mira-tools-p9ncrsen/blender/scripts/addons/mira_tools/__init__.py\", line 38, in <module>\n    from . import mi_curve_stretch\n  File \"/tmp/bac-mira-tools-p9ncrsen/blender/scripts/addons/mira_tools/mi_curve_stretch.py\", line 21, in <module>\n    from . import mi_widget_select as s_widget\n  File \"/tmp/bac-mira-tools-p9ncrsen/blender/scripts/addons/mira_tools/mi_widget_select.py\", line 10, in <module>\n    shader3d = gpu.shader.from_builtin('POINT_UNIFORM_COLOR' if bpy.app.version >= (4, 5, 0) else 'UNIFORM_COLOR')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSystemError: GPU functions for drawing are not available in background mode\n",
+  "error_stage": "enable",
+  "group": "github",
+  "homepage": "https://github.com/mifth/mifthtools",
+  "kind": "legacy",
+  "log": "mira-tools.log",
+  "module": "mira_tools",
+  "name": "Mira Tools",
+  "operators_poll_failed": 0,
+  "operators_total": 0,
+  "python_version": "3.11.15",
+  "ran_at": "2026-11-03T13:54:12+00:00",
+  "source_type": "github_zipball",
+  "stages": {
+    "enable": {
+      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 432, in enable\n    mod = importlib.import_module(module_name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/python/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<frozen importlib._bootstrap>\", line 1204, in _gcd_import\n  File \"<frozen importlib._bootstrap>\", line 1176, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 1147, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 690, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 940, in exec_module\n  File \"<frozen importlib._bootstrap>\", line 241, in _call_with_frames_removed\n  File \"/tmp/bac-mira-tools-p9ncrsen/blender/scripts/addons/mira_tools/__init__.py\", line 38, in <module>\n    from . import mi_curve_stretch\n  File \"/tmp/bac-mira-tools-p9ncrsen/blender/scripts/addons/mira_tools/mi_curve_stretch.py\", line 21, in <module>\n    from . import mi_widget_select as s_widget\n  File \"/tmp/bac-mira-tools-p9ncrsen/blender/scripts/addons/mira_tools/mi_widget_select.py\", line 10, in <module>\n    shader3d = gpu.shader.from_builtin('POINT_UNIFORM_COLOR' if bpy.app.version >= (4, 5, 0) else 'UNIFORM_COLOR')\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nSystemError: GPU functions for drawing are not available in background mode\n",
+      "ok": false
+    },
+    "install": {
+      "detail": "addon_utils.disable: mira_tools not loaded\nModules Installed (mira_tools) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/mira-tools.zip' into '/tmp/bac-mira-tools-p9ncrsen/blender/scripts/addons'\nInfo: Modules Installed (mira_tools) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/mira-tools.zip' into '/tmp/bac-mira-tools-p9ncrsen/blender/scripts/addons'\n",
+      "ok": true
+    }
+  },
+  "status": "fail",
+  "timing_s": {
+    "install": 0.02
+  }
+}

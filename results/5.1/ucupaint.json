@@ -1,0 +1,42 @@
+{
+  "addon_id": "ucupaint",
+  "addon_version": "3.0.1",
+  "blender_version": "5.1.2",
+  "captured_output": "Exception in module register(): /tmp/bac-ucupaint-n8_jgev5/blender/extensions/user_default/ucupaint/__init__.py\n",
+  "cause": {
+    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
+    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
+    "id": "unclassified"
+  },
+  "classes_registered": 0,
+  "declared_max": null,
+  "declared_min": "4.2.0",
+  "developer": "ucupumar",
+  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.1.2-linux-x64/5.1/scripts/modules/addon_utils.py\", line 515, in enable\n    mod.register()\n    ~~~~~~~~~~~~^^\n  File \"/tmp/bac-ucupaint-n8_jgev5/blender/extensions/user_default/ucupaint/__init__.py\", line 97, in register\n    lib.register()\n    ~~~~~~~~~~~~^^\n  File \"/tmp/bac-ucupaint-n8_jgev5/blender/extensions/user_default/ucupaint/lib.py\", line 601, in register\n    load_custom_icons()\n    ~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-ucupaint-n8_jgev5/blender/extensions/user_default/ucupaint/lib.py\", line 376, in load_custom_icons\n    folder = get_icon_folder()\n  File \"/tmp/bac-ucupaint-n8_jgev5/blender/extensions/user_default/ucupaint/lib.py\", line 352, in get_icon_folder\n    icons = get_user_preferences().icons\n            ~~~~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-ucupaint-n8_jgev5/blender/extensions/user_default/ucupaint/common.py\", line 973, in get_user_preferences\n    return bpy.context.preferences.addons[__package__].preferences\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\nKeyError: 'bpy_prop_collection[key]: key \"bl_ext.user_default.ucupaint\" not found'\n",
+  "error_stage": "enable",
+  "group": "extensions-top",
+  "homepage": "https://extensions.blender.org/add-ons/ucupaint/",
+  "kind": "extension",
+  "log": "ucupaint.log",
+  "module": "bl_ext.user_default.ucupaint",
+  "name": "Ucupaint",
+  "operators_poll_failed": 0,
+  "operators_total": 0,
+  "python_version": "3.13.9",
+  "ran_at": "2026-11-03T13:54:17+00:00",
+  "source_type": "extensions",
+  "stages": {
+    "enable": {
+      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.1.2-linux-x64/5.1/scripts/modules/addon_utils.py\", line 515, in enable\n    mod.register()\n    ~~~~~~~~~~~~^^\n  File \"/tmp/bac-ucupaint-n8_jgev5/blender/extensions/user_default/ucupaint/__init__.py\", line 97, in register\n    lib.register()\n    ~~~~~~~~~~~~^^\n  File \"/tmp/bac-ucupaint-n8_jgev5/blender/extensions/user_default/ucupaint/lib.py\", line 601, in register\n    load_custom_icons()\n    ~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-ucupaint-n8_jgev5/blender/extensions/user_default/ucupaint/lib.py\", line 376, in load_custom_icons\n    folder = get_icon_folder()\n  File \"/tmp/bac-ucupaint-n8_jgev5/blender/extensions/user_default/ucupaint/lib.py\", line 352, in get_icon_folder\n    icons = get_user_preferences().icons\n            ~~~~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-ucupaint-n8_jgev5/blender/extensions/user_default/ucupaint/common.py\", line 973, in get_user_preferences\n    return bpy.context.preferences.addons[__package__].preferences\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^\nKeyError: 'bpy_prop_collection[key]: key \"bl_ext.user_default.ucupaint\" not found'\n",
+      "ok": false
+    },
+    "install": {
+      "detail": "",
+      "ok": true
+    }
+  },
+  "status": "fail",
+  "timing_s": {
+    "install": 0.0
+  }
+}

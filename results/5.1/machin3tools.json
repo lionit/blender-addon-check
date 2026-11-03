@@ -1,0 +1,17 @@
+{
+  "addon_id": "machin3tools",
+  "cause": {
+    "cause": "The add-on could not be downloaded, so it was not tested.",
+    "fix": "Check the source URL in config/addons.json.",
+    "id": "unavailable"
+  },
+  "developer": "MACHIN3",
+  "error": "could not fetch add-on: HTTP Error 404: Not Found",
+  "error_stage": "fetch",
+  "group": "github",
+  "homepage": "https://github.com/machin3io/MACHIN3tools",
+  "name": "MACHIN3tools",
+  "ran_at": "2026-11-03T13:54:16+00:00",
+  "source_type": "github_zipball",
+  "status": "unavailable"
+}
