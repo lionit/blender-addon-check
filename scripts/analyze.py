@@ -20,6 +20,18 @@ from common import RESULTS_DIR, log, read_json, write_json
 # (id, regex, cause, fix)
 RULES: list[tuple[str, str, str, str]] = [
     (
+        "reenable-failed",
+        r"second enable returned None",
+        "Loads once, but cannot be disabled and enabled again in the same session: unregister() leaves classes, handlers or properties behind, so the second register() fails.",
+        "Make unregister() undo everything register() does, in reverse order, and test with Preferences > Add-ons > disable/enable or F3 > Reload Scripts.",
+    ),
+    (
+        "panel-category-invalid",
+        r"Registering panel class: '[^']+' has category",
+        "Registers a panel with a bl_category in a region that does not accept tabs; Blender 4.5+ rejects this at registration instead of ignoring it.",
+        "Remove bl_category from panels whose bl_region_type is not 'UI' (the sidebar), or move the panel to the sidebar.",
+    ),
+    (
         "platform-not-shipped",
         r"This platform \(linux-x64\) isn't one of",
         "The extension ships builds only for other platforms (usually Windows), so it cannot be installed on the Linux machine this test runs on.",
@@ -30,6 +42,12 @@ RULES: list[tuple[str, str, str, str]] = [
         r"cannot import name 'Sequence' from 'bpy\.types'|bpy\.types\.Sequence\b|'Sequences' object has no attribute|has no attribute 'sequences'|has no attribute 'sequence_editor'",
         "Uses the video-sequencer 'Sequence' API that Blender 4.4 renamed to 'Strip' (bpy.types.Strip, scene.sequence_editor.strips).",
         "Replace Sequence/sequences with Strip/strips, guarded by a bpy.app.version check if you still support 4.2.",
+    ),
+    (
+        "removed-bpy-type",
+        r"cannot import name '[A-Za-z_]+' from 'bpy\.types'",
+        "Imports a bpy.types class that this Blender version no longer has (for example NodeSocketInterface, removed in 4.0).",
+        "Check the Python API changes for the release that removed it and use the replacement class, guarded by bpy.app.version.",
     ),
     (
         "bgl-removed",
@@ -51,7 +69,7 @@ RULES: list[tuple[str, str, str, str]] = [
     ),
     (
         "compiled-python-mismatch",
-        r"cpython-3(11|12)[^\n]*\.so|ImportError: [^\n]*(undefined symbol|wrong ELF|cannot open shared object)|ModuleNotFoundError: No module named '[^']*cpython|ask if someone can create a build for you|compiled for a different (Blender|Python) version",
+        r"cpython-3(11|12)[^\n]*\.so|ImportError: [^\n]*(undefined symbol|wrong ELF|cannot open shared object)|ModuleNotFoundError: No module named '[^']*cpython|ask if someone can create a build for you|compiled for a different (Blender|Python) version|cannot import name 'etree' from 'lxml'|cannot import name '[A-Za-z_]+' from '[A-Za-z_.]+' \(unknown location\)",
         "Ships a compiled library built for an older Python. Blender 5.1 moved to Python 3.13, so binaries built for 3.11 no longer load.",
         "Rebuild the compiled parts (or the wheels in the manifest) for Python 3.13, and ship one build per Blender Python version.",
     ),

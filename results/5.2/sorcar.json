@@ -4,9 +4,9 @@
   "blender_version": "5.2.3 LTS",
   "captured_output": "addon_utils.disable: sorcar not loaded\nModules Installed (sorcar) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sorcar.zip' into '/tmp/bac-sorcar-uxxi4cac/blender/scripts/addons'\nInfo: Modules Installed (sorcar) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sorcar.zip' into '/tmp/bac-sorcar-uxxi4cac/blender/scripts/addons'\n-------------REGISTER SORCAR-------------\nSORCAR: IMPORT OP: ScClearPreview\nSORCAR: IMPORT OP: ScEditGroup\nSORCAR: IMPORT OP: ScExecuteNode\nSORCAR: IMPORT OP: ScGroupNodes\nSORCAR: IMPORT OP: ScSaveSelection\nSORCAR: IMPORT SOCKET: ScNodeSocketArray\nSORCAR: IMPORT SOCKET: ScNodeSocketArrayPlaceholder\nSORCAR: IMPORT SOCKET: ScNodeSocketBool\nSORCAR: IMPORT SOCKET: ScNodeSocketCurve\nSORCAR: IMPORT SOCKET: ScNodeSocketInfo\nException in module register(): /tmp/bac-sorcar-uxxi4cac/blender/scripts/addons/sorcar/__init__.py\n",
   "cause": {
-    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
-    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
-    "id": "unclassified"
+    "cause": "Imports a bpy.types class that this Blender version no longer has (for example NodeSocketInterface, removed in 4.0).",
+    "fix": "Check the Python API changes for the release that removed it and use the replacement class, guarded by bpy.app.version.",
+    "id": "removed-bpy-type"
   },
   "classes_registered": 0,
   "declared_max": null,

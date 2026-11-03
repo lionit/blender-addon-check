@@ -167,5 +167,27 @@ class BuildSelectionTests(unittest.TestCase):
         self.assertIsNone(pick_build([], "5.2.0"))
 
 
+
+class AddonRootTests(unittest.TestCase):
+    def test_lifts_nested_addon_folder(self):
+        from fetch_addons import addon_root
+        names = ["Stop-motion-OBJ/", "Stop-motion-OBJ/README.md", "Stop-motion-OBJ/stop_motion_obj/__init__.py", "Stop-motion-OBJ/stop_motion_obj/ops.py"]
+        self.assertEqual(addon_root(names, read=lambda n: b"bl_info = {}"), "Stop-motion-OBJ/stop_motion_obj/")
+
+    def test_prefers_manifest(self):
+        from fetch_addons import addon_root
+        names = ["repo-main/", "repo-main/__init__.py", "repo-main/addon/blender_manifest.toml", "repo-main/addon/__init__.py"]
+        self.assertEqual(addon_root(names), "repo-main/addon/")
+
+    def test_single_top_folder_fallback(self):
+        from fetch_addons import addon_root
+        self.assertEqual(addon_root(["x/", "x/a.py"]), "x/")
+
+    def test_rules(self):
+        self.assertEqual(analyze.classify("second enable returned None for BlenderMalt", "warn")["id"], "reenable-failed")
+        self.assertEqual(analyze.classify("ImportError: cannot import name 'NodeSocketInterface' from 'bpy.types' (unknown location)", "fail")["id"], "removed-bpy-type")
+        self.assertEqual(analyze.classify("ImportError: cannot import name 'ConstantProperty' from 'modular_tree.m_tree' (unknown location)", "fail")["id"], "compiled-python-mismatch")
+
+
 if __name__ == "__main__":
     unittest.main()

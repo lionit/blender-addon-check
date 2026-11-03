@@ -45,14 +45,14 @@ def http_get_json(url: str, timeout: int = 60):
     return json.loads(http_get(url, timeout=timeout).decode("utf-8"))
 
 
-def download(url: str, dest: Path, timeout: int = 600) -> Path:
+def download(url: str, dest: Path, timeout: int = 600, headers: dict | None = None) -> Path:
     """Download url to dest unless dest already exists. Returns dest."""
     if dest.exists() and dest.stat().st_size > 0:
         return dest
     dest.parent.mkdir(parents=True, exist_ok=True)
     tmp = dest.with_suffix(dest.suffix + ".part")
     log("downloading", url)
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, **(headers or {})})
     with urllib.request.urlopen(req, timeout=timeout) as resp, open(tmp, "wb") as out:
         while True:
             chunk = resp.read(1 << 20)

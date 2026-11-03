@@ -4,9 +4,9 @@
   "blender_version": "5.1.2",
   "captured_output": "addon_utils.disable: BlenderGPT not loaded\nModules Installed (BlenderGPT) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blendergpt.zip' into '/tmp/bac-blendergpt-d24_7adq/blender/scripts/addons'\nInfo: Modules Installed (BlenderGPT) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blendergpt.zip' into '/tmp/bac-blendergpt-d24_7adq/blender/scripts/addons'\nException in module unregister(): '/tmp/bac-blendergpt-d24_7adq/blender/scripts/addons/BlenderGPT/__init__.py'\nException in module register(): /tmp/bac-blendergpt-d24_7adq/blender/scripts/addons/BlenderGPT/__init__.py\n",
   "cause": {
-    "cause": "Calls a bpy attribute that no longer exists in this Blender version.",
-    "fix": "Check the Python API change log for this release and add a version guard around the renamed or removed attribute.",
-    "id": "removed-bpy-attribute"
+    "cause": "Loads once, but cannot be disabled and enabled again in the same session: unregister() leaves classes, handlers or properties behind, so the second register() fails.",
+    "fix": "Make unregister() undo everything register() does, in reverse order, and test with Preferences > Add-ons > disable/enable or F3 > Reload Scripts.",
+    "id": "reenable-failed"
   },
   "classes_registered": 0,
   "declared_max": null,

@@ -4,9 +4,9 @@
   "blender_version": "5.3.0 Beta",
   "captured_output": "Exception in module unregister(): '/tmp/bac-mesh-align-plus-wu454fcv/blender/extensions/user_default/mesh_mesh_align_plus/__init__.py'\nException in module register(): /tmp/bac-mesh-align-plus-wu454fcv/blender/extensions/user_default/mesh_mesh_align_plus/__init__.py\n",
   "cause": {
-    "cause": "A class fails to register: it is already registered or no longer has a valid bpy.types base.",
-    "fix": "Unregister cleanly in unregister(), avoid double registration, and check that bl_rna properties use the current annotation syntax.",
-    "id": "register-class-conflict"
+    "cause": "Loads once, but cannot be disabled and enabled again in the same session: unregister() leaves classes, handlers or properties behind, so the second register() fails.",
+    "fix": "Make unregister() undo everything register() does, in reverse order, and test with Preferences > Add-ons > disable/enable or F3 > Reload Scripts.",
+    "id": "reenable-failed"
   },
   "classes_registered": 0,
   "declared_max": null,

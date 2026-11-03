@@ -75,15 +75,30 @@ def github_release_asset_url(repo: str, pattern: str | None) -> str:
     return rel["zipball_url"]
 
 
+def addon_root(names: list[str], subdir: str | None = None, read=None) -> str:
+    """The folder inside a zip that holds the add-on: the shallowest one with a
+    blender_manifest.toml, else the shallowest whose __init__.py mentions bl_info,
+    else the single top-level folder. Returned with a trailing slash, or '' for the zip root."""
+    tops = {n.split("/", 1)[0] for n in names if "/" in n}
+    base = (next(iter(tops)) + "/") if len(tops) == 1 else ""
+    if subdir:
+        return base + subdir.strip("/") + "/"
+    manifests = sorted((n for n in names if n.endswith("blender_manifest.toml")), key=lambda n: n.count("/"))
+    if manifests:
+        return manifests[0][: -len("blender_manifest.toml")]
+    inits = sorted((n for n in names if n.endswith("__init__.py")), key=lambda n: n.count("/"))
+    for n in inits:
+        if read is None or b"bl_info" in read(n):
+            return n[: -len("__init__.py")]
+    return base
+
+
 def repack(src: Path, dest: Path, module: str, subdir: str | None) -> None:
-    """Rewrite a zip so its top-level folder is `module` (optionally lifting `subdir`)."""
+    """Rewrite a zip so its top-level folder is `module`, lifting the real add-on folder
+    out of whatever wrapper folders the archive has."""
     with zipfile.ZipFile(src) as zin:
         names = zin.namelist()
-        tops = {n.split("/", 1)[0] for n in names if "/" in n}
-        top = next(iter(tops)) if len(tops) == 1 else None
-        prefix = (top + "/") if top else ""
-        if subdir:
-            prefix = prefix + subdir.strip("/") + "/"
+        prefix = addon_root(names, subdir, read=zin.read)
         buf = io.BytesIO()
         with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as zout:
             for info in zin.infolist():
@@ -200,8 +215,9 @@ def fetch_one(addon: dict, blender_version: str | None = None) -> Path:
     if kind == "github_release":
         url = github_release_asset_url(src["repo"], src.get("asset_pattern"))
     elif kind == "github_zipball":
+        # github.com/<repo>/archive/<ref>.zip is not subject to the API rate limit, unlike /zipball.
         ref = src.get("ref") or "HEAD"
-        url = f"https://api.github.com/repos/{src['repo']}/zipball" + ("" if ref == "HEAD" else f"/{ref}")
+        url = f"https://github.com/{src['repo']}/archive/{ref}.zip"
     else:
         raise ValueError(f"{addon['id']}: unknown source type {kind!r}")
     download(url, raw)

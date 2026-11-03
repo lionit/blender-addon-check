@@ -4,9 +4,9 @@
   "blender_version": "4.5.15 LTS",
   "captured_output": "addon_utils.disable: blosm not loaded\nModules Installed (blosm) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blosm.zip' into '/tmp/bac-blosm-n3qfl_c8/blender/scripts/addons'\nInfo: Modules Installed (blosm) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blosm.zip' into '/tmp/bac-blosm-n3qfl_c8/blender/scripts/addons'\nException in module register(): /tmp/bac-blosm-n3qfl_c8/blender/scripts/addons/blosm/__init__.py\n",
   "cause": {
-    "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
-    "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
-    "id": "unclassified"
+    "cause": "Registers a panel with a bl_category in a region that does not accept tabs; Blender 4.5+ rejects this at registration instead of ignoring it.",
+    "fix": "Remove bl_category from panels whose bl_region_type is not 'UI' (the sidebar), or move the panel to the sidebar.",
+    "id": "panel-category-invalid"
   },
   "classes_registered": 0,
   "declared_max": null,

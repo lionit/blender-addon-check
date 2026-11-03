@@ -492,7 +492,9 @@
         "repo": "curtisjamesholt/BY-GEN",
         "ref": "HEAD",
         "module": "BY-GEN"
-      }
+      },
+      "enabled": false,
+      "_note": "Repository returns 404; find the right source before enabling."
     }
   ]
 }
