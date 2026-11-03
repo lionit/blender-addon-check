@@ -2,7 +2,7 @@
   "addon_id": "blender-for-unrealengine",
   "addon_version": null,
   "blender_version": "5.1.2",
-  "captured_output": "addon_utils.disable: blender-for-unrealengine not loaded\nModules Installed (blender-for-unrealengine) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-for-unrealengine.zip' into '/tmp/bac-blender-for-unrealengine-hwo4umlp/blender/scripts/addons'\nInfo: Modules Installed (blender-for-unrealengine) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-for-unrealengine.zip' into '/tmp/bac-blender-for-unrealengine-hwo4umlp/blender/scripts/addons'\nFailed to import addon modules:\n\u001b[91m---------------------------------\u001b[0m\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-for-unrealengine-hwo4umlp/blender/scripts/addons/blender-for-unrealengine/__init__.py\", line 47, in <module>\n    from . import addon_cached_propertys\n  File \"/tmp/bac-blender-for-unrealengine-hwo4umlp/blender/scripts/addons/blender-for-unrealengine/addon_cached_propertys.py\", line 19, in <module>\n    ADDON_VERSION_STR: str = get_addon_version()\n                             ~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-blender-for-unrealengine-hwo4umlp/blender/scripts/addons/blender-for-unrealengine/addon_cached_propertys.py\", line 15, in get_addon_version\n    return str(bbpl.blender_extension.extension_utils.get_package_version())\n               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-blender-for-unrealengine-hwo4umlp/blender/scripts/addons/blender-for-unrealengine/bbpl/blender_extension/extension_utils.py\", line 26, in get_package_version\n    repo_module, pkg_idname = _extension_module_name_decompose(base_package)  # type: ignore\n                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.1.2-linux-x64/5.1/scripts/modules/addon_utils.py\", line 1434, in _extension_module_name_decompose\n    raise ValueError(\"The \\\"package\\\" does not name an extension\")\nValueError: The \"package\" does not name an extension\n\u001b[91m---------------------------------\u001b[0m\nException in module register(): /tmp/bac-blender-for-unrealengine-hwo4umlp/blender/scripts/addons/blender-for-unrealengine/__init__.py\n",
+  "captured_output": "addon_utils.disable: blender-for-unrealengine not loaded\nModules Installed (blender-for-unrealengine) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-for-unrealengine.zip' into '/tmp/bac-blender-for-unrealengine-aru7_8mk/blender/scripts/addons'\nInfo: Modules Installed (blender-for-unrealengine) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-for-unrealengine.zip' into '/tmp/bac-blender-for-unrealengine-aru7_8mk/blender/scripts/addons'\nFailed to import addon modules:\n\u001b[91m---------------------------------\u001b[0m\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-for-unrealengine-aru7_8mk/blender/scripts/addons/blender-for-unrealengine/__init__.py\", line 47, in <module>\n    from . import addon_cached_propertys\n  File \"/tmp/bac-blender-for-unrealengine-aru7_8mk/blender/scripts/addons/blender-for-unrealengine/addon_cached_propertys.py\", line 19, in <module>\n    ADDON_VERSION_STR: str = get_addon_version()\n                             ~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-blender-for-unrealengine-aru7_8mk/blender/scripts/addons/blender-for-unrealengine/addon_cached_propertys.py\", line 15, in get_addon_version\n    return str(bbpl.blender_extension.extension_utils.get_package_version())\n               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File \"/tmp/bac-blender-for-unrealengine-aru7_8mk/blender/scripts/addons/blender-for-unrealengine/bbpl/blender_extension/extension_utils.py\", line 26, in get_package_version\n    repo_module, pkg_idname = _extension_module_name_decompose(base_package)  # type: ignore\n                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.1.2-linux-x64/5.1/scripts/modules/addon_utils.py\", line 1434, in _extension_module_name_decompose\n    raise ValueError(\"The \\\"package\\\" does not name an extension\")\nValueError: The \"package\" does not name an extension\n\u001b[91m---------------------------------\u001b[0m\nException in module register(): /tmp/bac-blender-for-unrealengine-aru7_8mk/blender/scripts/addons/blender-for-unrealengine/__init__.py\n",
   "cause": {
     "cause": "Fails on this Blender version; the log does not match a known breakage pattern yet.",
     "fix": "Read the traceback in the log. If this turns out to be a common cause, add a rule to scripts/analyze.py.",
@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 0,
   "python_version": "3.13.9",
-  "ran_at": "2026-11-03T14:39:50+00:00",
+  "ran_at": "2026-11-03T17:11:57+00:00",
   "source_type": "github_release",
   "stages": {
     "enable": {
@@ -31,12 +31,12 @@
       "ok": false
     },
     "install": {
-      "detail": "addon_utils.disable: blender-for-unrealengine not loaded\nModules Installed (blender-for-unrealengine) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-for-unrealengine.zip' into '/tmp/bac-blender-for-unrealengine-hwo4umlp/blender/scripts/addons'\nInfo: Modules Installed (blender-for-unrealengine) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-for-unrealengine.zip' into '/tmp/bac-blender-for-unrealengine-hwo4umlp/blender/scripts/addons'\n",
+      "detail": "addon_utils.disable: blender-for-unrealengine not loaded\nModules Installed (blender-for-unrealengine) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-for-unrealengine.zip' into '/tmp/bac-blender-for-unrealengine-aru7_8mk/blender/scripts/addons'\nInfo: Modules Installed (blender-for-unrealengine) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-for-unrealengine.zip' into '/tmp/bac-blender-for-unrealengine-aru7_8mk/blender/scripts/addons'\n",
       "ok": true
     }
   },
   "status": "fail",
   "timing_s": {
-    "install": 0.08
+    "install": 0.09
   }
 }
