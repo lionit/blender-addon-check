@@ -11,9 +11,10 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import html
+import re
 from pathlib import Path
 
-from common import CONFIG_DIR, RESULTS_DIR, SITE_DIR, log, read_json, write_json
+from common import CONFIG_DIR, RESULTS_DIR, ROOT, SITE_DIR, log, read_json, write_json
 
 STATUS_LABEL = {
     "pass": ("Works", "ok"),
@@ -123,7 +124,7 @@ def build_index(versions: list[dict], results: dict[str, dict[str, dict]], site_
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Which Blender add-ons work on {esc(versions[-1]['label'] if versions else 'the latest Blender')}?</title><style>{CSS}</style></head><body><main>
 <h1>Which Blender add-ons work on the current Blender versions?</h1>
-<p class="sub">Every add-on below was installed and enabled in a fresh, headless Blender for each version. Last run: {esc(newest_run[:16].replace('T', ' '))} UTC. <a href="results.json">Raw results</a>.</p>
+<p class="sub">Every add-on below was installed and enabled in a fresh, headless Blender for each version. Last run: {esc(newest_run[:16].replace('T', ' '))} UTC. <a href="results.json">Raw results</a>.{' <a href="report.html"><b>Read the report: what breaks, and why</b></a>.' if (ROOT / "content" / "launch-report.md").exists() else ''}</p>
 <div class="stats"><div class="stat"><b>{len(tested)}</b><span>add-ons tested</span></div><div class="stat"><b>{len(broken)}</b><span>broken on at least one version</span></div><div class="stat"><b>{len(warned)}</b><span>load but throw errors</span></div><div class="stat"><b>{esc(top_cause)}</b><span>most common cause</span></div></div>
 <div class="cta"><b>Is your add-on paid, or not in this list?</b> We could not test what we cannot download. <a href="{esc(signup_url)}">Send us your add-on</a> and it joins the nightly run, free, with the same report and a suggested fix for anything that breaks.</div>
 <p class="legend"><span class="s ok">Works</span> installs, enables, every operator polls, disables and re-enables cleanly. <span class="s warn">Loads, with errors</span> enables but something throws. <span class="s bad">Broken</span> fails to install or enable, hangs, or crashes Blender. <span class="s na">Not supported (declared)</span> the add-on itself says it does not support this version. <span class="s na">Not testable here</span> needs a display (GPU drawing at register time) or ships no Linux build, so this headless Linux test cannot judge it. <span class="s na">Not tested</span> could not be downloaded.</p>
@@ -162,6 +163,68 @@ def build_addon_page(addon_id: str, per_version: dict[str, dict], versions: list
 </main></body></html>"""
 
 
+def md_inline(text: str) -> str:
+    text = esc(text)
+    text = re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", r'<a href="\2">\1</a>', text)
+    text = re.sub(r"\*\*([^*]+)\*\*", r"<b>\1</b>", text)
+    text = re.sub(r"(?<!\*)\*([^*]+)\*(?!\*)", r"<i>\1</i>", text)
+    text = re.sub(r"`([^`]+)`", r"<code>\1</code>", text)
+    return text
+
+
+def md_to_html(md: str) -> str:
+    """Just enough Markdown for the report page: headings, paragraphs, bullets, pipe tables, bold, italic, links."""
+    out: list[str] = []
+    lines = md.splitlines()
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if not line.strip():
+            i += 1
+            continue
+        if line.startswith("|"):
+            rows = []
+            while i < len(lines) and lines[i].startswith("|"):
+                cells = [c.strip() for c in lines[i].strip().strip("|").split("|")]
+                if not all(set(c) <= set("-: ") for c in cells):
+                    rows.append(cells)
+                i += 1
+            head, body = rows[0], rows[1:]
+            out.append("<table><thead><tr>" + "".join(f"<th>{md_inline(c)}</th>" for c in head) + "</tr></thead><tbody>"
+                       + "".join("<tr>" + "".join(f"<td>{md_inline(c)}</td>" for c in r) + "</tr>" for r in body) + "</tbody></table>")
+            continue
+        if line.startswith("- "):
+            items = []
+            while i < len(lines) and lines[i].startswith("- "):
+                items.append(f"<li>{md_inline(lines[i][2:])}</li>")
+                i += 1
+            out.append("<ul>" + "".join(items) + "</ul>")
+            continue
+        m = re.match(r"^(#{1,3})\s+(.*)", line)
+        if m:
+            level = len(m.group(1))
+            out.append(f"<h{level}>{md_inline(m.group(2))}</h{level}>")
+            i += 1
+            continue
+        para = [line]
+        i += 1
+        while i < len(lines) and lines[i].strip() and not lines[i].startswith(("|", "- ", "#")):
+            para.append(lines[i])
+            i += 1
+        out.append(f"<p>{md_inline(' '.join(para))}</p>")
+    return "\n".join(out)
+
+
+def build_report_page(md: str, site_url: str) -> str:
+    title = next((l[2:].strip() for l in md.splitlines() if l.startswith("# ")), "Report")
+    body = md_to_html("\n".join(l for l in md.splitlines() if not l.startswith("# ")))
+    return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{esc(title)}</title><meta name="description" content="{esc(title)}"><style>{CSS}</style></head><body><main>
+<p><a href="index.html">&larr; The live table</a></p><h1>{esc(title)}</h1>
+{body}
+</main></body></html>"""
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--site-url", default="https://lionit.github.io/blender-addon-check")
@@ -184,6 +247,10 @@ def main() -> None:
         },
     }
     write_json(SITE_DIR / "results.json", slim)
+    report_md = ROOT / "content" / "launch-report.md"
+    if report_md.exists():
+        (SITE_DIR / "report.html").write_text(build_report_page(report_md.read_text(encoding="utf-8"), args.site_url), encoding="utf-8")
+        log("report page built from content/launch-report.md")
     log(f"site built: {len(results)} add-ons x {len(versions)} versions -> {SITE_DIR}")
 
 

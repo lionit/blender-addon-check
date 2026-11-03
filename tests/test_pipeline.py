@@ -189,5 +189,16 @@ class AddonRootTests(unittest.TestCase):
         self.assertEqual(analyze.classify("ImportError: cannot import name 'ConstantProperty' from 'modular_tree.m_tree' (unknown location)", "fail")["id"], "compiled-python-mismatch")
 
 
+
+class MarkdownTests(unittest.TestCase):
+    def test_table_and_inline(self):
+        html_out = build_report.md_to_html("**Lead:** see [site](https://example.com)\n\n| A | B |\n| --- | --- |\n| 1 | *two* |\n\n- item")
+        self.assertIn("<b>Lead:</b>", html_out)
+        self.assertIn('<a href="https://example.com">site</a>', html_out)
+        self.assertIn("<th>A</th>", html_out)
+        self.assertIn("<td><i>two</i></td>", html_out)
+        self.assertIn("<li>item</li>", html_out)
+
+
 if __name__ == "__main__":
     unittest.main()
