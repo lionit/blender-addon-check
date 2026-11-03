@@ -1,0 +1,133 @@
+name: Nightly add-on check
+
+on:
+  schedule:
+    - cron: "15 2 * * *"   # 02:15 UTC every day
+  workflow_dispatch:
+    inputs:
+      only:
+        description: "Comma-separated add-on ids to test (empty = all)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: nightly
+  cancel-in-progress: false
+
+jobs:
+  test:
+    name: Blender ${{ matrix.version }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ["4.5", "5.1", "5.2", "5.3"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install libraries headless Blender needs
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q --no-install-recommends \
+            libxi6 libxxf86vm1 libxfixes3 libxrender1 libgl1 libglu1-mesa \
+            libxkbcommon0 libsm6 libice6 libegl1 xz-utils
+
+      - name: Resolve Blender build URL
+        id: resolve
+        run: |
+          url="$(python scripts/fetch_blender.py --resolve "${{ matrix.version }}")"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "Resolved to $url"
+
+      - name: Cache Blender build
+        uses: actions/cache@v4
+        with:
+          path: .cache/blender
+          key: blender-${{ runner.os }}-${{ steps.resolve.outputs.url }}
+
+      - name: Cache add-on downloads
+        uses: actions/cache@v4
+        with:
+          path: .cache/addons
+          key: addons-${{ hashFiles('config/addons.json', 'config/addons.generated.json') }}-${{ github.run_id }}
+          restore-keys: |
+            addons-${{ hashFiles('config/addons.json', 'config/addons.generated.json') }}-
+
+      - name: Run the tests
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PRIVATE_ADDONS_TOKEN: ${{ secrets.PRIVATE_ADDONS_TOKEN }}
+        run: |
+          only="${{ github.event.inputs.only }}"
+          if [ -n "$only" ]; then extra="--only $only"; else extra=""; fi
+          python scripts/run_tests.py --version "${{ matrix.version }}" --jobs 4 --timeout 300 $extra
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-${{ matrix.version }}
+          path: results/${{ matrix.version }}
+          if-no-files-found: error
+
+  report:
+    name: Analyse, build site, publish
+    needs: test
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download all results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: results-*
+          path: results-artifacts
+
+      - name: Place results
+        run: |
+          set -e
+          for d in results-artifacts/results-*; do
+            v="${d##*/results-}"
+            mkdir -p "results/$v"
+            rm -f "results/$v"/*.json "results/$v"/*.log
+            cp -r "$d"/. "results/$v/"
+          done
+          ls -R results | head -50
+
+      - name: Name causes and build the site
+        run: |
+          python scripts/analyze.py
+          python scripts/build_report.py
+
+      - name: Commit results back to the repository
+        run: |
+          git config user.name "blender-addon-check bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add results
+          git diff --cached --quiet && echo "no changes" || git commit -m "Nightly results $(date -u +%Y-%m-%d) [skip ci]"
+          git push
+
+      - name: Upload site for GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

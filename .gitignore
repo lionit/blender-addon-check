@@ -1,0 +1,10 @@
+.cache/
+__pycache__/
+*.pyc
+*.part
+*.raw.zip
+addons/*.zip
+!addons/.gitkeep
+site/addons/
+site/index.html
+site/results.json

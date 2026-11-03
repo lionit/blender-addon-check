@@ -66,13 +66,13 @@
       "source": {"type": "github_zipball", "repo": "mifth/mifthtools", "ref": "master", "subdir": "blender/addons/2.8/mira_tools", "module": "mira_tools"}
     },
     {
-      "id": "blender-launcher-placeholder-owner-addons",
-      "name": "Owner's add-ons go here",
+      "id": "owner-addon-example",
+      "name": "Owner's add-ons go here (example entry, disabled)",
       "group": "owner",
       "developer": "lionit",
       "homepage": "",
       "enabled": false,
-      "source": {"type": "local", "path": "addons/OWNER_ADDON.zip", "module": "owner_addon"}
+      "source": {"type": "private_github_file", "repo": "lionit/blender-addon-check-private", "path": "addons/example.zip", "module": "example"}
     }
   ]
 }

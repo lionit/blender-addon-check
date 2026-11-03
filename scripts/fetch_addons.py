@@ -126,6 +126,16 @@ def fetch_one(addon: dict) -> Path:
             raise FileNotFoundError(f"{addon['id']}: local file {local} not found")
         shutil.copyfile(local, dest)
         return dest
+    if kind == "private_github_file":
+        token = os.environ.get("PRIVATE_ADDONS_TOKEN")
+        if not token:
+            raise RuntimeError(f"{addon['id']}: PRIVATE_ADDONS_TOKEN is not set")
+        ref = src.get("ref", "main")
+        url = f"https://api.github.com/repos/{src['repo']}/contents/{src['path'].strip('/')}?ref={ref}"
+        data = http_get(url, headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github.raw"})
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_bytes(data)
+        return dest
     raw = ADDONS_CACHE / f"{addon['id']}.raw.zip"
     if kind == "github_release":
         url = github_release_asset_url(src["repo"], src.get("asset_pattern"))

@@ -1,0 +1,56 @@
+name: Test my add-on every night
+description: Add your add-on to the nightly compatibility run. Free. You get the same report as the public table, plus a suggested fix when a Blender build breaks it.
+title: "Test my add-on: "
+labels: ["addon-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks. Fill in what you can; a link is enough to get started. Paid add-ons are kept private: attach the zip here only if you are comfortable with it being visible in this public issue, otherwise say so and we will send you a private upload link.
+  - type: input
+    id: name
+    attributes:
+      label: Add-on name
+      placeholder: My Great Add-on
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Where it lives
+      description: Marketplace page, GitHub repository, or extensions.blender.org page.
+      placeholder: https://superhivemarket.com/products/...
+    validations:
+      required: true
+  - type: dropdown
+    id: paid
+    attributes:
+      label: Is it paid?
+      options:
+        - "Yes, paid"
+        - "No, free"
+    validations:
+      required: true
+  - type: textarea
+    id: versions
+    attributes:
+      label: Which Blender versions do you support today?
+      placeholder: 4.2 LTS to 5.2
+  - type: input
+    id: contact
+    attributes:
+      label: Email for the nightly alert (optional)
+      description: Only used to tell you when a build breaks your add-on.
+  - type: dropdown
+    id: pay
+    attributes:
+      label: If this saved you a broken release, would you pay a few dollars a month for it?
+      options:
+        - "Yes"
+        - "Maybe, depends on price"
+        - "No"
+  - type: textarea
+    id: zip
+    attributes:
+      label: Attach the add-on zip (optional)
+      description: Drag the zip file here. For paid add-ons you can skip this and we will arrange a private upload.
