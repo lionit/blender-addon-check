@@ -1,58 +1,58 @@
 
 --- harness ---
-00:00.715  bpy.rna          | ERROR Python script error in UV_OT_textools_color_assign.poll
-00:00.716  bpy.rna          | ERROR Python script error in UV_OT_textools_color_clear.poll
-00:00.718  bpy.rna          | ERROR Python script error in UV_OT_textools_color_convert_to_texture.poll
-00:00.718  bpy.rna          | ERROR Python script error in UV_OT_textools_color_convert_to_vertex_colors.poll
-00:00.719  bpy.rna          | ERROR Python script error in UV_OT_textools_color_from_elements.poll
-00:00.719  bpy.rna          | ERROR Python script error in UV_OT_textools_color_from_materials.poll
-00:00.720  bpy.rna          | ERROR Python script error in UV_OT_textools_color_from_directions.poll
-00:00.720  bpy.rna          | ERROR Python script error in UV_OT_textools_edge_split_bevel.poll
-00:00.721  bpy.rna          | ERROR Python script error in UV_OT_textools_color_io_export.poll
-00:00.721  bpy.rna          | ERROR Python script error in UV_OT_textools_color_io_import.poll
-00:00.722  bpy.rna          | ERROR Python script error in UV_OT_textools_color_select.poll
-00:00.722  bpy.rna          | ERROR Python script error in UV_OT_textools_island_align_edge.poll
-00:00.722  bpy.rna          | ERROR Python script error in UV_OT_textools_island_align_world.poll
-00:00.723  bpy.rna          | ERROR Python script error in UV_OT_textools_island_mirror.poll
-00:00.723  bpy.rna          | ERROR Python script error in UV_OT_textools_island_rotate_90.poll
-00:00.723  bpy.rna          | ERROR Python script error in UV_OT_textools_island_straighten_edge_loops.poll
-00:00.724  bpy.rna          | ERROR Python script error in UV_OT_textools_randomize.poll
-00:00.724  bpy.rna          | ERROR Python script error in UV_OT_textools_rectify.poll
-00:00.725  bpy.rna          | ERROR Python script error in UV_OT_textools_select_islands_identical.poll
-00:00.725  bpy.rna          | ERROR Python script error in UV_OT_textools_select_islands_outline.poll
-00:00.725  bpy.rna          | ERROR Python script error in UV_OT_textools_select_islands_overlap.poll
-00:00.726  bpy.rna          | ERROR Python script error in UV_OT_textools_select_islands_flipped.poll
-00:00.726  bpy.rna          | ERROR Python script error in UV_OT_textools_select_zero.poll
-00:00.727  bpy.rna          | ERROR Python script error in UV_OT_textools_texel_density_get.poll
-00:00.727  bpy.rna          | ERROR Python script error in UV_OT_textools_texel_density_set.poll
-00:00.728  bpy.rna          | ERROR Python script error in UV_OT_textools_stitch.poll
-00:00.728  bpy.rna          | ERROR Python script error in UV_OT_textools_uv_crop.poll
-00:00.729  bpy.rna          | ERROR Python script error in UV_OT_textools_uv_fill.poll
-00:00.729  bpy.rna          | ERROR Python script error in UV_OT_textools_uv_resize.poll
-00:00.730  bpy.rna          | ERROR Python script error in UV_OT_textools_uv_unwrap.poll
-Exception in module unregister(): '/tmp/bac-textools-frrftxdv/blender/scripts/addons/TexTools/__init__.py'
-Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
+00:00.937  bpy.rna          | ERROR Python script error in UV_OT_textools_color_assign.poll
+00:00.937  bpy.rna          | ERROR Python script error in UV_OT_textools_color_clear.poll
+00:00.938  bpy.rna          | ERROR Python script error in UV_OT_textools_color_convert_to_texture.poll
+00:00.941  bpy.rna          | ERROR Python script error in UV_OT_textools_color_convert_to_vertex_colors.poll
+00:00.942  bpy.rna          | ERROR Python script error in UV_OT_textools_color_from_elements.poll
+00:00.942  bpy.rna          | ERROR Python script error in UV_OT_textools_color_from_materials.poll
+00:00.943  bpy.rna          | ERROR Python script error in UV_OT_textools_color_from_directions.poll
+00:00.944  bpy.rna          | ERROR Python script error in UV_OT_textools_edge_split_bevel.poll
+00:00.945  bpy.rna          | ERROR Python script error in UV_OT_textools_color_io_export.poll
+00:00.945  bpy.rna          | ERROR Python script error in UV_OT_textools_color_io_import.poll
+00:00.946  bpy.rna          | ERROR Python script error in UV_OT_textools_color_select.poll
+00:00.946  bpy.rna          | ERROR Python script error in UV_OT_textools_island_align_edge.poll
+00:00.947  bpy.rna          | ERROR Python script error in UV_OT_textools_island_align_world.poll
+00:00.948  bpy.rna          | ERROR Python script error in UV_OT_textools_island_mirror.poll
+00:00.948  bpy.rna          | ERROR Python script error in UV_OT_textools_island_rotate_90.poll
+00:00.949  bpy.rna          | ERROR Python script error in UV_OT_textools_island_straighten_edge_loops.poll
+00:00.950  bpy.rna          | ERROR Python script error in UV_OT_textools_randomize.poll
+00:00.951  bpy.rna          | ERROR Python script error in UV_OT_textools_rectify.poll
+00:00.951  bpy.rna          | ERROR Python script error in UV_OT_textools_select_islands_identical.poll
+00:00.952  bpy.rna          | ERROR Python script error in UV_OT_textools_select_islands_outline.poll
+00:00.952  bpy.rna          | ERROR Python script error in UV_OT_textools_select_islands_overlap.poll
+00:00.953  bpy.rna          | ERROR Python script error in UV_OT_textools_select_islands_flipped.poll
+00:00.954  bpy.rna          | ERROR Python script error in UV_OT_textools_select_zero.poll
+00:00.955  bpy.rna          | ERROR Python script error in UV_OT_textools_texel_density_get.poll
+00:00.956  bpy.rna          | ERROR Python script error in UV_OT_textools_texel_density_set.poll
+00:00.957  bpy.rna          | ERROR Python script error in UV_OT_textools_stitch.poll
+00:00.958  bpy.rna          | ERROR Python script error in UV_OT_textools_uv_crop.poll
+00:00.959  bpy.rna          | ERROR Python script error in UV_OT_textools_uv_fill.poll
+00:00.959  bpy.rna          | ERROR Python script error in UV_OT_textools_uv_resize.poll
+00:00.960  bpy.rna          | ERROR Python script error in UV_OT_textools_uv_unwrap.poll
+Exception in module unregister(): '/tmp/bac-textools-gmjtxrwx/blender/scripts/addons/TexTools/__init__.py'
+Blender 5.3.0 Beta (hash 7e7c173d45c8 built 2026-11-04 01:33:05)
 
 Blender quit
 
 --- stderr ---
 Traceback (most recent call last):
-  File "/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/scripts/modules/addon_utils.py", line 601, in disable
+  File "/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.7e7c173d45c8-linux.x86_64-release/5.3/scripts/modules/addon_utils.py", line 601, in disable
     mod.unregister()
     ~~~~~~~~~~~~~~^^
-  File "/tmp/bac-textools-frrftxdv/blender/scripts/addons/TexTools/__init__.py", line 1781, in unregister
+  File "/tmp/bac-textools-gmjtxrwx/blender/scripts/addons/TexTools/__init__.py", line 1781, in unregister
     utilities_ui.unregister()
     ~~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/tmp/bac-textools-frrftxdv/blender/scripts/addons/TexTools/utilities_ui.py", line 159, in unregister
+  File "/tmp/bac-textools-gmjtxrwx/blender/scripts/addons/TexTools/utilities_ui.py", line 159, in unregister
     previews.remove(preview_icons)
     ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
-  File "/tmp/bac-textools-frrftxdv/blender/scripts/addons/TexTools/t3dn_bip/previews.py", line 225, in remove
+  File "/tmp/bac-textools-gmjtxrwx/blender/scripts/addons/TexTools/t3dn_bip/previews.py", line 225, in remove
     collection.close()
     ~~~~~~~~~~~~~~~~^^
-  File "/tmp/bac-textools-frrftxdv/blender/scripts/addons/TexTools/t3dn_bip/previews.py", line 199, in close
+  File "/tmp/bac-textools-gmjtxrwx/blender/scripts/addons/TexTools/t3dn_bip/previews.py", line 199, in close
     self._collection.close()
     ~~~~~~~~~~~~~~~~~~~~~~^^
-  File "/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.ace25df17a10-linux.x86_64-release/5.3/scripts/modules/bpy/utils/previews.py", line 96, in close
+  File "/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-5.3.0-beta+v53.7e7c173d45c8-linux.x86_64-release/5.3/scripts/modules/bpy/utils/previews.py", line 96, in close
     _uuid_open.remove(self._uuid)
     ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
-KeyError: '0x7fdbe2e38ff0'
+KeyError: '0x7f2b54c3d090'

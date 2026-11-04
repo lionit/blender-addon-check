@@ -1,7 +1,7 @@
 
 --- harness ---
 Blender 4.5.15 LTS (hash 5afeabba6097 built 2026-10-22 01:33:47)
-Exception in module unregister(): '/tmp/bac-textools-m9s90g_y/blender/scripts/addons/TexTools/__init__.py'
+Exception in module unregister(): '/tmp/bac-textools-w6gxueo3/blender/scripts/addons/TexTools/__init__.py'
 
 Blender quit
 
@@ -9,14 +9,14 @@ Blender quit
 Traceback (most recent call last):
   File "/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py", line 566, in disable
     mod.unregister()
-  File "/tmp/bac-textools-m9s90g_y/blender/scripts/addons/TexTools/__init__.py", line 1781, in unregister
+  File "/tmp/bac-textools-w6gxueo3/blender/scripts/addons/TexTools/__init__.py", line 1781, in unregister
     utilities_ui.unregister()
-  File "/tmp/bac-textools-m9s90g_y/blender/scripts/addons/TexTools/utilities_ui.py", line 159, in unregister
+  File "/tmp/bac-textools-w6gxueo3/blender/scripts/addons/TexTools/utilities_ui.py", line 159, in unregister
     previews.remove(preview_icons)
-  File "/tmp/bac-textools-m9s90g_y/blender/scripts/addons/TexTools/t3dn_bip/previews.py", line 225, in remove
+  File "/tmp/bac-textools-w6gxueo3/blender/scripts/addons/TexTools/t3dn_bip/previews.py", line 225, in remove
     collection.close()
-  File "/tmp/bac-textools-m9s90g_y/blender/scripts/addons/TexTools/t3dn_bip/previews.py", line 199, in close
+  File "/tmp/bac-textools-w6gxueo3/blender/scripts/addons/TexTools/t3dn_bip/previews.py", line 199, in close
     self._collection.close()
   File "/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/bpy/utils/previews.py", line 96, in close
     _uuid_open.remove(self._uuid)
-KeyError: '0x7f525f169af0'
+KeyError: '0x7f7c9e769af0'

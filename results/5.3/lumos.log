@@ -1,27 +1,27 @@
 --- extension install-file ---
 STATUS Installed "lumos"
-Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
+Blender 5.3.0 Beta (hash 7e7c173d45c8 built 2026-11-04 01:33:05)
 
 --- harness ---
-00:00.570  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_add_light.poll
-00:00.571  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_delete_light.poll
-00:00.572  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_select_light.poll
-00:00.572  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_lookthrough_light.poll
-00:00.572  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_visibility.poll
-00:00.573  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_all_light_visibility.poll
-00:00.573  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_isolate_light.poll
-00:00.574  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_normals_modal.poll
-00:00.574  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_reflection_modal.poll
-00:00.575  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_target_modal.poll
-00:00.576  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_shadow_modal.poll
-00:00.576  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_edit_mode_switcher.poll
-00:00.577  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_position_modal_manager.poll
-00:00.577  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_modify_intensity_modal.poll
-00:00.578  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_modify_color_modal.poll
-00:00.578  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_modify_local_z_position_modal.poll
-00:00.579  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_edit_tool_toggle.poll
-00:00.579  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_delete_emissive_object.poll
-Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
+00:00.526  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_add_light.poll
+00:00.527  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_delete_light.poll
+00:00.527  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_select_light.poll
+00:00.528  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_lookthrough_light.poll
+00:00.528  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_visibility.poll
+00:00.528  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_all_light_visibility.poll
+00:00.529  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_isolate_light.poll
+00:00.529  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_normals_modal.poll
+00:00.529  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_reflection_modal.poll
+00:00.530  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_target_modal.poll
+00:00.530  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_shadow_modal.poll
+00:00.531  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_edit_mode_switcher.poll
+00:00.531  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_position_modal_manager.poll
+00:00.531  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_modify_intensity_modal.poll
+00:00.532  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_modify_color_modal.poll
+00:00.532  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_modify_local_z_position_modal.poll
+00:00.532  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_light_edit_tool_toggle.poll
+00:00.533  bpy.rna          | ERROR Python script error in LUMOS_MANAGER_OT_delete_emissive_object.poll
+Blender 5.3.0 Beta (hash 7e7c173d45c8 built 2026-11-04 01:33:05)
 
 Blender quit
 

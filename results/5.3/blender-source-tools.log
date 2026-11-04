@@ -1,10 +1,10 @@
 
 --- harness ---
-00:01.497  bpy.rna          | ERROR Python script error in EXPORT_SCENE_OT_dmx_flex_controller.poll
-00:01.497  bpy.rna          | ERROR Python script error in TEXT_OT_insert_uuid.poll
-00:01.498  bpy.rna          | ERROR Python script error in SMD_OT_vertexanim_add.poll
-00:01.498  bpy.rna          | ERROR Python script error in SMD_OT_vertexanim_remove.poll
-Blender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)
+00:01.913  bpy.rna          | ERROR Python script error in EXPORT_SCENE_OT_dmx_flex_controller.poll
+00:01.918  bpy.rna          | ERROR Python script error in TEXT_OT_insert_uuid.poll
+00:01.919  bpy.rna          | ERROR Python script error in SMD_OT_vertexanim_add.poll
+00:01.920  bpy.rna          | ERROR Python script error in SMD_OT_vertexanim_remove.poll
+Blender 5.3.0 Beta (hash 7e7c173d45c8 built 2026-11-04 01:33:05)
 
 Blender quit
 

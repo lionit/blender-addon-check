@@ -2,7 +2,7 @@
   "addon_id": "latticemagic",
   "addon_version": "1.0.1",
   "blender_version": "4.5.15 LTS",
-  "captured_output": "Traceback (most recent call last):\n  File \"/tmp/bac-latticemagic-p81azyk9/blender/extensions/user_default/latticemagic/camera_lattice.py\", line 201, in poll\n    active_slot = scene.lattice_slots[scene.active_lattice_index]\n                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nIndexError: bpy_prop_collection[index]: index 0 out of range, size 0\nTraceback (most recent call last):\n  File \"/tmp/bac-latticemagic-p81azyk9/blender/extensions/user_default/latticemagic/camera_lattice.py\", line 342, in poll\n    active_slot = scene.lattice_slots[scene.active_lattice_index]\n                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nIndexError: bpy_prop_collection[index]: index 0 out of range, size 0\n",
+  "captured_output": "Traceback (most recent call last):\n  File \"/tmp/bac-latticemagic-bzh9sxc_/blender/extensions/user_default/latticemagic/camera_lattice.py\", line 201, in poll\n    active_slot = scene.lattice_slots[scene.active_lattice_index]\n                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nIndexError: bpy_prop_collection[index]: index 0 out of range, size 0\nTraceback (most recent call last):\n  File \"/tmp/bac-latticemagic-bzh9sxc_/blender/extensions/user_default/latticemagic/camera_lattice.py\", line 342, in poll\n    active_slot = scene.lattice_slots[scene.active_lattice_index]\n                  ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nIndexError: bpy_prop_collection[index]: index 0 out of range, size 0\n",
   "cause": {
     "cause": "",
     "fix": "",
@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 15,
   "python_version": "3.11.15",
-  "ran_at": "2026-11-03T17:43:43+00:00",
+  "ran_at": "2026-11-04T09:10:14+00:00",
   "source_type": "extensions",
   "stages": {
     "enable": {
@@ -45,9 +45,9 @@
   },
   "status": "pass",
   "timing_s": {
-    "enable": 0.05,
+    "enable": 0.07,
     "install": 0.01,
-    "poll": 0.0,
+    "poll": 0.01,
     "reenable": 0.01
   }
 }

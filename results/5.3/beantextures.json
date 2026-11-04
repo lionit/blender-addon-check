@@ -2,7 +2,7 @@
   "addon_id": "beantextures",
   "addon_version": "1.1.0",
   "blender_version": "5.3.0 Beta",
-  "captured_output": "Traceback (most recent call last):\n  File \"/tmp/bac-beantextures-90gqru1w/blender/extensions/user_default/beantextures/ops_settings.py\", line 293, in poll\n    return ((context.area.type == 'NODE_EDITOR') and hasattr(context, \"active_node\") and hasattr(context, \"material\"))\n             ^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\n",
+  "captured_output": "Traceback (most recent call last):\n  File \"/tmp/bac-beantextures-x2aris7q/blender/extensions/user_default/beantextures/ops_settings.py\", line 293, in poll\n    return ((context.area.type == 'NODE_EDITOR') and hasattr(context, \"active_node\") and hasattr(context, \"material\"))\n             ^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\n",
   "cause": {
     "cause": "",
     "fix": "",
@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 16,
   "python_version": "3.13.13",
-  "ran_at": "2026-11-03T17:43:54+00:00",
+  "ran_at": "2026-11-04T09:11:01+00:00",
   "source_type": "extensions",
   "stages": {
     "enable": {
@@ -46,8 +46,8 @@
   "status": "pass",
   "timing_s": {
     "enable": 0.04,
-    "install": 0.0,
+    "install": 0.01,
     "poll": 0.01,
-    "reenable": 0.13
+    "reenable": 0.0
   }
 }

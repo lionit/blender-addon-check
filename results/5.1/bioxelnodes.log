@@ -3,7 +3,7 @@ STATUS Installed "bioxelnodes"
 Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)
 
 --- harness ---
-00:07.337  bpy.rna          | ERROR Python script error in BIOXEL_OT_extract_mesh.poll
+00:07.494  bpy.rna          | ERROR Python script error in BIOXEL_OT_extract_mesh.poll
 Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)
 
 Blender quit

@@ -17,7 +17,7 @@
   "log": "measureit.log",
   "module": "bl_ext.user_default.measureit",
   "name": "MeasureIt",
-  "ran_at": "2026-11-03T17:43:10+00:00",
+  "ran_at": "2026-11-04T09:09:52+00:00",
   "source_type": "extensions",
   "status": "unsupported",
   "status_before_analysis": "fail"

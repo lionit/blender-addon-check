@@ -2,7 +2,7 @@
   "addon_id": "blender-source-tools",
   "addon_version": null,
   "blender_version": "5.3.0 Beta",
-  "captured_output": "addon_utils.disable: io_scene_valvesource not loaded\nModules Installed (io_scene_valvesource) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-source-tools.zip' into '/tmp/bac-blender-source-tools-dlk29alx/blender/scripts/addons'\nInfo: Modules Installed (io_scene_valvesource) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-source-tools.zip' into '/tmp/bac-blender-source-tools-dlk29alx/blender/scripts/addons'\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-source-tools-dlk29alx/blender/scripts/addons/io_scene_valvesource/flex.py\", line 33, in poll\n    return utils.hasShapes(utils.get_active_exportable(context).item, valid_only=False)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'item'\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-source-tools-dlk29alx/blender/scripts/addons/io_scene_valvesource/flex.py\", line 189, in poll\n    return context.space_data.type == 'TEXT_EDITOR' and context.space_data.text\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-source-tools-dlk29alx/blender/scripts/addons/io_scene_valvesource/GUI.py\", line 205, in poll\n    return type(get_active_exportable(c).item) in [bpy.types.Object, bpy.types.Collection]\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'item'\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-source-tools-dlk29alx/blender/scripts/addons/io_scene_valvesource/GUI.py\", line 223, in poll\n    item = get_active_exportable(c).item\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'item'\n",
+  "captured_output": "addon_utils.disable: io_scene_valvesource not loaded\nModules Installed (io_scene_valvesource) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-source-tools.zip' into '/tmp/bac-blender-source-tools-4_gdmb5m/blender/scripts/addons'\nInfo: Modules Installed (io_scene_valvesource) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-source-tools.zip' into '/tmp/bac-blender-source-tools-4_gdmb5m/blender/scripts/addons'\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-source-tools-4_gdmb5m/blender/scripts/addons/io_scene_valvesource/flex.py\", line 33, in poll\n    return utils.hasShapes(utils.get_active_exportable(context).item, valid_only=False)\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'item'\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-source-tools-4_gdmb5m/blender/scripts/addons/io_scene_valvesource/flex.py\", line 189, in poll\n    return context.space_data.type == 'TEXT_EDITOR' and context.space_data.text\n           ^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-source-tools-4_gdmb5m/blender/scripts/addons/io_scene_valvesource/GUI.py\", line 205, in poll\n    return type(get_active_exportable(c).item) in [bpy.types.Object, bpy.types.Collection]\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'item'\nTraceback (most recent call last):\n  File \"/tmp/bac-blender-source-tools-4_gdmb5m/blender/scripts/addons/io_scene_valvesource/GUI.py\", line 223, in poll\n    item = get_active_exportable(c).item\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'item'\n",
   "cause": {
     "cause": "",
     "fix": "",
@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 23,
   "python_version": "3.13.13",
-  "ran_at": "2026-11-03T17:42:50+00:00",
+  "ran_at": "2026-11-04T09:10:16+00:00",
   "source_type": "github_zipball",
   "stages": {
     "enable": {
@@ -31,7 +31,7 @@
       "ok": true
     },
     "install": {
-      "detail": "addon_utils.disable: io_scene_valvesource not loaded\nModules Installed (io_scene_valvesource) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-source-tools.zip' into '/tmp/bac-blender-source-tools-dlk29alx/blender/scripts/addons'\nInfo: Modules Installed (io_scene_valvesource) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-source-tools.zip' into '/tmp/bac-blender-source-tools-dlk29alx/blender/scripts/addons'\n",
+      "detail": "addon_utils.disable: io_scene_valvesource not loaded\nModules Installed (io_scene_valvesource) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-source-tools.zip' into '/tmp/bac-blender-source-tools-4_gdmb5m/blender/scripts/addons'\nInfo: Modules Installed (io_scene_valvesource) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blender-source-tools.zip' into '/tmp/bac-blender-source-tools-4_gdmb5m/blender/scripts/addons'\n",
       "ok": true
     },
     "poll": {
@@ -45,9 +45,9 @@
   },
   "status": "pass",
   "timing_s": {
-    "enable": 0.95,
-    "install": 0.01,
-    "poll": 0.01,
+    "enable": 1.0,
+    "install": 0.02,
+    "poll": 0.02,
     "reenable": 0.0
   }
 }

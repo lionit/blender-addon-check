@@ -9,7 +9,7 @@
   "declared_max": "5.3.0",
   "declared_min": "4.2.0",
   "developer": "saturday06",
-  "error": "`blender --command extension install-file` exited with 0\n--- extension install-file ---\nERROR vrm: This Blender version (5.3.0) must be less than the maximum version (5.3.0)\nBlender 5.3.0 Beta (hash ace25df17a10 built 2026-11-03 02:27:00)\n",
+  "error": "`blender --command extension install-file` exited with 0\n--- extension install-file ---\nERROR vrm: This Blender version (5.3.0) must be less than the maximum version (5.3.0)\nBlender 5.3.0 Beta (hash 7e7c173d45c8 built 2026-11-04 01:33:05)\n",
   "error_stage": "install",
   "group": "extensions-top",
   "homepage": "https://extensions.blender.org/add-ons/vrm/",
@@ -17,7 +17,7 @@
   "log": "vrm.log",
   "module": "bl_ext.user_default.vrm",
   "name": "VRM format",
-  "ran_at": "2026-11-03T17:43:05+00:00",
+  "ran_at": "2026-11-04T09:10:28+00:00",
   "source_type": "extensions",
   "status": "unsupported",
   "status_before_analysis": "fail"

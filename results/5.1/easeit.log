@@ -3,7 +3,7 @@ STATUS Installed "easeit"
 Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)
 
 --- harness ---
-00:00.587  bpy.rna          | ERROR Python script error in GRAPH_OT_apply_custom_simple_preset.poll
+00:00.462  bpy.rna          | ERROR Python script error in GRAPH_OT_apply_custom_simple_preset.poll
 Blender 5.1.2 (hash ec6e62d40fa9 built 2026-05-19 02:18:37)
 
 Blender quit
