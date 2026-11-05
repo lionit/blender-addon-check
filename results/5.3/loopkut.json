@@ -1,7 +1,7 @@
 {
   "addon_id": "loopkut",
   "addon_version": "1.6.2",
-  "blender_version": "5.3.0 Beta",
+  "blender_version": "5.3.0 Release Candidate",
   "captured_output": "",
   "cause": {
     "cause": "",
@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 9,
   "python_version": "3.13.13",
-  "ran_at": "2026-11-04T09:10:53+00:00",
+  "ran_at": "2026-11-05T09:29:40+00:00",
   "source_type": "extensions",
   "stages": {
     "enable": {
@@ -45,7 +45,7 @@
   },
   "status": "pass",
   "timing_s": {
-    "enable": 0.14,
+    "enable": 0.13,
     "install": 0.0,
     "poll": 0.0,
     "reenable": 0.01

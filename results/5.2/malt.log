@@ -1,10 +1,10 @@
 
 --- harness ---
-00:02.615  bpy.rna          | ERROR Python script error in WM_OT_malt_edit_node_tree.poll
-00:02.617  bpy.rna          | ERROR Python script error in WM_OT_malt_set_tree_preview.poll
-00:02.618  bpy.rna          | ERROR Python script error in WM_OT_malt_connect_tree_preview.poll
-00:02.619  bpy.rna          | ERROR Python script error in WM_OT_malt_cycle_sub_categories.poll
-00:02.620  bpy.rna          | ERROR Python script error in NODE_OT_add_subcategory_node.poll
+00:01.869  bpy.rna          | ERROR Python script error in WM_OT_malt_edit_node_tree.poll
+00:01.871  bpy.rna          | ERROR Python script error in WM_OT_malt_set_tree_preview.poll
+00:01.872  bpy.rna          | ERROR Python script error in WM_OT_malt_connect_tree_preview.poll
+00:01.873  bpy.rna          | ERROR Python script error in WM_OT_malt_cycle_sub_categories.poll
+00:01.873  bpy.rna          | ERROR Python script error in NODE_OT_add_subcategory_node.poll
 Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)
 
 Blender quit

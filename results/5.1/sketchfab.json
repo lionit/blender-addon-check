@@ -2,7 +2,7 @@
   "addon_id": "sketchfab",
   "addon_version": null,
   "blender_version": "5.1.2",
-  "captured_output": "addon_utils.disable: sketchfab not loaded\nModules Installed (sketchfab) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sketchfab.zip' into '/tmp/bac-sketchfab-yvm2ljuc/blender/scripts/addons'\nInfo: Modules Installed (sketchfab) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sketchfab.zip' into '/tmp/bac-sketchfab-yvm2ljuc/blender/scripts/addons'\n",
+  "captured_output": "addon_utils.disable: sketchfab not loaded\nModules Installed (sketchfab) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sketchfab.zip' into '/tmp/bac-sketchfab-sqer6nk2/blender/scripts/addons'\nInfo: Modules Installed (sketchfab) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sketchfab.zip' into '/tmp/bac-sketchfab-sqer6nk2/blender/scripts/addons'\n",
   "cause": {
     "cause": "",
     "fix": "",
@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 14,
   "python_version": "3.13.9",
-  "ran_at": "2026-11-04T09:09:32+00:00",
+  "ran_at": "2026-11-05T09:28:31+00:00",
   "source_type": "github_release",
   "stages": {
     "enable": {
@@ -31,7 +31,7 @@
       "ok": true
     },
     "install": {
-      "detail": "addon_utils.disable: sketchfab not loaded\nModules Installed (sketchfab) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sketchfab.zip' into '/tmp/bac-sketchfab-yvm2ljuc/blender/scripts/addons'\nInfo: Modules Installed (sketchfab) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sketchfab.zip' into '/tmp/bac-sketchfab-yvm2ljuc/blender/scripts/addons'\n",
+      "detail": "addon_utils.disable: sketchfab not loaded\nModules Installed (sketchfab) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sketchfab.zip' into '/tmp/bac-sketchfab-sqer6nk2/blender/scripts/addons'\nInfo: Modules Installed (sketchfab) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/sketchfab.zip' into '/tmp/bac-sketchfab-sqer6nk2/blender/scripts/addons'\n",
       "ok": true
     },
     "poll": {
@@ -45,7 +45,7 @@
   },
   "status": "pass",
   "timing_s": {
-    "enable": 0.49,
+    "enable": 0.31,
     "install": 0.01,
     "poll": 0.0,
     "reenable": 0.0

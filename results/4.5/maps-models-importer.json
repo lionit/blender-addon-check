@@ -2,7 +2,7 @@
   "addon_id": "maps-models-importer",
   "addon_version": null,
   "blender_version": "4.5.15 LTS",
-  "captured_output": "addon_utils.disable: MapsModelsImporter not loaded\nModules Installed (MapsModelsImporter) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/maps-models-importer.zip' into '/tmp/bac-maps-models-importer-_25uko_h/blender/scripts/addons'\nInfo: Modules Installed (MapsModelsImporter) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/maps-models-importer.zip' into '/tmp/bac-maps-models-importer-_25uko_h/blender/scripts/addons'\n",
+  "captured_output": "addon_utils.disable: MapsModelsImporter not loaded\nModules Installed (MapsModelsImporter) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/maps-models-importer.zip' into '/tmp/bac-maps-models-importer-h130ckn_/blender/scripts/addons'\nInfo: Modules Installed (MapsModelsImporter) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/maps-models-importer.zip' into '/tmp/bac-maps-models-importer-h130ckn_/blender/scripts/addons'\n",
   "cause": {
     "cause": "",
     "fix": "",
@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 1,
   "python_version": "3.11.15",
-  "ran_at": "2026-11-04T09:09:34+00:00",
+  "ran_at": "2026-11-05T09:28:26+00:00",
   "source_type": "github_release",
   "stages": {
     "enable": {
@@ -31,7 +31,7 @@
       "ok": true
     },
     "install": {
-      "detail": "addon_utils.disable: MapsModelsImporter not loaded\nModules Installed (MapsModelsImporter) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/maps-models-importer.zip' into '/tmp/bac-maps-models-importer-_25uko_h/blender/scripts/addons'\nInfo: Modules Installed (MapsModelsImporter) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/maps-models-importer.zip' into '/tmp/bac-maps-models-importer-_25uko_h/blender/scripts/addons'\n",
+      "detail": "addon_utils.disable: MapsModelsImporter not loaded\nModules Installed (MapsModelsImporter) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/maps-models-importer.zip' into '/tmp/bac-maps-models-importer-h130ckn_/blender/scripts/addons'\nInfo: Modules Installed (MapsModelsImporter) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/maps-models-importer.zip' into '/tmp/bac-maps-models-importer-h130ckn_/blender/scripts/addons'\n",
       "ok": true
     },
     "poll": {
@@ -45,8 +45,8 @@
   },
   "status": "pass",
   "timing_s": {
-    "enable": 0.1,
-    "install": 0.23,
+    "enable": 0.12,
+    "install": 0.2,
     "poll": 0.0,
     "reenable": 0.0
   }

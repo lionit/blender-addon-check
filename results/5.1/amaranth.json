@@ -17,7 +17,7 @@
   "log": "amaranth.log",
   "module": "bl_ext.user_default.amaranth",
   "name": "Amaranth",
-  "ran_at": "2026-11-04T09:10:12+00:00",
+  "ran_at": "2026-11-05T09:29:07+00:00",
   "source_type": "extensions",
   "status": "unsupported",
   "status_before_analysis": "fail"

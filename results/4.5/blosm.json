@@ -2,7 +2,7 @@
   "addon_id": "blosm",
   "addon_version": null,
   "blender_version": "4.5.15 LTS",
-  "captured_output": "addon_utils.disable: blosm not loaded\nModules Installed (blosm) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blosm.zip' into '/tmp/bac-blosm-b2s8aehs/blender/scripts/addons'\nInfo: Modules Installed (blosm) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blosm.zip' into '/tmp/bac-blosm-b2s8aehs/blender/scripts/addons'\nException in module register(): /tmp/bac-blosm-b2s8aehs/blender/scripts/addons/blosm/__init__.py\n",
+  "captured_output": "addon_utils.disable: blosm not loaded\nModules Installed (blosm) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blosm.zip' into '/tmp/bac-blosm-6gh8hocf/blender/scripts/addons'\nInfo: Modules Installed (blosm) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blosm.zip' into '/tmp/bac-blosm-6gh8hocf/blender/scripts/addons'\nException in module register(): /tmp/bac-blosm-6gh8hocf/blender/scripts/addons/blosm/__init__.py\n",
   "cause": {
     "cause": "Registers a panel with a bl_category in a region that does not accept tabs; Blender 4.5+ rejects this at registration instead of ignoring it.",
     "fix": "Remove bl_category from panels whose bl_region_type is not 'UI' (the sidebar), or move the panel to the sidebar.",
@@ -12,7 +12,7 @@
   "declared_max": null,
   "declared_min": "2.80.0",
   "developer": "vvoovv",
-  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 515, in enable\n    mod.register()\n  File \"/tmp/bac-blosm-b2s8aehs/blender/scripts/addons/blosm/__init__.py\", line 596, in register\n    gui.register()\n  File \"/tmp/bac-blosm-b2s8aehs/blender/scripts/addons/blosm/gui/__init__.py\", line 924, in register\n    bpy.utils.register_class(c)\nRuntimeError: Error: Registering panel class: 'PanelBlosmExtent' has category 'osm'\n\n",
+  "error": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 515, in enable\n    mod.register()\n  File \"/tmp/bac-blosm-6gh8hocf/blender/scripts/addons/blosm/__init__.py\", line 596, in register\n    gui.register()\n  File \"/tmp/bac-blosm-6gh8hocf/blender/scripts/addons/blosm/gui/__init__.py\", line 924, in register\n    bpy.utils.register_class(c)\nRuntimeError: Error: Registering panel class: 'PanelBlosmExtent' has category 'osm'\n\n",
   "error_stage": "enable",
   "group": "github",
   "homepage": "https://github.com/vvoovv/blosm",
@@ -23,20 +23,20 @@
   "operators_poll_failed": 0,
   "operators_total": 0,
   "python_version": "3.11.15",
-  "ran_at": "2026-11-04T09:09:35+00:00",
+  "ran_at": "2026-11-05T09:28:27+00:00",
   "source_type": "github_release",
   "stages": {
     "enable": {
-      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 515, in enable\n    mod.register()\n  File \"/tmp/bac-blosm-b2s8aehs/blender/scripts/addons/blosm/__init__.py\", line 596, in register\n    gui.register()\n  File \"/tmp/bac-blosm-b2s8aehs/blender/scripts/addons/blosm/gui/__init__.py\", line 924, in register\n    bpy.utils.register_class(c)\nRuntimeError: Error: Registering panel class: 'PanelBlosmExtent' has category 'osm'\n\n",
+      "detail": "Traceback (most recent call last):\n  File \"/home/runner/work/blender-addon-check/blender-addon-check/.cache/blender/blender-4.5.15-linux-x64/4.5/scripts/modules/addon_utils.py\", line 515, in enable\n    mod.register()\n  File \"/tmp/bac-blosm-6gh8hocf/blender/scripts/addons/blosm/__init__.py\", line 596, in register\n    gui.register()\n  File \"/tmp/bac-blosm-6gh8hocf/blender/scripts/addons/blosm/gui/__init__.py\", line 924, in register\n    bpy.utils.register_class(c)\nRuntimeError: Error: Registering panel class: 'PanelBlosmExtent' has category 'osm'\n\n",
       "ok": false
     },
     "install": {
-      "detail": "addon_utils.disable: blosm not loaded\nModules Installed (blosm) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blosm.zip' into '/tmp/bac-blosm-b2s8aehs/blender/scripts/addons'\nInfo: Modules Installed (blosm) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blosm.zip' into '/tmp/bac-blosm-b2s8aehs/blender/scripts/addons'\n",
+      "detail": "addon_utils.disable: blosm not loaded\nModules Installed (blosm) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blosm.zip' into '/tmp/bac-blosm-6gh8hocf/blender/scripts/addons'\nInfo: Modules Installed (blosm) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blosm.zip' into '/tmp/bac-blosm-6gh8hocf/blender/scripts/addons'\n",
       "ok": true
     }
   },
   "status": "fail",
   "timing_s": {
-    "install": 0.05
+    "install": 0.07
   }
 }

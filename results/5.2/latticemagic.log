@@ -3,8 +3,8 @@ STATUS Installed "latticemagic"
 Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)
 
 --- harness ---
-00:00.677  bpy.rna          | ERROR Python script error in LATTICE_OT_generate_lattice_for_slot.poll
-00:00.678  bpy.rna          | ERROR Python script error in LATTICE_OT_delete_lattice_from_slot.poll
+00:00.467  bpy.rna          | ERROR Python script error in LATTICE_OT_generate_lattice_for_slot.poll
+00:00.468  bpy.rna          | ERROR Python script error in LATTICE_OT_delete_lattice_from_slot.poll
 Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)
 
 Blender quit
