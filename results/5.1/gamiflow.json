@@ -2,7 +2,7 @@
   "addon_id": "gamiflow",
   "addon_version": "1.10.1",
   "blender_version": "5.1.2",
-  "captured_output": "/tmp/bac-gamiflow-vsxh7ejx/blender/extensions/user_default/gamiflow/uv.py:774: SyntaxWarning: \"is not\" with 'str' literal. Did you mean \"!=\"?\n  if sp.type is not 'Space Image Editor': continue\n-------Registering gflow-------\n-------gflow registered--------\n-------Unregistering gflow-------\n-------Registering gflow-------\n-------gflow registered--------\n",
+  "captured_output": "/tmp/bac-gamiflow-miq3gblq/blender/extensions/user_default/gamiflow/uv.py:774: SyntaxWarning: \"is not\" with 'str' literal. Did you mean \"!=\"?\n  if sp.type is not 'Space Image Editor': continue\n-------Registering gflow-------\n-------gflow registered--------\n-------Unregistering gflow-------\n-------Registering gflow-------\n-------gflow registered--------\n",
   "cause": {
     "cause": "",
     "fix": "",
@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 55,
   "python_version": "3.13.9",
-  "ran_at": "2026-11-05T09:29:21+00:00",
+  "ran_at": "2026-11-06T09:23:21+00:00",
   "source_type": "extensions",
   "stages": {
     "enable": {
@@ -45,7 +45,7 @@
   },
   "status": "pass",
   "timing_s": {
-    "enable": 0.11,
+    "enable": 0.09,
     "install": 0.0,
     "poll": 0.0,
     "reenable": 0.0

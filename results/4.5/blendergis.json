@@ -2,7 +2,7 @@
   "addon_id": "blendergis",
   "addon_version": null,
   "blender_version": "4.5.15 LTS",
-  "captured_output": "addon_utils.disable: BlenderGIS not loaded\nModules Installed (BlenderGIS) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blendergis.zip' into '/tmp/bac-blendergis-v29mt5zn/blender/scripts/addons'\nInfo: Modules Installed (BlenderGIS) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blendergis.zip' into '/tmp/bac-blendergis-v29mt5zn/blender/scripts/addons'\nDEBUG:BlenderGIS.core.checkdeps:GDAL Python binding unavailable\nDEBUG:BlenderGIS.core.checkdeps:PyProj unavailable\nDEBUG:BlenderGIS.core.checkdeps:Pillow unavailable\nImageio: 'libfreeimage-3.16.0-linux64.so' was not found on your computer; downloading it now.\nTry 1. Download from https://github.com/domlysz/freeimage_bin/raw/master/libfreeimage-3.16.0-linux64.so (4.6 MB)\nDownloading: 8192/4830080 bytes (0.2%)\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b2777088/4830080 bytes (57.5%)\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b4830080/4830080 bytes (100.0%)\n  Done\nFile saved as /tmp/bac-blendergis-v29mt5zn/.imageio/libfreeimage-3.16.0-linux64.so.\nDEBUG:BlenderGIS.core.checkdeps:ImageIO Freeimage plugin available\nERROR:BlenderGIS:Uncaught exception\nTraceback (most recent call last):\n  File \"/tmp/bac-blendergis-v29mt5zn/blender/scripts/addons/BlenderGIS/geoscene.py\", line 385, in poll\n    return bpy.context.mode == 'OBJECT' and context.area.type == 'VIEW_3D'\n                                            ^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\nTraceback (most recent call last):\n  File \"/tmp/bac-blendergis-v29mt5zn/blender/scripts/addons/BlenderGIS/geoscene.py\", line 385, in poll\n    return bpy.context.mode == 'OBJECT' and context.area.type == 'VIEW_3D'\n                                            ^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\nERROR:BlenderGIS:Uncaught exception\nTraceback (most recent call last):\n  File \"/tmp/bac-blendergis-v29mt5zn/blender/scripts/addons/BlenderGIS/operators/view3d_mapviewer.py\", line 551, in poll\n    return context.area.type == 'VIEW_3D'\n           ^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\nTraceback (most recent call last):\n  File \"/tmp/bac-blendergis-v29mt5zn/blender/scripts/addons/BlenderGIS/operators/view3d_mapviewer.py\", line 551, in poll\n    return context.area.type == 'VIEW_3D'\n           ^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\n",
+  "captured_output": "addon_utils.disable: BlenderGIS not loaded\nModules Installed (BlenderGIS) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blendergis.zip' into '/tmp/bac-blendergis-vt9fa3s_/blender/scripts/addons'\nInfo: Modules Installed (BlenderGIS) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blendergis.zip' into '/tmp/bac-blendergis-vt9fa3s_/blender/scripts/addons'\nDEBUG:BlenderGIS.core.checkdeps:GDAL Python binding unavailable\nDEBUG:BlenderGIS.core.checkdeps:PyProj unavailable\nDEBUG:BlenderGIS.core.checkdeps:Pillow unavailable\nImageio: 'libfreeimage-3.16.0-linux64.so' was not found on your computer; downloading it now.\nTry 1. Download from https://github.com/domlysz/freeimage_bin/raw/master/libfreeimage-3.16.0-linux64.so (4.6 MB)\nDownloading: 8192/4830080 bytes (0.2%)\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b3301376/4830080 bytes (68.4%)\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b\b4830080/4830080 bytes (100.0%)\n  Done\nFile saved as /tmp/bac-blendergis-vt9fa3s_/.imageio/libfreeimage-3.16.0-linux64.so.\nDEBUG:BlenderGIS.core.checkdeps:ImageIO Freeimage plugin available\nERROR:BlenderGIS:Uncaught exception\nTraceback (most recent call last):\n  File \"/tmp/bac-blendergis-vt9fa3s_/blender/scripts/addons/BlenderGIS/geoscene.py\", line 385, in poll\n    return bpy.context.mode == 'OBJECT' and context.area.type == 'VIEW_3D'\n                                            ^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\nTraceback (most recent call last):\n  File \"/tmp/bac-blendergis-vt9fa3s_/blender/scripts/addons/BlenderGIS/geoscene.py\", line 385, in poll\n    return bpy.context.mode == 'OBJECT' and context.area.type == 'VIEW_3D'\n                                            ^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\nERROR:BlenderGIS:Uncaught exception\nTraceback (most recent call last):\n  File \"/tmp/bac-blendergis-vt9fa3s_/blender/scripts/addons/BlenderGIS/operators/view3d_mapviewer.py\", line 551, in poll\n    return context.area.type == 'VIEW_3D'\n           ^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\nTraceback (most recent call last):\n  File \"/tmp/bac-blendergis-vt9fa3s_/blender/scripts/addons/BlenderGIS/operators/view3d_mapviewer.py\", line 551, in poll\n    return context.area.type == 'VIEW_3D'\n           ^^^^^^^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'type'\n",
   "cause": {
     "cause": "",
     "fix": "",
@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 58,
   "python_version": "3.11.15",
-  "ran_at": "2026-11-05T09:28:23+00:00",
+  "ran_at": "2026-11-06T09:22:25+00:00",
   "source_type": "github_zipball",
   "stages": {
     "enable": {
@@ -31,7 +31,7 @@
       "ok": true
     },
     "install": {
-      "detail": "addon_utils.disable: BlenderGIS not loaded\nModules Installed (BlenderGIS) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blendergis.zip' into '/tmp/bac-blendergis-v29mt5zn/blender/scripts/addons'\nInfo: Modules Installed (BlenderGIS) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blendergis.zip' into '/tmp/bac-blendergis-v29mt5zn/blender/scripts/addons'\n",
+      "detail": "addon_utils.disable: BlenderGIS not loaded\nModules Installed (BlenderGIS) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blendergis.zip' into '/tmp/bac-blendergis-vt9fa3s_/blender/scripts/addons'\nInfo: Modules Installed (BlenderGIS) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/blendergis.zip' into '/tmp/bac-blendergis-vt9fa3s_/blender/scripts/addons'\n",
       "ok": true
     },
     "poll": {
@@ -45,8 +45,8 @@
   },
   "status": "pass",
   "timing_s": {
-    "enable": 1.79,
-    "install": 0.05,
+    "enable": 1.54,
+    "install": 0.03,
     "poll": 0.01,
     "reenable": 0.0
   }

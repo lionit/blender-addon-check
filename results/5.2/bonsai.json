@@ -17,7 +17,7 @@
   "log": "bonsai.log",
   "module": "bl_ext.user_default.bonsai",
   "name": "Bonsai",
-  "ran_at": "2026-11-05T09:28:58+00:00",
+  "ran_at": "2026-11-06T09:24:45+00:00",
   "source_type": "extensions",
   "status": "unsupported",
   "status_before_analysis": "fail"

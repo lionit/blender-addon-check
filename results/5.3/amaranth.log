@@ -1,10 +1,10 @@
 --- extension install-file ---
 STATUS Installed "amaranth"
-Blender 5.3.0 Release Candidate (hash c956fd684542 built 2026-11-05 01:39:05)
+Blender 5.3.0 Release Candidate (hash f78a5e153839 built 2026-11-06 02:27:08)
 
 --- harness ---
-00:00.536  bpy.rna          | ERROR Python script error in NODE_OT_show_active_node_image.poll
-Blender 5.3.0 Release Candidate (hash c956fd684542 built 2026-11-05 01:39:05)
+00:00.268  bpy.rna          | ERROR Python script error in NODE_OT_show_active_node_image.poll
+Blender 5.3.0 Release Candidate (hash f78a5e153839 built 2026-11-06 02:27:08)
 
 Blender quit
 

@@ -1,17 +1,17 @@
 
 --- harness ---
-00:06.580  bpy.rna          | ERROR Python script error in NODE_OT_add_node_output_input.poll
-00:06.581  bpy.rna          | ERROR Python script error in NODE_OT_ungroup_group_tree.poll
-00:06.582  bpy.rna          | ERROR Python script error in NODE_OT_sv_testing_dump_node_def.poll
-00:06.582  bpy.rna          | ERROR Python script error in NODE_OT_sv_testing_list_old_nodes.poll
-00:06.582  bpy.rna          | ERROR Python script error in NODE_OT_sv_temporal_viewer.poll
-00:06.583  bpy.rna          | ERROR Python script error in NODE_OT_sv_node_vd_toggle.poll
-00:06.583  bpy.rna          | ERROR Python script error in NODE_OT_zoom_to_node.poll
-00:06.584  bpy.rna          | ERROR Python script error in NODE_OT_sv_switch_layout.poll
-00:06.585  bpy.rna          | ERROR Python script error in NODE_OT_sv_node_connector.poll
-00:06.585  bpy.rna          | ERROR Python script error in NODE_OT_sv_abort_nodes_updating.poll
-00:06.586  bpy.rna          | ERROR Python script error in NODE_OT_sv_create_material.poll
-Blender 5.3.0 Release Candidate (hash c956fd684542 built 2026-11-05 01:39:05)
+00:08.445  bpy.rna          | ERROR Python script error in NODE_OT_add_node_output_input.poll
+00:08.446  bpy.rna          | ERROR Python script error in NODE_OT_ungroup_group_tree.poll
+00:08.447  bpy.rna          | ERROR Python script error in NODE_OT_sv_testing_dump_node_def.poll
+00:08.447  bpy.rna          | ERROR Python script error in NODE_OT_sv_testing_list_old_nodes.poll
+00:08.447  bpy.rna          | ERROR Python script error in NODE_OT_sv_temporal_viewer.poll
+00:08.448  bpy.rna          | ERROR Python script error in NODE_OT_sv_node_vd_toggle.poll
+00:08.448  bpy.rna          | ERROR Python script error in NODE_OT_zoom_to_node.poll
+00:08.449  bpy.rna          | ERROR Python script error in NODE_OT_sv_switch_layout.poll
+00:08.449  bpy.rna          | ERROR Python script error in NODE_OT_sv_node_connector.poll
+00:08.450  bpy.rna          | ERROR Python script error in NODE_OT_sv_abort_nodes_updating.poll
+00:08.451  bpy.rna          | ERROR Python script error in NODE_OT_sv_create_material.poll
+Blender 5.3.0 Release Candidate (hash f78a5e153839 built 2026-11-06 02:27:08)
 
 Blender quit
 

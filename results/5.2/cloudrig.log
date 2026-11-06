@@ -3,8 +3,8 @@ STATUS Installed "cloudrig"
 Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)
 
 --- harness ---
-00:01.035  bpy.rna          | ERROR Python script error in POSE_OT_cloudrig_remove_component_type.poll
-00:01.036  bpy.rna          | ERROR Python script error in POSE_OT_cloudrig_bone_set_collection_remove.poll
+00:00.970  bpy.rna          | ERROR Python script error in POSE_OT_cloudrig_remove_component_type.poll
+00:00.971  bpy.rna          | ERROR Python script error in POSE_OT_cloudrig_bone_set_collection_remove.poll
 Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)
 
 Blender quit

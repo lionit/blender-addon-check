@@ -2,7 +2,7 @@
   "addon_id": "stop-motion-obj",
   "addon_version": null,
   "blender_version": "4.5.15 LTS",
-  "captured_output": "addon_utils.disable: Stop-motion-OBJ not loaded\nModules Installed (Stop-motion-OBJ) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/stop-motion-obj.zip' into '/tmp/bac-stop-motion-obj-tvs3y85r/blender/scripts/addons'\nInfo: Modules Installed (Stop-motion-OBJ) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/stop-motion-obj.zip' into '/tmp/bac-stop-motion-obj-tvs3y85r/blender/scripts/addons'\n",
+  "captured_output": "addon_utils.disable: Stop-motion-OBJ not loaded\nModules Installed (Stop-motion-OBJ) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/stop-motion-obj.zip' into '/tmp/bac-stop-motion-obj-uzaiyvkx/blender/scripts/addons'\nInfo: Modules Installed (Stop-motion-OBJ) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/stop-motion-obj.zip' into '/tmp/bac-stop-motion-obj-uzaiyvkx/blender/scripts/addons'\n",
   "cause": {
     "cause": "",
     "fix": "",
@@ -23,7 +23,7 @@
   "operators_poll_failed": 0,
   "operators_total": 10,
   "python_version": "3.11.15",
-  "ran_at": "2026-11-05T09:28:27+00:00",
+  "ran_at": "2026-11-06T09:22:28+00:00",
   "source_type": "github_release",
   "stages": {
     "enable": {
@@ -31,7 +31,7 @@
       "ok": true
     },
     "install": {
-      "detail": "addon_utils.disable: Stop-motion-OBJ not loaded\nModules Installed (Stop-motion-OBJ) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/stop-motion-obj.zip' into '/tmp/bac-stop-motion-obj-tvs3y85r/blender/scripts/addons'\nInfo: Modules Installed (Stop-motion-OBJ) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/stop-motion-obj.zip' into '/tmp/bac-stop-motion-obj-tvs3y85r/blender/scripts/addons'\n",
+      "detail": "addon_utils.disable: Stop-motion-OBJ not loaded\nModules Installed (Stop-motion-OBJ) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/stop-motion-obj.zip' into '/tmp/bac-stop-motion-obj-uzaiyvkx/blender/scripts/addons'\nInfo: Modules Installed (Stop-motion-OBJ) from '/home/runner/work/blender-addon-check/blender-addon-check/.cache/addons/stop-motion-obj.zip' into '/tmp/bac-stop-motion-obj-uzaiyvkx/blender/scripts/addons'\n",
       "ok": true
     },
     "poll": {
@@ -45,9 +45,9 @@
   },
   "status": "pass",
   "timing_s": {
-    "enable": 0.03,
+    "enable": 0.02,
     "install": 0.01,
-    "poll": 0.01,
+    "poll": 0.0,
     "reenable": 0.0
   }
 }

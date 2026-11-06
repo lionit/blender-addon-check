@@ -1,7 +1,7 @@
 
 --- harness ---
-00:01.761  bpy.rna          | ERROR Python script error in GEOSCENE_OT_coords_viewer.poll
-00:01.762  bpy.rna          | ERROR Python script error in VIEW3D_OT_map_viewer.poll
+00:02.517  bpy.rna          | ERROR Python script error in GEOSCENE_OT_coords_viewer.poll
+00:02.519  bpy.rna          | ERROR Python script error in VIEW3D_OT_map_viewer.poll
 Blender 5.2.3 LTS (hash e13b728c6880 built 2026-10-22 01:35:05)
 
 Blender quit
